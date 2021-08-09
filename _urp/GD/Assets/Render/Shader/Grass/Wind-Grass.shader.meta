@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 9274999d1397faf458314bf04622c3f8
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _WindNoiseMap: {fileID: 2800000, guid: 6a8bc4649f6847449ac1669de3ed7ea1, type: 3}
+  - _FogRampmap: {fileID: 2800000, guid: 409aebad96157034b8cee22c9bb9b3c0, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

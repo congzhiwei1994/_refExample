@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920656cf8aa8caf4b8f0c9fbbd3cdacb, type: 3}
+  m_Name: MeshPaintShaderDatas
+  m_EditorClassIdentifier: 
+  layers:
+  - Ground
+  shaders:
+  - shaderName: E3D/Ground/3M-Blend
+  - shaderName: E3D/Ground/3M-Blend-Sinple
+  - shaderName: E3D/Envir/Blend-Build
+  - shaderName: E3D/Ground/3M-Blend-D2
+  - shaderName: E3D/Ground/4M-Blend

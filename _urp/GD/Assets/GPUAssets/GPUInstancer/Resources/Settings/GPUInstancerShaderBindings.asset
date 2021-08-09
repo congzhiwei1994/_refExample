@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d8588b9b4d4e344b3c6c8da8806a1c, type: 3}
+  m_Name: GPUInstancerShaderBindings
+  m_EditorClassIdentifier: 
+  shaderInstances:
+  - name: Universal Render Pipeline/Lit
+    instancedShader: {fileID: 4800000, guid: 81c954fbcbf8c6246b4fd7acbebb98cb, type: 3}
+    modifiedDate: 08/27/2020 14:51:20.525
+    isOriginalInstanced: 0
+    extensionCode: 
+  - name: Good/Grass/Wind-Grass
+    instancedShader: {fileID: 4800000, guid: 75c4d891812d2d346a0c6e92ad3db876, type: 3}
+    modifiedDate: 12/13/2020 22:57:46.639
+    isOriginalInstanced: 0
+    extensionCode: 

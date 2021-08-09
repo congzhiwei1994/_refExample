@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 7d469781269228242ad42a895879445f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _CubeMapA: {fileID: 2800000, guid: d7e92fb8fadbbf14ab3dd5789867de55, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: shader.bundle
+  assetBundleVariant: 

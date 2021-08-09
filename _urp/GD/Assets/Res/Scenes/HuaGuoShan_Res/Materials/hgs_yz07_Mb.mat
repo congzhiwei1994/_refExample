@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2124683041646789704
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hgs_yz07_Mb
+  m_Shader: {fileID: 4800000, guid: aed225316edf51a4282ea75f8f5bb5ea, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _INVERSELIGHT_ON _LIGHTSHADOW_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 2e827209ff1884045b9972d44c07235c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FogRampmap:
+        m_Texture: {fileID: 2800000, guid: 409aebad96157034b8cee22c9bb9b3c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FogRampmap1:
+        m_Texture: {fileID: 2800000, guid: 409aebad96157034b8cee22c9bb9b3c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightTexture:
+        m_Texture: {fileID: 2800000, guid: ea713c9e3cd412349a88aa7531365459, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightTexture1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a15f0393488a298439fbbfb50003ee4f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseNormal:
+        m_Texture: {fileID: 2800000, guid: a618b944fabd45046ba6b83a8bd2e15a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampMap:
+        m_Texture: {fileID: 2800000, guid: 4d6627ffa32c9da4f84100181dd741dc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 6a8bc4649f6847449ac1669de3ed7ea1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClip: 1
+    - _AlphaCutoff: 0.5
+    - _BackRang: -0.59
+    - _Blend: 0
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Cutoff: 0.439
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _Float5: 0.045
+    - _Float7: 1.25
+    - _Floatx: 1.05
+    - _FogDistance: 0.023
+    - _FogDistance1: 0.023
+    - _FogDistanceAlphaOffset: -0.03
+    - _FogDistanceAlphaOffset1: -0.03
+    - _FogDistanceFogInstensity: 2.74
+    - _FogDistanceFogInstensity1: 2.74
+    - _FogDistanceFogRampOffset: -0.46
+    - _FogDistanceFogRampOffset1: -0.46
+    - _FogHeightHard: 0.015
+    - _FogHeightHard1: 0.015
+    - _FogHeightOffset: 0.56
+    - _FogHeightOffset1: 0.56
+    - _FogHorizontalLine: -17
+    - _FogHorizontalLine1: -17
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Insten: 1.67
+    - _InverseLight: 1
+    - _InverseLightPower: 6.505882
+    - _InverseLightScale: 0.2
+    - _LightDen: 0.445
+    - _LightDen1: 0.1668242
+    - _LightMax: 0.807
+    - _LightMax1: 1
+    - _LightMin: 0.007
+    - _LightMin1: 0.1411765
+    - _LightOffset: 0.74
+    - _LightOffsetRing: 0.21
+    - _LightOffsetRing1: 0
+    - _LightScale: 0.43
+    - _LightShadow: 1
+    - _LightSpeed: 0.07
+    - _LightSpeed1: 0.3
+    - _LightTiling: 34.2
+    - _LightTiling1: 1
+    - _Lightintensity: 1.99
+    - _Lightintensity1: 0
+    - _Metallic: 0
+    - _NScale: 0.12
+    - _OcclusionStrength: 1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StepMax: 1
+    - _StepMax1: 0.1294118
+    - _StepMin: 0.131
+    - _StepMin1: 0.1294118
+    - _Surface: 0
+    - _WaveDirect: 1.085015
+    - _WaveSize: 0.9741176
+    - _WaveSpeed: 0
+    - _WindIntensity: 2
+    - _WindMultip: 0.12
+    - _WindOffset: 5.52
+    - _WindSpeed: 0.5
+    - _WindTiling: 0.38
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BackColor: {r: 0.2565419, g: 0.395489, b: 0.4779412, a: 0}
+    - _BaseColor: {r: 0.6049025, g: 0.8301887, b: 0.28586686, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DarkColor: {r: 0.27398524, g: 0.40104333, b: 0.44339606, a: 0}
+    - _DarkColor1: {r: 0.35206237, g: 0.35016906, b: 0.57547164, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FogRampColor: {r: 0.6036298, g: 0.7027331, b: 0.9189587, a: 0}
+    - _FogRampColor1: {r: 0.6036298, g: 0.7027331, b: 0.9189587, a: 0}
+    - _InverseLightColor: {r: 0.56390727, g: 0.6415094, b: 0.4811321, a: 0}
+    - _LightColor: {r: 0.41907242, g: 1, b: 0.1745283, a: 0}
+    - _MainColor: {r: 2.3736694, g: 2.3736694, b: 2.3736694, a: 0}
+    - _ShadowColor: {r: 0.47347802, g: 0.5653499, b: 0.75471693, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WindDirection: {r: 2.57, g: 1.49, b: -0.45, a: 0}

@@ -1,0 +1,202 @@
+//******************************************************
+//
+//	文件名 (File Name) 	: 		MyToolsEditor
+//	
+//	脚本创建者(Author) 	:		Ejoy_小林
+
+//	创建时间 (CreatTime):		2019/12/11/15/6/30
+//******************************************************
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+
+/// <summary>
+/// 截图图片格式
+/// </summary>
+enum MyImgeType
+{
+    JPG = 0,
+    PNG,
+    TGA
+}
+/// <summary>
+/// 新分辨率
+/// </summary>
+enum MyImageSize
+{
+    x4320p_8K = 4320,
+    x2880p_5K = 2880,
+    x2160p_4K = 2160,
+    x1440p_QHD = 1440,
+    x1080p_FHD = 1080,
+    x720p_HD = 720,
+    x480p = 480,
+    x240p = 240,
+    Custom = int.MaxValue
+}
+
+/// <summary>
+/// 截图类型
+/// </summary>
+enum MyScreenShotImageType
+{
+    /// <summary>
+    /// 原图输出
+    /// </summary>
+    Origin=0,
+    /// <summary>
+    /// 深度图输出
+    /// </summary>
+    Depth,
+    /// <summary>
+    /// 深度法线
+    /// </summary>
+    DepthNormal
+}
+[CustomEditor(typeof(MyTools))]
+public class MyToolsEditor : Editor
+{
+    private MyTools _target;
+    string[] m_toolBarStrs = { "创建正交相机", "截图输出" };
+    int m_toolBarIndex = 0;
+
+    private MyImgeType myImgeType = MyImgeType.JPG;
+    private MyImageSize myImageSize = MyImageSize.x720p_HD;
+
+    private int m_customWidth = 1;
+    const string m_imageSaveRootFolder = "Assets/";
+    
+    private void OnEnable()
+    {
+        _target = (MyTools)target;
+        m_toolBarIndex = 1;
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        base.OnInspectorGUI();
+
+        EditorGUILayout.BeginVertical(GUI.skin.box);
+
+        EditorGUILayout.BeginHorizontal();
+        m_toolBarIndex = GUILayout.Toolbar(m_toolBarIndex, m_toolBarStrs);
+        EditorGUILayout.EndHorizontal();
+
+        ToolType(m_toolBarIndex);
+
+        EditorGUILayout.EndVertical();
+
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(_target);
+    }
+
+    private void ToolType(int indexType)
+    {
+        if (indexType > 0)
+        {
+            ScreenShotImage();
+        }
+        else
+        {
+            CreatOrthographicCamera();
+        }
+    }
+
+    /// <summary>
+    /// 依据平面创建正交相机
+    /// </summary>
+    private void CreatOrthographicCamera()
+    {
+
+    }
+
+    /// <summary>
+    /// 截取Game视图
+    /// </summary>
+    private void ScreenShotImage()
+    {
+        EditorGUILayout.BeginHorizontal();
+        myImgeType = (MyImgeType)EditorGUILayout.EnumPopup("格式:", myImgeType);
+        //if (GUILayout.Button("保存路径",GUILayout.Width(100)))
+        //{
+
+        //}
+        EditorGUILayout.EndHorizontal();
+
+        myImageSize = (MyImageSize)EditorGUILayout.EnumPopup("输出尺寸:", myImageSize);
+        if (myImageSize == MyImageSize.Custom)
+        {
+            EditorGUI.indentLevel += 1;
+            EditorGUILayout.BeginVertical(GUI.skin.box);
+            
+            m_customWidth = EditorGUILayout.IntField("自定义尺寸:", m_customWidth);
+            EditorGUI.indentLevel += 1;
+            EditorGUILayout.LabelField("注：宽高比一致！");
+            EditorGUI.indentLevel -= 1;
+         
+            EditorGUILayout.EndVertical();
+            EditorGUI.indentLevel -= 1;
+        }
+
+        if (GUILayout.Button("设置分辨率"))
+        {
+            if (myImageSize == MyImageSize.Custom)
+                SetGameViewSize(myImageSize, m_customWidth);
+            else
+                SetGameViewSize(myImageSize);
+        }
+    }
+    private bool m_ModifiedResolution;
+    private void SetGameViewSize(MyImageSize myImageSize, int customSize=0)
+    {
+        switch (myImageSize)
+        {
+            case MyImageSize.x4320p_8K:
+                break;
+            case MyImageSize.x2880p_5K:
+                break;
+            case MyImageSize.x2160p_4K:
+                break;
+            case MyImageSize.x1440p_QHD:
+                break;
+            case MyImageSize.x1080p_FHD:
+                break;
+            case MyImageSize.x720p_HD:
+                break;
+            case MyImageSize.x480p:
+                break;
+            case MyImageSize.x240p:
+                break;
+            case MyImageSize.Custom:
+                break;
+            default:
+                break;
+        }
+      
+        int imageSize = 0;
+        if (customSize == 0)
+        {
+            imageSize = (int)myImageSize;
+        }
+        else
+        {
+            imageSize = customSize;
+        }
+        var size = CustomGameViewSize.SetCustomSizwWEH(imageSize);
+        if (size != null)
+        {
+            CustomGameViewSize.modifiedResolutionCount++;
+            m_ModifiedResolution = true;
+            CustomGameViewSize.SelectSize(size);
+        }
+    }
+}
