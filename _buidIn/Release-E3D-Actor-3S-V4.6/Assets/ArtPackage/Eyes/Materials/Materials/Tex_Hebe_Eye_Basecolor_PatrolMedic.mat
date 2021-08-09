@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Tex_Hebe_Eye_Basecolor_PatrolMedic
+  m_Shader: {fileID: 4800000, guid: f29b309d583763d468b0b367c0822d22, type: 3}
+  m_ShaderKeywords: _KEYWORD0_ON _MONEYES_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 9109a332f4dbd9145b62c7b862191ea0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexP:
+        m_Texture: {fileID: 2800000, guid: 9109a332f4dbd9145b62c7b862191ea0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexP1:
+        m_Texture: {fileID: 2800000, guid: 9109a332f4dbd9145b62c7b862191ea0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexW:
+        m_Texture: {fileID: 2800000, guid: 3070326a755c94d4b8c194bb67fa8032, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapMap:
+        m_Texture: {fileID: 2800000, guid: 96497bba6238d0b45b22980b45826a33, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 15400b18d160e9e4091b87575f22d11c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 9109a332f4dbd9145b62c7b862191ea0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _22: 0.5
+    - _DemoEyes: 39
+    - _Float0: 0.194
+    - _Float1: -0.3448
+    - _MatcapLighting: 5
+    - _MonEyes: 1
+    - _MonEyesInstensity: -0.3501
+    - _PuilDepth: -0.17
+    - _PuilDepthScale: 0.4
+    - _PuilHeight: 0.27
+    - _PuilScale: 0.359
+    - _PuilSoft: 0.216
+    - _PupilSize: 0.171
+    - _Scale: 3
+    - _SizeEyes: 2.2
+    - _SizePupil: -0.384
+    - _Sizepupil: 0.024
+    - _Smooth: 0.547
+    - _WhiteSmooth: 0.977
+    - __dirty: 0
+    m_Colors:
+    - _EyesColor: {r: 0.50735295, g: 0.6534483, b: 1, a: 0}
