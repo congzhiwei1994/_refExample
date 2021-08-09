@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Wing1
+  m_Shader: {fileID: 4800000, guid: ef32d7b81a29e2f439e7a4f461cd2aac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 84d224a633e9a4b43ba8b9a1e182fdcd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BurnMap:
+        m_Texture: {fileID: 2800000, guid: 448669748ad5ff7468153fed6ff69ebd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BurnNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 195a033527d5d71488053925be0fa46e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EnvTex:
+        m_Texture: {fileID: 2800000, guid: 32630b35855b99542809127dd5ad6689, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MixMap:
+        m_Texture: {fileID: 2800000, guid: 1c2a913a033524b42a9d45e5d3bf1d2f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: a7c48f3a08d0224439083559d836a0ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AO_Slider: 1
+    - _AlphaAmount: 0.64
+    - _AlphaClip: 0
+    - _AlphaMtl: 1
+    - _Black_Height: 0.03
+    - _Blend: 0
+    - _Bloom_Range: 0.4
+    - _BumpScale: 1
+    - _Burn_Amount: 0.88
+    - _Burn_Line_Width: 0.32
+    - _ChangeAmount: 0
+    - _ColorUPAmount: 1.02
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _Diffuse_Intensity: 1
+    - _DstBlend: 0
+    - _Emissive_Bloom: 1
+    - _Envir_Brightness: 1
+    - _Envir_Fresnel_Brightness: 0.35
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Illum_Multi: 1
+    - _Inner_Alpha: 1
+    - _Mask_Intensity: 0
+    - _Max_Brightness: 130
+    - _Max_GGX_Roughness: 1
+    - _Metal_Multi: 0
+    - _Metallic: 0
+    - _Min_GGX_Roughness: 0.04
+    - _Noise_Density01: 1.31
+    - _Noise_Density02: 0.51
+    - _Noise_Intensity02: 0.51
+    - _OcclusionStrength: 1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Rim_Multi: 0.45
+    - _Rim_Power: 1
+    - _Rough_Multi: 0
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Tortuosity_Intensity01: 0.033
+    - _Tortuosity_Intensity02: 0.2
+    - _U_Light_Scale: 1
+    - _U_Rim_End: 0.93
+    - _U_Rim_Start: 0.08
+    - _U_Tonemapping_Factor: 1
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _Adjust_Inner: {r: 0.051, g: 0.0784, b: 0.102, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Burn_Color01: {r: 0.2392, g: 0.302, b: 0.651, a: 1}
+    - _Burn_Color02: {r: 0.3176, g: 0.1686, b: 0.5451, a: 1}
+    - _Burn_Color03: {r: 0.0196, g: 0, b: 0.1294, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Env_Shadow_Factor: {r: 0.667, g: 0.545, b: 0.761, a: 1}
+    - _Force_Pixel_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Noise_Speed01: {r: 0.18, g: -0.2, b: 1, a: 1}
+    - _Noise_Speed02: {r: 0.1, g: -0.1, b: 1, a: 1}
+    - _Rim_Color: {r: 0.3059, g: 0.2118, b: 0.8353, a: 0}
+    - _Shadow_Bias_Factor: {r: 0.004, g: 0.001, b: 1, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+--- !u!114 &7233640982343719082
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1

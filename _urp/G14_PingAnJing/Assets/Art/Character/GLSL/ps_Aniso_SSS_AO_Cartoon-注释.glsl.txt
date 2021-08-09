@@ -1,0 +1,694 @@
+USE_ANISOTROPIC
+USE_CARTOON
+USE_SSS
+USE_AO
+#version 330
+uniform float metal_multi;
+uniform float rough_multi;
+uniform float envir_brightness;
+uniform float envir_fresnel_brightness;
+uniform float max_brightness;
+uniform float min_ggx_roughness;
+uniform float max_ggx_roughness;
+uniform float noise_offset;
+uniform float normal_offset;
+uniform float diffuse_intensity;
+uniform float u_light_scale;
+uniform vec4 env_shadow_factor;
+uniform float AO_slider;
+uniform vec3 force_pixel_color;
+uniform float rim_power;
+uniform float rim_multi;
+uniform vec4 rim_color;
+uniform vec4 adjust_inner;
+uniform float inner_alpha;
+uniform float u_rim_start;
+uniform float u_rim_end;
+uniform float emissive_bloom;
+uniform float illum_multi;
+uniform float bloom_range;
+uniform float sss_factor;
+uniform vec4 newAnisoFactor;
+uniform vec4 cartoonFactor;
+uniform float u_tonemapping_factor;
+uniform vec4 u_shadowmap_info;
+uniform vec2 shadow_bias_factor;
+uniform vec4 ShadowLightAttr[5];
+uniform vec4 camera_pos;
+uniform mat4 view_mat;
+uniform float AlphaMtl;
+uniform mat4 envSHR;
+uniform mat4 envSHG;
+uniform mat4 envSHB;
+uniform sampler2D sam_diffuse_0;
+uniform sampler2D sam_other1_2;
+uniform sampler2D sam_other2_3;
+uniform sampler2D sam_other3_5;
+uniform sampler2D sam_other4_6;
+uniform sampler2DShadow sam_shadow_4;
+in vec4 v_texture0;
+in vec4 v_texture2;
+in vec3 tangentWorld0;
+in vec3 binormalWorld0;
+in vec3 vertex_normal_world;
+in vec4 v_texture9;
+out vec4 gFragColor;
+void main(){
+float sam_other1_2_bias = -1.0;
+float sam_other4_6_bias = -1.0;
+float sam_other3_5_bias = -1.0;
+float sam_diffuse_0_bias = -1.0;
+// UV
+vec2 local_0 = v_texture0.xy;
+// Mix贴图
+vec4 local_2 = texture(sam_other1_2, local_0, sam_other1_2_bias);
+float local_3;
+(local_3 = 1.0);
+float local_9;
+float local_10;
+float local_11;
+float local_17;
+(local_17 = 1.0);
+float local_22;
+(local_22 = 1.0);
+float local_27;
+(local_27 = 1.0);
+float local_32 = (local_22 * local_3);
+(local_9 = local_17);
+(local_10 = local_32);
+(local_11 = local_27);
+vec3 local_33 = camera_pos.xyz;
+vec3 local_35 = v_texture2.xyz;
+vec3 local_37 = (local_33 - local_35);
+// viewDirectionWS
+vec3 local_38 = normalize(local_37);
+float local_39;
+(local_39 = 1.0);
+vec3 local_42;
+vec3 local_43;
+float local_44;
+vec3 local_45;
+vec3 local_46;
+vec2 local_47;
+float local_48;
+// 法线贴图
+vec4 local_49 = texture(sam_other3_5, local_0, sam_other3_5_bias);
+vec2 local_50 = local_49.xy;
+vec2 local_53 = (local_50 * 2.0);
+vec2 local_55 = vec2(1.0, 1.0);
+vec2 local_56 = (local_53 - local_55);
+vec3 local_57;
+vec3 local_58;
+vec2 local_59;
+float local_93 = local_56.x;
+float local_94 = local_56.y;
+vec3 local_95 = (tangentWorld0 * local_93);
+vec3 local_96 = (local_95 * local_39);
+vec3 local_97 = (binormalWorld0 * local_94);
+vec3 local_98 = (local_97 * local_39);
+vec3 local_99 = (local_96 + local_98);
+vec3 local_100 = (local_99 + vertex_normal_world);
+// normalWS
+vec3 local_101 = normalize(local_100);
+// normalWS
+(local_57 = local_101);
+// normalWS
+(local_58 = local_101);
+// normalTS.xy
+(local_59 = local_56);
+vec3 local_102;
+// normalWS
+(local_102 = local_58);
+// 法线贴图(B) AO
+float local_123 = local_49.z;
+float local_126 = cartoonFactor.z;
+// AO
+float local_128 = mix(local_123, 1.0, local_126);
+// normalWS
+(local_42 = local_102);
+(local_43 = local_57);
+// AO = lerp(AO, 1, cartoonFactor.z)
+(local_44 = local_128);
+(local_45 = binormalWorld0);
+(local_46 = tangentWorld0);
+(local_47 = local_59);
+// 没用到
+(local_48 = local_123);
+vec3 local_134;
+(local_134 = local_42);
+// 颜色贴图
+vec4 local_143 = texture(sam_diffuse_0, local_0, sam_diffuse_0_bias);
+vec4 local_144;
+// 颜色贴图
+(local_144 = local_143);
+vec4 local_155;
+vec4 local_158 = vec4(0.0, 0.0, 0.0, 0.0);
+(local_155 = local_158);
+vec4 local_159;
+vec4 local_160;
+// 颜色贴图
+(local_159 = local_144);
+(local_160 = local_2);
+float local_257;
+float local_258;
+float local_259;
+// metallic
+float local_263 = local_160.x;
+// sss
+float local_264 = local_160.y;
+// roughness
+float local_265 = local_160.z;
+float local_267 = (local_263 + metal_multi);
+float local_268 = clamp(local_267, 0.0, 1.0);
+float local_269 = (local_265 + rough_multi);
+float local_270 = clamp(local_269, 0.0, 1.0);
+float local_272 = (2.0 * local_264);
+float local_274 = (local_272 - 1.0);
+float local_276 = clamp(local_274, 0.0, 1.0);
+// metallic 01
+(local_257 = local_268);
+// roughness 01
+(local_258 = local_270);
+// sss 01
+(local_259 = local_276);
+float local_277;
+float local_278;
+{
+float local_280 = shadow_bias_factor.x;
+float local_281 = shadow_bias_factor.y;
+float local_284 = v_texture9.w;
+float local_285 = (1.0 - local_284);
+float local_286 = (local_280 * local_285);
+float local_287 = (local_286 + local_281);
+float local_289 = clamp(local_287, 0.0, 1.0);
+vec2 local_290 = v_texture9.xy;
+float local_293 = v_texture9.z;
+float local_295 = (local_293 - local_289);
+float local_296;
+float local_298 = (local_295 * 0.5);
+float local_299 = (local_298 + 0.5);
+(local_296 = local_299);
+float local_300;
+vec4 local_308 = vec4(local_290.x, local_290.y, local_296, 1.0);
+float local_309 = textureProj(sam_shadow_4, local_308);
+(local_300 = local_309);
+float local_310 = local_290.x;
+float local_311 = local_290.y;
+float local_312 = (1.0 - local_310);
+float local_313 = (1.0 - local_311);
+vec4 local_314 = vec4(local_310, local_312, local_311, local_313);
+vec4 local_315 = sign(local_314);
+vec4 local_317 = vec4(1.0, 1.0, 1.0, 1.0);
+float local_318 = dot(local_315, local_317);
+float local_319 = step(3.5, local_318);
+float local_320 = (1.0 - local_319);
+float local_321 = (local_300 + local_320);
+float local_322 = clamp(local_321, 0.0, 1.0);
+// Shadowmap
+(local_278 = local_322);
+}
+float local_326 = cartoonFactor.w;
+// Shadowmap
+float local_327 = mix(local_278, 1.0, local_326);
+float local_328;
+float local_351;
+// Shadowmap
+(local_351 = local_327);
+// Shadowmap
+(local_328 = local_351);
+// Shadowmap
+(local_277 = local_328);
+vec3 local_368;
+vec3 local_369;
+vec4 local_393 = ShadowLightAttr[1];
+vec3 local_394 = local_393.xyz;
+vec3 local_396 = (1.0 * local_394);
+vec4 local_398 = ShadowLightAttr[3];
+vec3 local_399 = local_398.xyz;
+// lightDirectionWS(相反)
+vec3 local_401 = normalize(local_399);
+// lightColor
+(local_368 = local_396);
+// lightDirectionWS(相反)
+(local_369 = local_401);
+float local_402 = local_369.x;
+float local_403 = local_369.y;
+float local_404 = local_369.z;
+vec3 local_405 = vec3(local_402, local_403, local_404);
+// lightDirectionWS(相反)
+vec3 local_406 = normalize(local_405);
+vec3 local_407 = (local_406 * u_light_scale);
+vec3 local_408 = (local_38 - local_406);
+// halfDirectionWS
+vec3 local_409 = normalize(local_408);
+float local_410 = dot(local_38, local_409);
+// VoH 01
+float local_412 = clamp(local_410, 0.0, 1.0);
+float local_413 = dot(local_42, local_409);
+// NoH 01
+float local_414 = max(0.0, local_413);
+float local_415 = dot(local_38, local_42);
+// NoV 01
+float local_416 = clamp(local_415, 0.0, 1.0);
+vec3 local_417 = (-local_407);
+// NoSL
+float local_418 = dot(local_42, local_417);
+vec3 local_419;
+vec4 local_420;
+vec3 local_512 = vec3(0.0, 0.0, 0.0);
+(local_419 = local_512);
+// 颜色贴图
+(local_420 = local_159);
+float local_513;
+float local_514;
+float local_517 = (local_418 + 0.44999999);
+float local_518 = max(0.0, local_517);
+float local_520 = 1.45;
+float local_521 = (local_518 / local_520);
+float local_522 = min(local_521, local_277);
+float local_523 = (local_522 * local_522);
+float local_524 = clamp(local_418, 0.0, 1.0);
+float local_525 = min(local_524, local_277);
+float local_526 = (local_259 * sss_factor);
+// finalNoL
+float local_527 = mix(local_525, local_523, local_526);
+float local_528;
+(local_528 = 0.0);
+// finalNoL
+(local_513 = local_527);
+(local_514 = local_528);
+float local_554 = -1.0;
+// finalNoL_NegativePart
+float local_555 = clamp(local_513, local_554, 0.0);
+float local_556;
+// diffuseNoL = finalNoL
+(local_556 = local_513);
+float local_564;
+float local_565;
+vec3 local_566;
+vec3 local_567;
+// 各向贴图
+vec4 local_568 = texture(sam_other4_6, local_0, sam_other4_6_bias);
+vec4 local_570 = vec4(0.5, 0.5, 0.5, 0.5);
+vec4 local_571 = (local_568 - local_570);
+vec4 local_573 = (local_571 * 2.0);
+float local_574 = local_573.x;
+float local_575 = local_573.y;
+vec3 local_578 = (local_574 * local_46);
+vec3 local_579 = (local_575 * local_45);
+vec3 local_580 = (local_578 + local_579);
+// anisotropicNormalWS
+vec3 local_581 = normalize(local_580);
+float local_583 = local_568.z;
+float local_585 = (local_583 - 0.5);
+float local_586 = (local_585 * noise_offset);
+// normalScale
+float local_587 = (normal_offset + local_586);
+vec3 local_588 = (local_42 * local_587);
+vec3 local_589 = (local_588 + local_581);
+// anisotropicNormalWS
+vec3 local_590 = normalize(local_589);
+float local_591 = dot(local_590, local_38);
+// VoA 01
+float local_592 = clamp(local_591, 0.0, 1.0);
+float local_594 = (local_592 * 3.141593);
+float local_595 = sin(local_594);
+// aniso
+float local_597 = max(local_595, 0.0);
+float local_599 = local_160.y;
+// anisotropicMask
+float local_602 = step(local_599, 0.25);
+// NoH
+float local_603 = mix(local_414, local_597, local_602);
+// 没用到
+float local_605 = newAnisoFactor.z;
+// 没用到
+float local_606 = newAnisoFactor.w;
+// 没用到
+float local_607 = (local_606 * local_415);
+// 没用到
+float local_608 = (local_605 + local_607);
+// 没用到
+vec3 local_609 = vec3(local_608, local_608, local_608);
+// 没用到
+vec3 local_610 = mix(local_42, local_590, local_609);
+// 没用到
+vec3 local_611 = normalize(local_610);
+// 没用到
+vec3 local_612 = local_568.xyz;
+float local_614;
+(local_614 = 0.0);
+// NoH
+(local_564 = local_603);
+// 0
+(local_565 = local_614);
+// 没用到
+(local_566 = local_611);
+// 没用到
+(local_567 = local_612);
+vec3 local_645;
+float local_646;
+vec3 local_783 = vec3(0.0, 0.0, 0.0);
+(local_645 = local_783);
+(local_646 = 0.0);
+float local_784;
+float local_785;
+(local_784 = local_257);
+(local_785 = local_258);
+// oneMinusReflectivity
+float local_798 = (1.0 - local_784);
+// 颜色贴图
+vec3 local_799 = local_420.xyz;
+vec3 local_801 = (local_799 * local_799);
+// albedo
+vec3 local_802 = (local_801 * diffuse_intensity);
+vec3 local_803 = vec3(local_646, local_646, local_646);
+// albedo
+vec3 local_804 = mix(local_802, local_645, local_803);
+// diffColor
+vec3 local_805 = (local_798 * local_804);
+vec3 local_806;
+vec3 local_826 = vec3(0.0, 0.0, 0.0);
+(local_806 = local_826);
+vec3 local_827;
+float local_829 = mix(1.0, local_44, local_416);
+float local_832 = (0.5 - local_44);
+float local_833 = clamp(local_832, 0.0, 1.0);
+float local_834 = (2.0 * local_833);
+float local_835 = (local_834 * AO_slider);
+// finalAO GetSpecularOcclusion
+float local_836 = mix(local_829, local_44, local_835);
+// finalAO
+vec3 local_837 = vec3(local_836, local_836, local_836);
+// finalAO
+(local_827 = local_837);
+float local_840 = local_420.x;
+float local_841 = local_420.y;
+float local_842 = local_420.z;
+float local_844 = max(local_840, local_841);
+float local_845 = max(local_844, local_842);
+float local_847 = (local_845 - 0.38999999);
+vec3 local_848 = vec3(local_847, local_847, local_847);
+vec3 local_850 = vec3(0.1, 0.1, 0.1);
+vec3 local_851 = max(local_848, local_850);
+vec3 local_852 = (local_799 - local_851);
+// sssColor
+vec3 local_853 = clamp(local_852, 0.0, 1.0);
+vec3 local_854;
+// finalAO
+(local_854 = local_827);
+vec3 local_857;
+vec3 local_858;
+// -NoSL
+float local_860 = (0.0 - local_418);
+// -NoSL 01
+float local_861 = clamp(local_860, 0.0, 1.0);
+// NoSL 01
+float local_863 = clamp(local_418, 0.0, 1.0);
+float local_865 = mix(local_863, local_861, 0.61000001);
+// sssNoSL
+float local_866 = (1.0 - local_865);
+float local_868 = -0.47;
+float local_869 = (local_868 + local_866);
+float local_870 = -0.47;
+float local_871 = (local_870 + 1.0);
+float local_872 = (local_869 / local_871);
+// finalNoL_NegativePart + finalNoL
+float local_874 = (local_555 + local_513);
+float local_876 = (local_874 / 2.0);
+// unknowSSS_1
+float local_877 = smoothstep(0.50999999, 0.0, local_876);
+// sssNoSL_wrap = WrapDiffuse(sssNoSL, -0.47);
+float local_878 = clamp(local_872, 0.0, 1.0);
+float local_879 = (local_878 * local_877);
+float local_880 = (local_879 * local_259);
+float local_881 = (local_880 * sss_factor);
+vec3 local_882 = (local_881 * local_853);
+vec3 local_884 = (local_882 * 2.3499999);
+// sssResult
+vec3 local_886 = (local_884 * 0.30000001);
+float local_887 = (2.0 - local_416);
+vec3 local_888 = (local_887 * local_853);
+vec3 local_889 = (local_888 * local_259);
+// sssIndirectResult
+vec3 local_890 = (local_889 * sss_factor);
+// sssResult
+(local_857 = local_886);
+// sssIndirectResult
+(local_858 = local_890);
+vec3 local_894;
+vec3 local_895;
+vec3 local_898 = (-local_38);
+vec3 local_899 = reflect(local_898, local_42);
+// reflectVectorWS
+(local_895 = local_899);
+// reflectVectorWS
+(local_894 = local_895);
+mat3 local_902 = mat3(view_mat);
+vec3 local_903 = (local_902 * local_42);
+float local_904 = local_903.x;
+float local_905 = local_903.y;
+float local_906 = local_903.z;
+float local_907 = (-local_906);
+vec3 local_908 = vec3(local_904, local_905, local_907);
+vec3 local_909;
+{
+vec4 local_912 = vec4(local_908.x, local_908.y, local_908.z, 1.0);
+vec4 local_913 = (envSHR * local_912);
+float local_914 = dot(local_912, local_913);
+vec4 local_915 = (envSHG * local_912);
+float local_916 = dot(local_912, local_915);
+vec4 local_917 = (envSHB * local_912);
+float local_918 = dot(local_912, local_917);
+vec3 local_919 = vec3(local_914, local_916, local_918);
+// sh = ShaderSH(normalVS);
+(local_909 = local_919);
+}
+vec3 local_921 = env_shadow_factor.xyz;
+vec3 local_923 = vec3(1.0, 1.0, 1.0);
+vec3 local_924 = vec3(local_556, local_556, local_556);
+//colorNoL
+vec3 local_925 = mix(local_921, local_923, local_924);
+// diffuseNoL
+vec3 local_926 = vec3(local_556, local_556, local_556);
+// diffuse = diffuseNoL + sssResult;
+vec3 local_927 = (local_926 + local_857);
+// diffuseTerm = diffuse * lightColor;
+vec3 local_928 = (local_927 * local_368);
+// colorNoL * sh
+vec3 local_929 = (local_925 * local_909);
+// sh * sssIndirectResult
+vec3 local_930 = (local_909 * local_858);
+// colorNoL * sh +  sh * sssIndirectResult
+vec3 local_931 = (local_929 + local_930);
+// indirectDiffuseTerm = sh * indirectDiffuse * _Envir_Brightness;
+vec3 local_932 = (local_931 * envir_brightness);
+// indirectDiffuseTerm + diffuseTerm
+vec3 local_933 = (local_928 + local_932);
+//  diffColor * (indirectDiffuseTerm + diffuseTerm);
+vec3 local_934 = (local_805 * local_933);
+// diffuseTotal
+vec3 local_935 = (local_934 + local_806);
+vec3 local_937 = vec3(0.039999999, 0.039999999, 0.039999999);
+vec3 local_938 = vec3(local_798, local_798, local_798);
+// specColor
+vec3 local_939 = mix(local_804, local_937, local_938);
+// roughnessRange
+float local_940 = mix(min_ggx_roughness, max_ggx_roughness, local_785);
+vec3 local_941;
+{
+float local_944 = (1.0 - local_412);
+float local_946;
+{
+float local_949 = 7.2134752;
+float local_951 = (local_949 + 1.0892349);
+float local_952 = (local_951 * local_944);
+float local_953 = (local_952 - local_951);
+float local_954 = exp2(local_953);
+(local_946 = local_954);
+}
+vec3 local_956 = vec3(1.0, 1.0, 1.0);
+vec3 local_957 = (local_956 - local_939);
+vec3 local_958 = (local_957 * local_946);
+vec3 local_959 = (local_939 + local_958);
+// My_F_Schlick
+(local_941 = local_959);
+}
+float local_961;
+{
+float local_963 = (local_940 * local_940);
+float local_964 = (local_963 * local_963);
+float local_965 = (local_564 * local_964);
+float local_966 = (local_965 - local_564);
+float local_967 = (local_966 * local_564);
+float local_969 = (local_967 + 1.0);
+float local_970 = (local_969 * local_969);
+float local_971 = (local_964 / local_970);
+float local_973 = min(local_971, 10000.0);
+// My_D_GGX
+(local_961 = local_973);
+}
+float local_975;
+{
+float local_978 = (0.5 * local_940);
+float local_979 = (0.5 + local_978);
+float local_980 = (0.5 * local_940);
+float local_981 = (0.5 + local_980);
+float local_982 = (local_979 * local_981);
+float local_984 = (1.0 - local_982);
+float local_985 = (local_416 * local_984);
+float local_986 = (local_985 + local_982);
+float local_987 = (1.0 - local_982);
+float local_988 = (local_513 * local_987);
+float local_989 = (local_988 + local_982);
+float local_991 = (local_986 * local_989);
+float local_992 = (0.25 / local_991);
+// My_Vis_Schlick
+(local_975 = local_992);
+}
+vec3 local_994 = (local_961 * local_941);
+vec3 local_995 = (local_994 * local_975);
+// specularTerm
+vec3 local_996 = (local_995 * local_513);
+vec3 local_997;
+float local_998;
+// specularTerm
+(local_997 = local_996);
+(local_998 = local_998);
+vec3 local_1078;
+vec3 local_1079;
+{
+float local_1082 = (local_785 / 0.14);
+float local_1087 = local_894.z;
+float local_1088 = local_894.x;
+float local_1089 = local_894.y;
+float local_1091 = atan(local_1087, local_1088);
+float local_1092 = (local_1091 + 3.141593);
+float local_1093 = (local_1092 * 0.15915491);
+float local_1094 = acos(local_1089);
+float local_1095 = (local_1094 * 0.3183099);
+vec2 local_1096 = vec2(local_1093, local_1095);
+vec4 local_1097 = textureLod(sam_other2_3, local_1096, local_1082);
+vec3 local_1098 = local_1097.xyz;
+float local_1099 = local_1097.w;
+vec3 local_1100 = (local_1098 * local_1099);
+vec3 local_1101 = (local_1100 * max_brightness);
+///  GlossyEnvironmentReflection
+(local_1079 = local_1101);
+}
+vec3 local_1103;
+{
+float local_1106 = -1.0;
+float local_1108 = -0.0275;
+float local_1110 = -0.57200003;
+vec4 local_1112 = vec4(local_1106, local_1108, local_1110, 0.022);
+float local_1116 = -0.039999999;
+vec4 local_1117 = vec4(1.0, 0.0425, 1.04, local_1116);
+vec4 local_1118 = (local_940 * local_1112);
+vec4 local_1119 = (local_1118 + local_1117);
+float local_1120 = local_1119.x;
+float local_1121 = local_1119.y;
+float local_1124 = (local_1120 * local_1120);
+float local_1126 = -9.2799997;
+float local_1127 = (local_1126 * local_416);
+float local_1128 = exp2(local_1127);
+float local_1129 = min(local_1124, local_1128);
+float local_1130 = (local_1129 * local_1120);
+float local_1131 = (local_1130 + local_1121);
+float local_1132 = -1.04;
+vec2 local_1133 = vec2(local_1132, 1.04);
+vec2 local_1134 = (local_1133 * local_1131);
+vec2 local_1136 = local_1119.zw;
+vec2 local_1137 = (local_1134 + local_1136);
+float local_1138 = local_1137.x;
+float local_1139 = local_1137.y;
+vec3 local_1140 = (local_939 * local_1138);
+vec3 local_1141 = vec3(local_1139, local_1139, local_1139);
+vec3 local_1142 = (local_1141 * envir_fresnel_brightness);
+vec3 local_1143 = (local_1140 + local_1142);
+// EnvironmentBRDFApprox
+(local_1103 = local_1143);
+}
+vec3 local_1145 = (envir_brightness * local_1103);
+vec3 local_1146 = (local_1145 * local_1079);
+vec3 local_1147 = (local_1146 * local_925);
+vec3 local_1148;
+// indirectSpecularTerm = indirectSpecularColor * indirectSpecular * _Envir_Brightness;
+(local_1148 = local_1147);
+// indirectSpecularTerm
+(local_1078 = local_1148);
+vec3 local_1260;
+float local_1261;
+vec3 local_1270 = vec3(0.0, 0.0, 0.0);
+(local_1260 = local_1270);
+(local_1261 = 0.0);
+float local_1272 = mix(0.60000002, 1.0, local_513);
+vec3 local_1273 = (local_1078 * local_1272);
+// specularTotal
+vec3 local_1274 = (local_997 + local_1273);
+vec3 local_1275 = (local_935 + local_1274);
+// color
+vec3 local_1276 = (local_1275 * local_854);
+vec3 local_1277 = (local_1276 + local_1260);
+vec3 local_1278 = (local_1277 + local_419);
+float local_1279 = (1.0 - local_416);
+float local_1280;
+{
+float local_1283 = (rim_power * 1.442695);
+float local_1285 = (local_1283 + 1.0892349);
+float local_1286 = (local_1285 * local_1279);
+float local_1287 = (local_1286 - local_1285);
+float local_1288 = exp2(local_1287);
+(local_1280 = local_1288);
+}
+float local_1290 = smoothstep(u_rim_start, u_rim_end, local_1280);
+vec3 local_1291 = rim_color.xyz;
+vec3 local_1293 = (local_1290 * local_1291);
+// rimColor
+vec3 local_1294 = (local_1293 * rim_multi);
+vec3 local_1295 = adjust_inner.xyz;
+vec3 local_1297 = (local_1278 * local_1295);
+vec3 local_1298 = (local_1297 + local_1294);
+float local_1299 = (local_1279 + inner_alpha);
+vec3 local_1300 = (local_1298 + force_pixel_color);
+vec3 local_1301;
+(local_1301 = local_1300);
+vec3 local_1303 = vec3(0.18700001, 0.18700001, 0.18700001);
+vec3 local_1304 = (local_1301 + local_1303);
+vec3 local_1305 = (local_1301 / local_1304);
+vec3 local_1307 = (local_1305 * 1.035);
+float local_1308 = (local_1299 * 1.0);
+float local_1309 = (local_1308 * AlphaMtl);
+vec4 local_1310 = vec4(local_1307.x, local_1307.y, local_1307.z, local_1309);
+float local_1311;
+{
+vec3 local_1316 = vec3(0.30000001, 0.58999997, 0.11);
+float local_1317 = dot(local_1274, local_1316);
+// specularLuminance
+(local_1311 = local_1317);
+}
+vec3 local_1319 = sqrt(local_1301);
+vec3 local_1321 = vec3(1.5, 1.5, 1.5);
+// colorA
+vec3 local_1322 = (local_1319 / local_1321);
+float local_1323 = (local_784 + bloom_range);
+float local_1324 = clamp(local_1323, 0.0, 1.0);
+float local_1325 = (local_1311 * local_1324);
+// illumBloom
+float local_1326 = (local_1325 * illum_multi);
+float local_1327 = (local_1261 * emissive_bloom);
+// illumBloom + emissiveBloom
+float local_1328 = (local_1326 + local_1327);
+vec4 local_1329 = vec4(local_1322.x, local_1322.y, local_1322.z, local_1328);
+vec4 local_1330 = vec4(u_tonemapping_factor, u_tonemapping_factor, u_tonemapping_factor, u_tonemapping_factor);
+vec4 local_1331 = mix(local_1329, local_1310, local_1330);
+vec4 local_1332;
+(local_1332 = local_1331);
+vec4 local_1335;
+(local_1335 = local_1332);
+vec4 local_1338;
+(local_1338 = local_1335);
+vec4 local_1341;
+(local_1341 = local_1338);
+(gFragColor = local_1341);
+}

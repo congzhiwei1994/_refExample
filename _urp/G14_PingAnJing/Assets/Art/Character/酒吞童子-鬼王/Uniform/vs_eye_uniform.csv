@@ -1,0 +1,22 @@
+Name,Value,Type
+ShadowLightAttr,,float4[5]
+ShadowLightAttr[0],"0.00, 0.00, 0.00, 0.00",float4
+ShadowLightAttr[1],"1.00, 0.9098, 0.8314, 3.00",float4
+ShadowLightAttr[2],"1.00, 0.9098, 0.8314, 1.00",float4
+ShadowLightAttr[3],"0.30802, -0.44072, -0.84314, 0.001",float4
+ShadowLightAttr[4],"1.00, 0.00, 0.00, 0.00",float4
+lvp,,float4x4 (column_major)
+lvp.row0,"-0.04857, -1.54107E-9, -0.01774, 9.14166",float4
+lvp.row1,"0.00655, 0.03887, -0.01793, 2.60287",float4
+lvp.row2,"0.00176, -0.00252, -0.00483, -0.21683",float4
+lvp.row3,"0.00, 0.00, 0.00, 1.00",float4
+world,,float4x4 (column_major)
+world.row0,"1.06193, 0.00, -0.19674, 136.00",float4
+world.row1,"0.00, 1.08, 0.00, -40.21",float4
+world.row2,"0.19674, 0.00, 1.06193, 146.10699",float4
+world.row3,"0.00, 0.00, 0.00, 1.00",float4
+wvp,,float4x4 (column_major)
+wvp.row0,"-2.22929, 0.00, 0.413, -26.24096",float4
+wvp.row1,"-0.01248, 4.03003, -0.06736, -47.50519",float4
+wvp.row2,"-0.19675, -0.01836, -1.06199, 61.13091",float4
+wvp.row3,"-0.19671, -0.01836, -1.06178, 63.11848",float4

@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Body 1
+  m_Shader: {fileID: 4800000, guid: abd073af2d63d1349942498adfd46b93, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AnisotropicMap:
+        m_Texture: {fileID: 2800000, guid: 366442f2d7f7f1943b56cadac9a319e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: c83066b7c9c298741ae64db97d4e5b71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: dbf2d15ad0d26454a84fa0059c81e70c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseCube:
+        m_Texture: {fileID: 8900000, guid: 7dad27d68667d904caa1251acc5303dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EnvTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossyCube:
+        m_Texture: {fileID: 8900000, guid: 61a99a36e1870fb4dadb1a4166a5b881, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HairMap:
+        m_Texture: {fileID: 2800000, guid: 366442f2d7f7f1943b56cadac9a319e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MixMap:
+        m_Texture: {fileID: 2800000, guid: 1ab3d32a6cba29d4eae5c6bd45454845, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 281c1648eb318164ba2b9846311cbaf4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Gama: 0.45
+    - _AO_Slider: 0.05
+    - _AlphaMtl: -1.31
+    - _AniShift: 2.54
+    - _AnisotropicEnable: 0
+    - _AoScale: 0.435
+    - _BaseBrightness: 2
+    - _BaseFacter: 2.57
+    - _Bloom_Range: 1.66
+    - _ChangeAmount: 6.63
+    - _Cull_Lerp: 0.54
+    - _Diffuse_Intensity: 2.32
+    - _DirTone: 1
+    - _Dir_Light_Intensity: 1
+    - _Dir_Tone: 7.17
+    - _Emissive: 0
+    - _EmissiveEnable: 0
+    - _EmissiveFactor: 0
+    - _Emissive_Bloom: 1.96
+    - _Emissive_Intensity: 1.05
+    - _EnvirFactor: 0.5
+    - _EnvirFresnel: 0
+    - _Envir_Brightness: 0.5
+    - _Envir_Fresnel_Brightness: 35.8
+    - _Gama: 1
+    - _Illum_Multi: 0.49
+    - _Inner_Alpha: 3.22
+    - _LightDirIntensity: 0.57
+    - _MainLightDir_Scale: 0.84
+    - _MainLight_Scale: 0.7
+    - _MaxBrightness: 0
+    - _Max_Brightness: 0.8
+    - _Max_GGX_Roughness: 0.68
+    - _Metal_Multi: 0.15
+    - _Metallic: 0.314
+    - _Min_GGX_Roughness: 0.19
+    - _Mip: 2.62
+    - _NoiseIntensity: 17.53
+    - _Noise_Offset: 0
+    - _Normal_Offset: 3.65
+    - _RimEnable: 0
+    - _RimEnd: 0.08
+    - _RimFactor: 1.61
+    - _RimSize: 9.7
+    - _RimStart: 0
+    - _Rim_Multi: 0
+    - _Rim_Power: 2.11
+    - _Rough_Multi: 0.85
+    - _Roughness: 0.48
+    - _SSS_Factor: 0.39
+    - _SkinFactor: 0.4
+    - _ToneDir: 0.2
+    - _U_Light_Scale: 1.57
+    - _U_Rim_End: 0
+    - _U_Rim_Start: 0.38
+    - _U_Tonemapping_Factor: 5.15
+    - _wrap: 1.85
+    m_Colors:
+    - _Adjust_Inner: {r: 1, g: 0, b: 0, a: 1}
+    - _DiffuseCubeColor: {r: 1, g: 0.8632076, b: 0.97575015, a: 1}
+    - _Dir_Tone: {r: 1, g: 1, b: 1, a: 1}
+    - _Env_Shadow_Factor: {r: 0.31132078, g: 0.19824672, b: 0.19824672, a: 1}
+    - _Env_Tone: {r: 0.8902, g: 0.5137, b: 0.5569, a: 1}
+    - _Force_Pixel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _GlossyCubeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0, g: 0.3804, b: 1, a: 0}
+    - _Rim_Color: {r: 0, g: 0.3804, b: 1, a: 0}
+    - _ShadowColor: {r: 1, g: 0.8254717, b: 0.944528, a: 1}
+    - _Shadow_Bias_Factor: {r: -0.84, g: -0.57, b: -0.98, a: 1}
+    - _Shadow_Factor: {r: 0.5471698, g: 0.30713776, b: 0.5155652, a: 1}
+    - _SkinColor: {r: 1, g: 0.7971698, b: 0.7971698, a: 1}
+--- !u!114 &7317642248217043880
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1

@@ -1,0 +1,3 @@
+Name,Value,Type
+blur_size,"4.00",float
+rtSize,"16.00, 9.00, 0.0625, 0.11111",float4

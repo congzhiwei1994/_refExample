@@ -1,0 +1,166 @@
+#version 330
+uniform vec4 rtSize;
+uniform float bloom_up_scale;
+in vec4 position;
+in vec4 texcoord0;
+out vec4 v_texture0;
+out vec4 v_texture1;
+out vec4 v_texture2;
+out vec4 v_texture3;
+out vec4 v_texture4;
+out vec4 v_texture5;
+out vec4 v_texture6;
+out vec4 v_texture7;
+void main(){
+(gl_Position = position);
+vec2 local_0;
+{
+vec2 local_3 = vec2(0.5, 0.5);
+vec2 local_5 = rtSize.zw;
+vec2 local_6 = (local_3 * local_5);
+(local_0 = local_6);
+}
+float local_10 = 0.2857143;
+vec2 local_12;
+{
+float local_16 = 6.283186;
+float local_17 = (local_16 / 7.0);
+float local_18 = (0.0 + local_10);
+float local_19 = (local_17 * local_18);
+float local_20 = sin(local_19);
+float local_21 = cos(local_19);
+vec2 local_22 = vec2(local_20, local_21);
+(local_12 = local_22);
+}
+vec2 local_25;
+{
+float local_29 = 6.283186;
+float local_30 = (local_29 / 7.0);
+float local_31 = (1.0 + local_10);
+float local_32 = (local_30 * local_31);
+float local_33 = sin(local_32);
+float local_34 = cos(local_32);
+vec2 local_35 = vec2(local_33, local_34);
+(local_25 = local_35);
+}
+vec2 local_37;
+{
+float local_41 = 6.283186;
+float local_42 = (local_41 / 7.0);
+float local_43 = (2.0 + local_10);
+float local_44 = (local_42 * local_43);
+float local_45 = sin(local_44);
+float local_46 = cos(local_44);
+vec2 local_47 = vec2(local_45, local_46);
+(local_37 = local_47);
+}
+vec2 local_50;
+{
+float local_54 = 6.283186;
+float local_55 = (local_54 / 7.0);
+float local_56 = (3.0 + local_10);
+float local_57 = (local_55 * local_56);
+float local_58 = sin(local_57);
+float local_59 = cos(local_57);
+vec2 local_60 = vec2(local_58, local_59);
+(local_50 = local_60);
+}
+vec2 local_63;
+{
+float local_67 = 6.283186;
+float local_68 = (local_67 / 7.0);
+float local_69 = (4.0 + local_10);
+float local_70 = (local_68 * local_69);
+float local_71 = sin(local_70);
+float local_72 = cos(local_70);
+vec2 local_73 = vec2(local_71, local_72);
+(local_63 = local_73);
+}
+vec2 local_76;
+{
+float local_80 = 6.283186;
+float local_81 = (local_80 / 7.0);
+float local_82 = (5.0 + local_10);
+float local_83 = (local_81 * local_82);
+float local_84 = sin(local_83);
+float local_85 = cos(local_83);
+vec2 local_86 = vec2(local_84, local_85);
+(local_76 = local_86);
+}
+vec2 local_89;
+{
+float local_93 = 6.283186;
+float local_94 = (local_93 / 7.0);
+float local_95 = (6.0 + local_10);
+float local_96 = (local_94 * local_95);
+float local_97 = sin(local_96);
+float local_98 = cos(local_96);
+vec2 local_99 = vec2(local_97, local_98);
+(local_89 = local_99);
+}
+vec2 local_101 = texcoord0.xy;
+float local_103 = (0.0 * bloom_up_scale);
+vec2 local_104 = (local_103 * local_0);
+vec2 local_105 = (local_101 + local_104);
+vec2 local_106 = (local_12 * bloom_up_scale);
+vec2 local_107 = (local_106 * local_0);
+vec2 local_108 = (local_101 + local_107);
+vec4 local_109 = vec4(local_105.x, local_105.y, local_108.x, local_108.y);
+(v_texture0 = local_109);
+vec2 local_110 = (local_25 * bloom_up_scale);
+vec2 local_111 = (local_110 * local_0);
+vec2 local_112 = (local_101 + local_111);
+vec2 local_113 = (local_37 * bloom_up_scale);
+vec2 local_114 = (local_113 * local_0);
+vec2 local_115 = (local_101 + local_114);
+vec4 local_116 = vec4(local_112.x, local_112.y, local_115.x, local_115.y);
+(v_texture1 = local_116);
+vec2 local_117 = (local_50 * bloom_up_scale);
+vec2 local_118 = (local_117 * local_0);
+vec2 local_119 = (local_101 + local_118);
+vec2 local_120 = (local_63 * bloom_up_scale);
+vec2 local_121 = (local_120 * local_0);
+vec2 local_122 = (local_101 + local_121);
+vec4 local_123 = vec4(local_119.x, local_119.y, local_122.x, local_122.y);
+(v_texture2 = local_123);
+vec2 local_124 = (local_76 * bloom_up_scale);
+vec2 local_125 = (local_124 * local_0);
+vec2 local_126 = (local_101 + local_125);
+vec2 local_127 = (local_89 * bloom_up_scale);
+vec2 local_128 = (local_127 * local_0);
+vec2 local_129 = (local_101 + local_128);
+vec4 local_130 = vec4(local_126.x, local_126.y, local_129.x, local_129.y);
+(v_texture3 = local_130);
+float local_131 = (0.0 * bloom_up_scale);
+vec2 local_132 = (local_131 * local_0);
+vec2 local_133 = (local_101 + local_132);
+vec2 local_134 = (local_12 * bloom_up_scale);
+vec2 local_135 = (local_134 * local_0);
+vec2 local_136 = (local_101 + local_135);
+vec4 local_137 = vec4(local_133.x, local_133.y, local_136.x, local_136.y);
+(v_texture4 = local_137);
+vec2 local_138 = (local_25 * bloom_up_scale);
+vec2 local_139 = (local_138 * local_0);
+vec2 local_140 = (local_101 + local_139);
+vec2 local_141 = (local_37 * bloom_up_scale);
+vec2 local_142 = (local_141 * local_0);
+vec2 local_143 = (local_101 + local_142);
+vec4 local_144 = vec4(local_140.x, local_140.y, local_143.x, local_143.y);
+(v_texture5 = local_144);
+vec2 local_145 = (local_50 * bloom_up_scale);
+vec2 local_146 = (local_145 * local_0);
+vec2 local_147 = (local_101 + local_146);
+vec2 local_148 = (local_63 * bloom_up_scale);
+vec2 local_149 = (local_148 * local_0);
+vec2 local_150 = (local_101 + local_149);
+vec4 local_151 = vec4(local_147.x, local_147.y, local_150.x, local_150.y);
+(v_texture6 = local_151);
+vec2 local_152 = (local_76 * bloom_up_scale);
+vec2 local_153 = (local_152 * local_0);
+vec2 local_154 = (local_101 + local_153);
+vec2 local_155 = (local_89 * bloom_up_scale);
+vec2 local_156 = (local_155 * local_0);
+vec2 local_157 = (local_101 + local_156);
+vec4 local_158 = vec4(local_154.x, local_154.y, local_157.x, local_157.y);
+(v_texture7 = local_158);
+}

@@ -1,0 +1,50 @@
+Name,Value,Type
+AO_slider,"1.00",float
+AlphaMtl,"1.00",float
+ShadowLightAttr,,float4[5]
+ShadowLightAttr[0],"0.00, 0.00, 0.00, 0.00",float4
+ShadowLightAttr[1],"1.00, 0.9098, 0.8314, 3.00",float4
+ShadowLightAttr[2],"1.00, 0.9098, 0.8314, 1.00",float4
+ShadowLightAttr[3],"0.30802, -0.44072, -0.84314, 0.001",float4
+ShadowLightAttr[4],"1.00, 0.00, 0.00, 0.00",float4
+adjust_inner,"1.00, 1.00, 1.00, 1.00",float4
+camera_pos,"123.50001, -26.41, 209.00, 0.00",float4
+cull_lerp,"0.00",float
+diffuse_intensity,"1.00",float
+envSHB,,float4x4 (column_major)
+envSHB.row0,"-0.00148, -0.00486, -0.02355, -0.02628",float4
+envSHB.row1,"-0.00486, 0.00148, 0.06823, 0.16609",float4
+envSHB.row2,"-0.02355, 0.06823, 0.06899, 0.1162",float4
+envSHB.row3,"-0.02628, 0.16609, 0.1162, 0.3541",float4
+envSHG,,float4x4 (column_major)
+envSHG.row0,"0.02118, -0.00841, -0.05412, -0.04306",float4
+envSHG.row1,"-0.00841, -0.02118, 0.0544, 0.08024",float4
+envSHG.row2,"-0.05412, 0.0544, 0.1225, 0.12068",float4
+envSHG.row3,"-0.04306, 0.08024, 0.12068, 0.27516",float4
+envSHR,,float4x4 (column_major)
+envSHR.row0,"0.03448, -0.01226, -0.08489, -0.05947",float4
+envSHR.row1,"-0.01226, -0.03448, 0.05065, 0.04973",float4
+envSHR.row2,"-0.08489, 0.05065, 0.1638, 0.13418",float4
+envSHR.row3,"-0.05947, 0.04973, 0.13418, 0.23201",float4
+env_shadow_factor,"0.667, 0.545, 0.761, 1.00",float4
+envir_brightness,"1.00",float
+envir_fresnel_brightness,"0.35",float
+force_pixel_color,"0.00, 0.00, 0.00",float3
+inner_alpha,"1.00",float
+max_brightness,"130.00",float
+max_ggx_roughness,"1.00",float
+metal_multi,"0.00",float
+min_ggx_roughness,"0.04",float
+rim_color,"0.00, 0.3804, 1.00, 0.00",float4
+rim_multi,"0.00",float
+rim_power,"2.80",float
+rough_multi,"0.00",float
+shadow_bias_factor,"0.004, 0.001",float2
+u_light_scale,"1.00",float
+u_rim_end,"1.00",float
+u_rim_start,"0.00",float
+view_mat,,float4x4 (column_major)
+view_mat.row0,"-1.00, 0.00, 0.00, 123.50002",float4
+view_mat.row1,"0.00, 0.99986, -0.017, 29.95867",float4
+view_mat.row2,"0.00, -0.017, -0.99986, 208.52092",float4
+view_mat.row3,"0.00, 0.00, 0.00, 1.00",float4

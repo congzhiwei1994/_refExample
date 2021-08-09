@@ -1,0 +1,53 @@
+Name,Value,Type
+FrameTime,"43.85078",float
+ShadowLightAttr,,float4[5]
+ShadowLightAttr[0],"0.00, 0.00, 0.00, 0.00",float4
+ShadowLightAttr[1],"1.00, 0.9098, 0.8314, 3.00",float4
+ShadowLightAttr[2],"1.00, 0.9098, 0.8314, 1.00",float4
+ShadowLightAttr[3],"0.30802, -0.44072, -0.84314, 0.001",float4
+ShadowLightAttr[4],"1.00, 0.00, 0.00, 0.00",float4
+Speed,"0.20",float
+camera_pos,"123.50001, -26.41, 209.00002, 0.00",float4
+emissive_color,"0.0941, 0.0471, 0.2078, 0.00",float4
+emissive_intensity,"1.00",float
+envSHB,,float4x4 (column_major)
+envSHB.row0,"-0.00148, -0.00486, -0.02355, -0.02628",float4
+envSHB.row1,"-0.00486, 0.00148, 0.06823, 0.16609",float4
+envSHB.row2,"-0.02355, 0.06823, 0.06899, 0.1162",float4
+envSHB.row3,"-0.02628, 0.16609, 0.1162, 0.3541",float4
+envSHG,,float4x4 (column_major)
+envSHG.row0,"0.02118, -0.00841, -0.05412, -0.04306",float4
+envSHG.row1,"-0.00841, -0.02118, 0.0544, 0.08024",float4
+envSHG.row2,"-0.05412, 0.0544, 0.1225, 0.12068",float4
+envSHG.row3,"-0.04306, 0.08024, 0.12068, 0.27516",float4
+envSHR,,float4x4 (column_major)
+envSHR.row0,"0.03448, -0.01226, -0.08489, -0.05947",float4
+envSHR.row1,"-0.01226, -0.03448, 0.05065, 0.04973",float4
+envSHR.row2,"-0.08489, 0.05065, 0.1638, 0.13418",float4
+envSHR.row3,"-0.05947, 0.04973, 0.13418, 0.23201",float4
+env_shadow_factor,"0.667, 0.545, 0.761, 1.00",float4
+envir_brightness,"1.00",float
+eyecolor1,"1.00, 0.2902, 0.9373, 1.00",float4
+eyecolor2,"1.00, 0.00, 0.5333, 0.00",float4
+eyecolor3,"0.0157, 0.0118, 0.1647, 0.00",float4
+eyecolor4,"0.0784, 0.0118, 0.098, 1.00",float4
+force_pixel_color,"0.00, 0.00, 0.00",float3
+period,"4.00",float
+rim_color1,"0.2275, 0.1451, 1.00, 0.00",float4
+rim_multi1,"0.25",float
+rim_power1,"0.27",float
+shadow_bias_factor,"0.004, 0.001",float2
+tail_color,"0.0353, 0.00, 0.051, 1.00",float4
+tail_ending1,"0.00",float
+tail_ending2,"0.50",float
+tail_ending3,"0.00",float
+tail_ending4,"0.09",float
+u_rim_end1,"0.85",float
+u_rim_start1,"0.50",float
+u_rim_start2,"0.30",float
+uvani_tilling,"3.00",float
+view_mat,,float4x4 (column_major)
+view_mat.row0,"-1.00, 0.00, 0.00, 123.50002",float4
+view_mat.row1,"0.00, 0.99986, -0.017, 29.95868",float4
+view_mat.row2,"0.00, -0.017, -0.99986, 208.52092",float4
+view_mat.row3,"0.00, 0.00, 0.00, 1.00",float4

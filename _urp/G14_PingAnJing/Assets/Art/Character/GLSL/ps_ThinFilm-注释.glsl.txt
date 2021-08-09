@@ -1,0 +1,924 @@
+#version 330
+uniform float metal_multi;
+uniform float rough_multi;
+uniform float envir_brightness;
+uniform float envir_fresnel_brightness;
+uniform float max_brightness;
+uniform float min_ggx_roughness;
+uniform float max_ggx_roughness;
+uniform float noise_offset;
+uniform float normal_offset;
+uniform float diffuse_intensity;
+uniform float u_light_scale;
+uniform vec4 env_shadow_factor;
+uniform float AO_slider;
+uniform vec3 force_pixel_color;
+uniform float rim_power;
+uniform float rim_multi;
+uniform vec4 rim_color;
+uniform vec4 adjust_inner;
+uniform float inner_alpha;
+uniform float u_rim_start;
+uniform float u_rim_end;
+uniform float emissive_bloom;
+uniform float illum_multi;
+uniform float bloom_range;
+uniform float sss_factor;
+uniform float coat_depth;
+uniform vec3 refractive_index;
+uniform float filmGloss;
+uniform vec3 RGB_atten;
+uniform vec3 film_intensity;
+uniform vec4 filmMR;
+uniform vec4 newAnisoFactor;
+uniform vec4 cartoonFactor;
+uniform float u_tonemapping_factor;
+uniform vec4 u_shadowmap_info;
+uniform vec2 shadow_bias_factor;
+uniform vec4 ShadowLightAttr[5];
+uniform vec4 camera_pos;
+uniform mat4 view_mat;
+uniform float AlphaMtl;
+uniform mat4 envSHR;
+uniform mat4 envSHG;
+uniform mat4 envSHB;
+uniform sampler2D sam_diffuse_0;
+uniform sampler2D sam_other1_2;
+uniform sampler2D sam_other2_3;
+uniform sampler2D sam_other3_5;
+uniform sampler2D sam_other4_6;
+uniform sampler2DShadow sam_shadow_4;
+in vec4 v_texture0;
+in vec4 v_texture2;
+in vec3 tangentWorld0;
+in vec3 binormalWorld0;
+in vec3 vertex_normal_world;
+in vec4 v_texture9;
+out vec4 gFragColor;
+void main(){
+float sam_other1_2_bias = -1.0;
+float sam_other4_6_bias = -1.0;
+float sam_other3_5_bias = -1.0;
+float sam_diffuse_0_bias = -1.0;
+// 主贴图uv
+vec2 local_0 = v_texture0.xy;
+// Mix贴图
+vec4 local_2 = texture(sam_other1_2, local_0, sam_other1_2_bias);
+float local_3;
+(local_3 = 1.0);
+float local_9;
+float local_10;
+float local_11;
+float local_17;
+(local_17 = 1.0);
+float local_22;
+(local_22 = 1.0);
+float local_27;
+(local_27 = 1.0);
+// local_32 = 1.0
+float local_32 = (local_22 * local_3);
+(local_9 = local_17);
+(local_10 = local_32);
+(local_11 = local_27);
+vec3 local_33 = camera_pos.xyz;
+// 世界空间 pos
+vec3 local_35 = v_texture2.xyz;
+vec3 local_37 = (local_33 - local_35);
+// viewDirWS
+vec3 local_38 = normalize(local_37);
+float local_39;
+(local_39 = 1.0);
+vec3 local_42;
+vec3 local_43;
+float local_44;
+vec3 local_45;
+vec3 local_46;
+vec2 local_47;
+float local_48;
+// 法线贴图
+vec4 local_49 = texture(sam_other3_5, local_0, sam_other3_5_bias);
+vec2 local_50 = local_49.xy;
+vec2 local_53 = (local_50 * 2.0);
+vec2 local_55 = vec2(1.0, 1.0);
+// 法线贴图RG通道 remap -1 到 1
+vec2 local_56 = (local_53 - local_55);
+vec3 local_57;
+vec3 local_58;
+vec2 local_59;
+float local_93 = local_56.x;
+float local_94 = local_56.y;
+vec3 local_95 = (tangentWorld0 * local_93);
+vec3 local_96 = (local_95 * local_39);
+vec3 local_97 = (binormalWorld0 * local_94);
+vec3 local_98 = (local_97 * local_39);
+vec3 local_99 = (local_96 + local_98);
+vec3 local_100 = (local_99 + vertex_normal_world);
+// 法线TBN转换到世界空间 切线空间法线(R, G, 1)
+vec3 local_101 = normalize(local_100);
+(local_57 = local_101);
+(local_58 = local_101);
+(local_59 = local_56);
+vec3 local_102;
+// 世界法线
+(local_102 = local_58);
+// AO
+float local_123 = local_49.z;
+float local_126 = cartoonFactor.z;
+// AO result
+float local_128 = mix(local_123, 1.0, local_126);
+// 世界法线
+(local_42 = local_102);
+(local_43 = local_57);
+// AO result
+(local_44 = local_128);
+(local_45 = binormalWorld0);
+(local_46 = tangentWorld0);
+// 法线贴图RG
+(local_47 = local_59);
+(local_48 = local_123);
+vec3 local_134;
+(local_134 = local_42);
+// Diffuse贴图
+vec4 local_143 = texture(sam_diffuse_0, local_0, sam_diffuse_0_bias);
+vec4 local_144;
+(local_144 = local_143);
+vec4 local_155;
+vec4 local_158 = vec4(0.0, 0.0, 0.0, 0.0);
+(local_155 = local_158);
+vec4 local_159;
+vec4 local_160;
+// Diffuse贴图
+(local_159 = local_144);
+// Mix贴图(A金属度 B粗糙度)
+(local_160 = local_2);
+float local_257;
+float local_258;
+float local_259;
+float local_263 = local_160.x;
+float local_264 = local_160.y;
+float local_265 = local_160.z;
+float local_267 = (local_263 + metal_multi);
+float local_268 = clamp(local_267, 0.0, 1.0);
+float local_269 = (local_265 + rough_multi);
+float local_270 = clamp(local_269, 0.0, 1.0);
+float local_272 = (2.0 * local_264);
+float local_274 = (local_272 - 1.0);
+float local_276 = clamp(local_274, 0.0, 1.0);
+// 金属度 01
+(local_257 = local_268);
+// 粗糙度 01
+(local_258 = local_270);
+// SSS 01
+(local_259 = local_276);
+float local_277;
+float local_278;
+{
+float local_280 = shadow_bias_factor.x;
+float local_281 = shadow_bias_factor.y;
+float local_284 = v_texture9.w;
+float local_285 = (1.0 - local_284);
+float local_286 = (local_280 * local_285);
+float local_287 = (local_286 + local_281);
+float local_289 = clamp(local_287, 0.0, 1.0);
+vec2 local_290 = v_texture9.xy;
+float local_293 = v_texture9.z;
+float local_295 = (local_293 - local_289);
+float local_296;
+float local_298 = (local_295 * 0.5);
+float local_299 = (local_298 + 0.5);
+(local_296 = local_299);
+float local_300;
+vec4 local_308 = vec4(local_290.x, local_290.y, local_296, 1.0);
+float local_309 = textureProj(sam_shadow_4, local_308);
+(local_300 = local_309);
+float local_310 = local_290.x;
+float local_311 = local_290.y;
+float local_312 = (1.0 - local_310);
+float local_313 = (1.0 - local_311);
+vec4 local_314 = vec4(local_310, local_312, local_311, local_313);
+vec4 local_315 = sign(local_314);
+vec4 local_317 = vec4(1.0, 1.0, 1.0, 1.0);
+float local_318 = dot(local_315, local_317);
+float local_319 = step(3.5, local_318);
+float local_320 = (1.0 - local_319);
+float local_321 = (local_300 + local_320);
+float local_322 = clamp(local_321, 0.0, 1.0);
+// 阴影01
+(local_278 = local_322);
+}
+float local_326 = cartoonFactor.w;
+// 由cartoonFactor.w因子减弱影子
+float local_327 = mix(local_278, 1.0, local_326);
+float local_328;
+float local_351;
+// 阴影01
+(local_351 = local_327);
+// 阴影01
+(local_328 = local_351);
+// 阴影01
+(local_277 = local_328);
+vec3 local_368;
+vec3 local_369;
+vec4 local_393 = ShadowLightAttr[1];
+// 光照颜色
+vec3 local_394 = local_393.xyz;
+vec3 local_396 = (1.0 * local_394);
+vec4 local_398 = ShadowLightAttr[3];
+vec3 local_399 = local_398.xyz;
+vec3 local_401 = normalize(local_399);
+// 光照颜色
+(local_368 = local_396);
+// 光照方向
+(local_369 = local_401);
+float local_402 = local_369.x;
+float local_403 = local_369.y;
+float local_404 = local_369.z;
+vec3 local_405 = vec3(local_402, local_403, local_404);
+vec3 local_406 = normalize(local_405);
+vec3 local_407 = (local_406 * u_light_scale);
+vec3 local_408 = (local_38 - local_406);
+// halfDirectionWS
+vec3 local_409 = normalize(local_408);
+float local_410 = dot(local_38, local_409);
+// VoH 01
+float local_412 = clamp(local_410, 0.0, 1.0);
+float local_413 = dot(local_42, local_409);
+// NoH 01
+float local_414 = max(0.0, local_413);
+// VoN
+float local_415 = dot(local_38, local_42);
+// VoN 01
+float local_416 = clamp(local_415, 0.0, 1.0);
+vec3 local_417 = (-local_407);
+// NoL
+float local_418 = dot(local_42, local_417);
+vec3 local_419;
+vec4 local_420;
+vec3 local_512 = vec3(0.0, 0.0, 0.0);
+(local_419 = local_512);
+// Diffuse贴图
+(local_420 = local_159);
+float local_513;
+float local_514;
+// NoL + 0.45
+float local_517 = (local_418 + 0.44999999);
+float local_518 = max(0.0, local_517);
+float local_520 = 1.45;
+// WrapDiffuse(NoL, 0.45);
+float local_521 = (local_518 / local_520);
+// min(NoL_warp, 阴影01)
+float local_522 = min(local_521, local_277);
+float local_523 = (local_522 * local_522);
+// NoL 01
+float local_524 = clamp(local_418, 0.0, 1.0);
+// min(NoL, 阴影01)
+float local_525 = min(local_524, local_277);
+float local_526 = (local_259 * sss_factor);
+// lerp(bxdfContext.NoL_01, NoL_01_wrap, brdfData.subsurface);
+float local_527 = mix(local_525, local_523, local_526);
+float local_528;
+(local_528 = 0.0);
+// NoL_01
+(local_513 = local_527);
+(local_514 = local_528);
+float local_554 = -1.0;
+// NoL_01
+float local_555 = clamp(local_513, local_554, 0.0);
+float local_556;
+// NoL_01
+(local_556 = local_513);
+float local_564;
+float local_565;
+vec3 local_566;
+vec3 local_567;
+// 各向异性图
+vec4 local_568 = texture(sam_other4_6, local_0, sam_other4_6_bias);
+vec4 local_570 = vec4(0.5, 0.5, 0.5, 0.5);
+vec4 local_571 = (local_568 - local_570);
+vec4 local_573 = (local_571 * 2.0);
+// 各向异性法线rg remap -1 1
+float local_574 = local_573.x;
+float local_575 = local_573.y;
+// (local_45 = binormalWorld0);
+// (local_46 = tangentWorld0);
+vec3 local_578 = (local_574 * local_46);
+vec3 local_579 = (local_575 * local_45);
+vec3 local_580 = (local_578 + local_579);
+// TBN 各向异性法线WS(r,g,0)
+vec3 local_581 = normalize(local_580);
+float local_583 = local_568.z;
+// 各向异性图 B通道 remap -0.5 - 0.5
+float local_585 = (local_583 - 0.5);
+float local_586 = (local_585 * noise_offset);
+float local_587 = (normal_offset + local_586);
+// local_42 == 世界法线
+// 世界法线 放大(增加权重) 权重来自于各向异性贴图B通道
+vec3 local_588 = (local_42 * local_587);
+vec3 local_589 = (local_588 + local_581);
+// 平均 世界法线 和 各向异性法线
+vec3 local_590 = normalize(local_589);
+// ToV
+float local_591 = dot(local_590, local_38);
+// ToV 01
+float local_592 = clamp(local_591, 0.0, 1.0);
+// ToV_01 * PI
+float local_594 = (local_592 * 3.141593);
+// sin(ToV_01 * PI)
+float local_595 = sin(local_594);
+//  -1 到 1 remap 0 - 1
+float local_597 = max(local_595, 0.0);
+float local_599 = local_160.y;
+float local_602 = step(local_599, 0.25);
+// Mix贴图的G通道中的各向异性参数
+// 不是各向异性为NoH_01 各向属性为计算的值
+// lerp(NoH_01, max(0.0, sin(ToV_01 * PI)), anisotropy)
+float local_603 = mix(local_414, local_597, local_602);
+float local_605 = newAnisoFactor.z;
+float local_606 = newAnisoFactor.w;
+// NoV * newAnisoFactor.w
+float local_607 = (local_606 * local_415);
+// (NoV * newAnisoFactor.w) + newAnisoFactor.z
+float local_608 = (local_605 + local_607);
+vec3 local_609 = vec3(local_608, local_608, local_608);
+// lerp(N, T, (NoV * newAnisoFactor.w) + newAnisoFactor.z)
+vec3 local_610 = mix(local_42, local_590, local_609);
+vec3 local_611 = normalize(local_610);
+vec3 local_612 = local_568.xyz;
+float local_614;
+(local_614 = 0.0);
+// NoH_01
+(local_564 = local_603);
+(local_565 = local_614);
+(local_566 = local_611);
+(local_567 = local_612);
+vec3 local_645;
+float local_646;
+float local_648 = refractive_index.x;
+float local_649 = refractive_index.y;
+float local_650 = refractive_index.z;
+float local_651;
+{
+// sq(VoN_01)
+float local_655 = (local_416 * local_416);
+// 1 - sq(VoN_01)
+float local_656 = (1.0 - local_655);
+// (1 - sq(VoN_01)) / refractive_index.x
+float local_657 = (local_656 / local_648);
+// (1 - sq(VoN_01)) / sq(refractive_index.x)
+float local_658 = (local_657 / local_648);
+// saturate((1 - sq(VoN_01)) / sq(refractive_index.x))
+float local_659 = clamp(local_658, 0.0, 1.0);
+// 1 - saturate((1 - sq(VoN_01)) / sq(refractive_index.x))
+float local_660 = (1.0 - local_659);
+// sqrt(1 - saturate((1 - sq(VoN_01)) / sq(refractive_index.x)))
+float local_661 = sqrt(local_660);
+// 2 * refractive_index.x
+float local_663 = (2.0 * local_648);
+// (2 * refractive_index.x) * coat_depth
+float local_664 = (local_663 * coat_depth);
+// ((2 * refractive_index.x) * coat_depth) * sqrt(1 - saturate((1 - sq(VoN_01)) / sq(refractive_index.x)))
+float local_665 = (local_664 * local_661);
+// (1 / 650.0) * 2 * refractive_index.x * coat_depth * sqrt(1 - saturate((1 - sq(VoN_01)) / sq(refractive_index.x)))
+float local_666 = (local_665 / 650.0);
+// ((1 / 650.0) * 2 * refractive_index.x * coat_depth * sqrt(1 - saturate((1 - sq(VoN_01)) / sq(refractive_index.x)))) + 0.5
+float local_668 = (local_666 + 0.5);
+// (((1 / 650.0) * 2 * refractive_index.x * coat_depth * sqrt(1 - saturate((1 - sq(VoN_01)) / sq(refractive_index.x)))) + 0.5) * PI
+float local_669 = (local_668 * 3.141593);
+// ((local_665 / 650.0) + 0.5) * PI * 2
+float local_670 = (local_669 * 2.0);
+// cos(((local_665 / 650.0) + 0.5) * PI * 2)
+// cos [-1,1]
+float local_671 = cos(local_670);
+// cos(((local_665 / 650.0) + 0.5) * PI * 2) * 0.5
+float local_672 = (local_671 * 0.5);
+// 1 - (cos(((local_665 / 650.0) + 0.5) * PI * 2) * 0.5)
+float local_673 = (1.0 - local_672);
+// 1.5 - (cos(((local_665 / 650.0) + 0.5) * PI * 2) * 0.5)
+float local_674 = (local_673 + 0.5);
+// 1 - refractive_index.x
+float local_675 = (1.0 - local_648);
+// 1 + refractive_index.x
+float local_676 = (1.0 + local_648);
+// (1 - refractive_index.x) / (1 + refractive_index.x)
+float local_677 = (local_675 / local_676);
+// sq((1 - refractive_index.x) / (1 + refractive_index.x))
+float local_678 = pow(local_677, 2.0);
+// 1.0 - sq((1 - refractive_index.x) / (1 + refractive_index.x))
+float local_679 = (1.0 - local_678);
+// (1.0 - sq((1 - refractive_index.x) / (1 + refractive_index.x))) * (1.5 - (cos(((local_665 / 650.0) + 0.5) * PI * 2) * 0.5))
+float local_680 = (local_679 * local_674);
+// sq((1 - refractive_index.x) / (1 + refractive_index.x)) + (1.0 - sq((1 - refractive_index.x) / (1 + refractive_index.x))) * (1.5 - (cos(((local_665 / 650.0) + 0.5) * PI * 2) * 0.5))
+float local_681 = (local_678 + local_680);
+(local_651 = local_681);
+}
+float local_684;
+{
+// sq(VoN_01)
+float local_688 = (local_416 * local_416);
+// 1 - sq(VoN_01)
+float local_689 = (1.0 - local_688);
+float local_690 = (local_689 / local_649);
+// (1 - sq(VoN_01)) / sq(refractive_index.y)
+float local_691 = (local_690 / local_649);
+// saturate((1 - sq(VoN_01)) / sq(refractive_index.y))
+float local_692 = clamp(local_691, 0.0, 1.0);
+// 1.0 - saturate((1 - sq(VoN_01)) / sq(refractive_index.y))
+float local_693 = (1.0 - local_692);
+// sqrt(1.0 - saturate((1 - sq(VoN_01)) / sq(refractive_index.y)))
+float local_694 = sqrt(local_693);
+// 2.0 * refractive_index.y
+float local_696 = (2.0 * local_649);
+// 2.0 * refractive_index.y * coat_depth
+float local_697 = (local_696 * coat_depth);
+// 2.0 * refractive_index.y * coat_depth * sqrt(1.0 - saturate((1 - sq(VoN_01)) / sq(refractive_index.y)))
+float local_698 = (local_697 * local_694);
+// local_698 / 510.0
+float local_699 = (local_698 / 510.0);
+// (local_698 / 510.0) + 0.5
+float local_701 = (local_699 + 0.5);
+// ((local_698 / 510.0) + 0.5) * PI
+float local_702 = (local_701 * 3.141593);
+// ((local_698 / 510.0) + 0.5) * PI * 2.0
+float local_703 = (local_702 * 2.0);
+// cos(((local_698 / 510.0) + 0.5) * PI * 2.0)
+float local_704 = cos(local_703);
+// cos(((local_698 / 510.0) + 0.5) * PI * 2.0) * 0.5
+float local_705 = (local_704 * 0.5);
+// 1 - (cos(((local_698 / 510.0) + 0.5) * PI * 2.0) * 0.5)
+float local_706 = (1.0 - local_705);
+// 1.5 - (cos(((local_698 / 510.0) + 0.5) * PI * 2.0) * 0.5)
+float local_707 = (local_706 + 0.5);
+// 1 - refractive_index.y
+float local_708 = (1.0 - local_649);
+// 1 + refractive_index.y
+float local_709 = (1.0 + local_649);
+// (1 - refractive_index.y) / (1 + refractive_index.y)
+float local_710 = (local_708 / local_709);
+// sq((1 - refractive_index.y) / (1 + refractive_index.y))
+float local_711 = pow(local_710, 2.0);
+// 1.0 - sq((1 - refractive_index.y) / (1 + refractive_index.y))
+float local_712 = (1.0 - local_711);
+// (1.0 - sq((1 - refractive_index.y) / (1 + refractive_index.y))) * (1.5 - (cos(((local_698 / 510.0) + 0.5) * PI * 2.0) * 0.5))
+float local_713 = (local_712 * local_707);
+// sq((1 - refractive_index.y) / (1 + refractive_index.y)) + (1.0 - sq((1 - refractive_index.y) / (1 + refractive_index.y))) * (1.5 - (cos(((local_698 / 510.0) + 0.5) * PI * 2.0) * 0.5))
+float local_714 = (local_711 + local_713);
+(local_684 = local_714);
+}
+float local_717;
+{
+// sq(VoN_01)
+float local_721 = (local_416 * local_416);
+// 1.0 - sq(VoN_01)
+float local_722 = (1.0 - local_721);
+// (1.0 - sq(VoN_01)) / refractive_index.z
+float local_723 = (local_722 / local_650);
+// (1.0 - sq(VoN_01)) / sq(refractive_index.z)
+float local_724 = (local_723 / local_650);
+// saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z))
+float local_725 = clamp(local_724, 0.0, 1.0);
+// 1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z))
+float local_726 = (1.0 - local_725);
+// sqrt(1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z)))
+float local_727 = sqrt(local_726);
+// 2 * refractive_index.z
+float local_729 = (2.0 * local_650);
+// 2 * refractive_index.z * coat_depth
+float local_730 = (local_729 * coat_depth);
+// 2 * refractive_index.z * coat_depth * sqrt(1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z)))
+float local_731 = (local_730 * local_727);
+// 2 * refractive_index.z * coat_depth * (1 / 470.0) * sqrt(1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z)))
+float local_732 = (local_731 / 470.0);
+// (2 * refractive_index.z * coat_depth * (1 / 470.0) * sqrt(1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z)))) + 0.5
+float local_734 = (local_732 + 0.5);
+// ((2 * refractive_index.z * coat_depth * (1 / 470.0) * sqrt(1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z)))) + 0.5) * PI
+float local_735 = (local_734 * 3.141593);
+// ((2 * refractive_index.z * coat_depth * (1 / 470.0) * sqrt(1.0 - saturate((1.0 - sq(VoN_01)) / sq(refractive_index.z)))) + 0.5) * PI * 2.0
+float local_736 = (local_735 * 2.0);
+float local_737 = cos(local_736);
+float local_738 = (local_737 * 0.5);
+float local_739 = (1.0 - local_738);
+float local_740 = (local_739 + 0.5);
+// 1 - refractive_index.z
+float local_741 = (1.0 - local_650);
+// 1 + refractive_index.z
+float local_742 = (1.0 + local_650);
+// (1 - refractive_index.z) / (1 + refractive_index.z)
+float local_743 = (local_741 / local_742);
+// Sq((1 - refractive_index.z) / (1 + refractive_index.z))
+float local_744 = pow(local_743, 2.0);
+// 1.0 - Sq((1 - refractive_index.z) / (1 + refractive_index.z))
+float local_745 = (1.0 - local_744);
+float local_746 = (local_745 * local_740);
+float local_747 = (local_744 + local_746);
+(local_717 = local_747);
+}
+// 上面三个结果: refractiveResult = local_651, local_684, local_717 (RGB) 
+float local_750 = (local_651 * 0.30000001);
+float local_752 = (local_684 * 0.58999997);
+float local_753 = (local_750 + local_752);
+float local_755 = (local_717 * 0.11);
+float local_756 = (local_753 + local_755);
+// grayRefractiveResult = x 0.3 y 0.59 z 0.11 灰化( refractiveResult.xyz)
+vec3 local_757 = vec3(local_756, local_756, local_756);
+// 1 - refractiveResult.x
+float local_759 = (1.0 - local_651);
+// 0.7
+float local_760 = RGB_atten.x;
+// 1.10
+float local_761 = RGB_atten.y;
+// 1.20
+float local_762 = RGB_atten.z;
+// (1 - refractiveResult.x) * RGB_atten.x
+float local_763 = (local_759 * local_760);
+// 1 - ((1 - refractiveResult.x) * RGB_atten.x)
+float local_764 = (1.0 - local_763);
+// 1 - refractiveResult.y
+float local_765 = (1.0 - local_684);
+// (1 - refractiveResult.y) * RGB_atten.y
+float local_766 = (local_765 * local_761);
+// 1 - ((1 - refractiveResult.y) * RGB_atten.y)
+float local_767 = (1.0 - local_766);
+// 1 - refractiveResult.z
+float local_768 = (1.0 - local_717);
+// (1 - refractiveResult.z) * RGB_atten.z
+float local_769 = (local_768 * local_762);
+// 1 - ((1 - refractiveResult.z) * RGB_atten.z)
+float local_770 = (1.0 - local_769);
+// refractiveRGBattenResult
+// x : 1 - ((1 - refractiveResult.x) * RGB_atten.x)
+// y : 1 - ((1 - refractiveResult.y) * RGB_atten.y)
+// z : 1 - ((1 - refractiveResult.z) * RGB_atten.z)
+vec3 local_771 = vec3(local_764, local_767, local_770);
+float local_772 = film_intensity.x;
+float local_773 = film_intensity.y;
+float local_774 = film_intensity.z;
+vec3 local_775 = vec3(local_772, local_772, local_772);
+// lerp(grayRefractiveResult.xyz, refractiveRGBattenResult.xyz, film_intensity.x)
+vec3 local_776 = mix(local_757, local_771, local_775);
+// lerp(grayRefractiveResult.xyz, refractiveRGBattenResult.xyz, film_intensity.x) * film_intensity.y
+vec3 local_777 = (local_776 * local_773);
+// pow(NoH_01, filmGloss)
+float local_778 = pow(local_564, filmGloss);
+// saturate(pow(NoH_01, filmGloss))
+float local_779 = clamp(local_778, 0.0, 1.0);
+// saturate(pow(NoH_01, filmGloss)) *  film_intensity.z
+float local_780 = (local_779 * local_774);
+// saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0
+float local_781 = (local_780 * local_11);
+// lerp(grayRefractiveResult.xyz, refractiveRGBattenResult.xyz, film_intensity.x) * film_intensity.y
+(local_645 = local_777);
+// saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0
+(local_646 = local_781);
+float local_784;
+float local_785;
+float local_786 = filmMR.x;
+float local_787 = filmMR.y;
+float local_788 = filmMR.z;
+float local_789 = filmMR.w;
+// filmMR.y * (saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0)
+float local_790 = (local_646 * local_787);
+float local_792 = film_intensity.z;
+// (filmMR.y * (saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0)) / film_intensity.z
+// 化简为: filmMR.y * saturate(pow(NoH_01, filmGloss))
+float local_793 = (local_790 / local_792);
+// 新金属度Result = lerp(金属度_01, filmMR.x, local_793)
+float local_794 = mix(local_257, local_786, local_793);
+// (saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0) * filmMR.w
+float local_795 = (local_646 * local_789);
+// (saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0) * filmMR.w / film_intensity.z
+float local_796 = (local_795 / local_792);
+// 新粗糙度Result = lerp(贴图粗糙度01, filmMR.z, (saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0) * filmMR.w / film_intensity.z)
+float local_797 = mix(local_258, local_788, local_796);
+// 新金属度Result
+(local_784 = local_794);
+// 新粗糙度Result
+(local_785 = local_797);
+// 1 - 金属度Result
+float local_798 = (1.0 - local_784);
+// Diffuse贴图
+vec3 local_799 = local_420.xyz;
+// Diffuse贴图 G2L
+vec3 local_801 = (local_799 * local_799);
+// Diffuse贴图 
+vec3 local_802 = (local_801 * diffuse_intensity);
+vec3 local_803 = vec3(local_646, local_646, local_646);
+// albedo = lerp( Diffuse贴图 , lerp(grayRefractiveResult.xyz, refractiveRGBattenResult.xyz, film_intensity.x) * film_intensity.y, saturate(pow(NoH_01, filmGloss)) *  film_intensity.z * 1.0);
+vec3 local_804 = mix(local_802, local_645, local_803);
+// diffuseColor = ComputeDiffuseColor(albedo, metallic)
+vec3 local_805 = (local_798 * local_804);
+vec3 local_806;
+vec3 local_826 = vec3(0.0, 0.0, 0.0);
+(local_806 = local_826);
+vec3 local_827;
+// lerp(1.0, AO, VoN_01)
+float local_829 = mix(1.0, local_44, local_416);
+// 0.5 - AO
+float local_832 = (0.5 - local_44);
+// saturate(0.5 - AO)
+float local_833 = clamp(local_832, 0.0, 1.0);
+// 2.0 * saturate(0.5 - AO)
+float local_834 = (2.0 * local_833);
+// ( 2.0 * saturate(0.5 - AO)) * AO_slider
+float local_835 = (local_834 * AO_slider);
+// lerp(lerp(1.0, AO, VoN_01), AO, ( 2.0 * saturate(0.5 - AO)) * AO_slider)
+float local_836 = mix(local_829, local_44, local_835);
+// Final AO
+vec3 local_837 = vec3(local_836, local_836, local_836);
+// Final AO
+(local_827 = local_837);
+float local_840 = local_420.x;
+float local_841 = local_420.y;
+float local_842 = local_420.z;
+float local_844 = max(local_840, local_841);
+// max(Diffuse.r, max(Diffuse.g, Diffuse.b))
+float local_845 = max(local_844, local_842);
+// max(Diffuse.r, max(Diffuse.g, Diffuse.b)) - 0.39
+float local_847 = (local_845 - 0.38999999);
+vec3 local_848 = vec3(local_847, local_847, local_847);
+vec3 local_850 = vec3(0.1, 0.1, 0.1);
+// max(0.1, max(Diffuse.r, max(Diffuse.g, Diffuse.b)) - 0.39)
+vec3 local_851 = max(local_848, local_850);
+// Diffuse贴图(Gamma) - max(0.1, max(Diffuse(Gamma).r, max(Diffuse(Gamma).g, Diffuse(Gamma).b)) - 0.39)
+vec3 local_852 = (local_799 - local_851);
+// saturate(Diffuse贴图(Gamma) - max(0.1, max(Diffuse(Gamma).r, max(Diffuse(Gamma).g, Diffuse(Gamma).b)) - 0.39))
+vec3 local_853 = clamp(local_852, 0.0, 1.0);
+vec3 local_854;
+// Final AO
+(local_854 = local_827);
+vec3 local_857;
+vec3 local_858;
+// 0.0 - NoL
+float local_860 = (0.0 - local_418);
+// saturate(-NoL)
+float local_861 = clamp(local_860, 0.0, 1.0);
+// NoL_01
+float local_863 = clamp(local_418, 0.0, 1.0);
+// lerp(NoL_01, saturate(-NoL), 0.61)
+float local_865 = mix(local_863, local_861, 0.61000001);
+// 1.0 - lerp(NoL_01, saturate(-NoL), 0.61)
+float local_866 = (1.0 - local_865);
+float local_868 = -0.47;
+// (1.0 - lerp(NoL_01, saturate(-NoL), 0.61)) -0.47
+float local_869 = (local_868 + local_866);
+float local_870 = -0.47;
+float local_871 = (local_870 + 1.0);
+// GreenWrap_Simple(1.0 - lerp(NoL_01, saturate(-NoL), 0.61), -0.47);
+float local_872 = (local_869 / local_871);
+// NoL_01 + NoL_01
+float local_874 = (local_555 + local_513);
+// NoL_01
+float local_876 = (local_874 / 2.0);
+// smoothstep(0.51, 0.0, NoL_01);
+float local_877 = smoothstep(0.50999999, 0.0, local_876);
+// GreenWrap_Simple(1.0 - lerp(NoL_01, saturate(-NoL), 0.61), -0.47);
+float local_878 = clamp(local_872, 0.0, 1.0);
+float local_879 = (local_878 * local_877);
+// GreenWrap_Simple(1.0 - lerp(NoL_01, saturate(-NoL), 0.61), -0.47) * smoothstep(0.50999999, 0.0, local_876) * SSS_01
+float local_880 = (local_879 * local_259);
+float local_881 = (local_880 * sss_factor);
+// sssNoL_01_wrap * SSS_01 * smoothSSS * sss_factor * sssColor
+vec3 local_882 = (local_881 * local_853);
+vec3 local_884 = (local_882 * 2.3499999);
+vec3 local_886 = (local_884 * 0.30000001);
+// 2.0 -  VoN_01
+float local_887 = (2.0 - local_416);
+// (2.0 - VoN_01) * sssColor
+vec3 local_888 = (local_887 * local_853);
+// (2.0 - VoN_01) * sssColor * SSS_01
+vec3 local_889 = (local_888 * local_259);
+// (2.0 - VoN_01) * sssColor * SSS_01 * sss_factor
+vec3 local_890 = (local_889 * sss_factor);
+(local_857 = local_886);
+// (2.0 - VoN_01) * sssColor * SSS_01 * sss_factor
+(local_858 = local_890);
+vec3 local_894;
+vec3 local_895;
+vec3 local_898 = (-local_38);
+vec3 local_899 = reflect(local_898, local_42);
+(local_895 = local_899);
+(local_894 = local_895);
+mat3 local_902 = mat3(view_mat);
+// normalVS
+vec3 local_903 = (local_902 * local_42);
+float local_904 = local_903.x;
+float local_905 = local_903.y;
+float local_906 = local_903.z;
+float local_907 = (-local_906);
+vec3 local_908 = vec3(local_904, local_905, local_907);
+vec3 local_909;
+{
+vec4 local_912 = vec4(local_908.x, local_908.y, local_908.z, 1.0);
+vec4 local_913 = (envSHR * local_912);
+float local_914 = dot(local_912, local_913);
+vec4 local_915 = (envSHG * local_912);
+float local_916 = dot(local_912, local_915);
+vec4 local_917 = (envSHB * local_912);
+float local_918 = dot(local_912, local_917);
+vec3 local_919 = vec3(local_914, local_916, local_918);
+// SH
+(local_909 = local_919);
+}
+vec3 local_921 = env_shadow_factor.xyz;
+vec3 local_923 = vec3(1.0, 1.0, 1.0);
+// NoL_01
+vec3 local_924 = vec3(local_556, local_556, local_556);
+// lerp(env_shadow_factor.xyz, 1.0, NoL_01)
+vec3 local_925 = mix(local_921, local_923, local_924);
+// NoL_01
+vec3 local_926 = vec3(local_556, local_556, local_556);
+vec3 local_927 = (local_926 + local_857);
+vec3 local_928 = (local_927 * local_368);
+vec3 local_929 = (local_925 * local_909);
+vec3 local_930 = (local_909 * local_858);
+vec3 local_931 = (local_929 + local_930);
+vec3 local_932 = (local_931 * envir_brightness);
+vec3 local_933 = (local_928 + local_932);
+vec3 local_934 = (local_805 * local_933);
+vec3 local_935 = (local_934 + local_806);
+vec3 local_937 = vec3(0.039999999, 0.039999999, 0.039999999);
+// 1 - 金属度
+vec3 local_938 = vec3(local_798, local_798, local_798);
+// f0 = lerp( 0.4, 1 - 金属度)
+vec3 local_939 = mix(local_804, local_937, local_938);
+float local_940 = mix(min_ggx_roughness, max_ggx_roughness, local_785);
+vec3 local_941;
+{
+float local_944 = (1.0 - local_412);
+float local_946;
+{
+float local_949 = 7.2134752;
+float local_951 = (local_949 + 1.0892349);
+float local_952 = (local_951 * local_944);
+float local_953 = (local_952 - local_951);
+float local_954 = exp2(local_953);
+(local_946 = local_954);
+}
+vec3 local_956 = vec3(1.0, 1.0, 1.0);
+vec3 local_957 = (local_956 - local_939);
+vec3 local_958 = (local_957 * local_946);
+vec3 local_959 = (local_939 + local_958);
+(local_941 = local_959);
+}
+float local_961;
+{
+float local_963 = (local_940 * local_940);
+float local_964 = (local_963 * local_963);
+float local_965 = (local_564 * local_964);
+float local_966 = (local_965 - local_564);
+float local_967 = (local_966 * local_564);
+float local_969 = (local_967 + 1.0);
+float local_970 = (local_969 * local_969);
+float local_971 = (local_964 / local_970);
+float local_973 = min(local_971, 10000.0);
+(local_961 = local_973);
+}
+float local_975;
+{
+float local_978 = (0.5 * local_940);
+float local_979 = (0.5 + local_978);
+float local_980 = (0.5 * local_940);
+float local_981 = (0.5 + local_980);
+float local_982 = (local_979 * local_981);
+float local_984 = (1.0 - local_982);
+float local_985 = (local_416 * local_984);
+float local_986 = (local_985 + local_982);
+float local_987 = (1.0 - local_982);
+float local_988 = (local_513 * local_987);
+float local_989 = (local_988 + local_982);
+float local_991 = (local_986 * local_989);
+float local_992 = (0.25 / local_991);
+(local_975 = local_992);
+}
+vec3 local_994 = (local_961 * local_941);
+vec3 local_995 = (local_994 * local_975);
+vec3 local_996 = (local_995 * local_513);
+vec3 local_997;
+float local_998;
+(local_997 = local_996);
+(local_998 = local_998);
+vec3 local_1078;
+vec3 local_1079;
+{
+float local_1082 = (local_785 / 0.14);
+float local_1087 = local_894.z;
+float local_1088 = local_894.x;
+float local_1089 = local_894.y;
+float local_1091 = atan(local_1087, local_1088);
+float local_1092 = (local_1091 + 3.141593);
+float local_1093 = (local_1092 * 0.15915491);
+float local_1094 = acos(local_1089);
+float local_1095 = (local_1094 * 0.3183099);
+vec2 local_1096 = vec2(local_1093, local_1095);
+vec4 local_1097 = textureLod(sam_other2_3, local_1096, local_1082);
+vec3 local_1098 = local_1097.xyz;
+float local_1099 = local_1097.w;
+vec3 local_1100 = (local_1098 * local_1099);
+vec3 local_1101 = (local_1100 * max_brightness);
+(local_1079 = local_1101);
+}
+vec3 local_1103;
+{
+float local_1106 = -1.0;
+float local_1108 = -0.0275;
+float local_1110 = -0.57200003;
+vec4 local_1112 = vec4(local_1106, local_1108, local_1110, 0.022);
+float local_1116 = -0.039999999;
+vec4 local_1117 = vec4(1.0, 0.0425, 1.04, local_1116);
+vec4 local_1118 = (local_940 * local_1112);
+vec4 local_1119 = (local_1118 + local_1117);
+float local_1120 = local_1119.x;
+float local_1121 = local_1119.y;
+float local_1124 = (local_1120 * local_1120);
+float local_1126 = -9.2799997;
+float local_1127 = (local_1126 * local_416);
+float local_1128 = exp2(local_1127);
+float local_1129 = min(local_1124, local_1128);
+float local_1130 = (local_1129 * local_1120);
+float local_1131 = (local_1130 + local_1121);
+float local_1132 = -1.04;
+vec2 local_1133 = vec2(local_1132, 1.04);
+vec2 local_1134 = (local_1133 * local_1131);
+vec2 local_1136 = local_1119.zw;
+vec2 local_1137 = (local_1134 + local_1136);
+float local_1138 = local_1137.x;
+float local_1139 = local_1137.y;
+vec3 local_1140 = (local_939 * local_1138);
+vec3 local_1141 = vec3(local_1139, local_1139, local_1139);
+vec3 local_1142 = (local_1141 * envir_fresnel_brightness);
+vec3 local_1143 = (local_1140 + local_1142);
+(local_1103 = local_1143);
+}
+vec3 local_1145 = (envir_brightness * local_1103);
+vec3 local_1146 = (local_1145 * local_1079);
+vec3 local_1147 = (local_1146 * local_925);
+vec3 local_1148;
+(local_1148 = local_1147);
+(local_1078 = local_1148);
+vec3 local_1260;
+float local_1261;
+vec3 local_1270 = vec3(0.0, 0.0, 0.0);
+(local_1260 = local_1270);
+(local_1261 = 0.0);
+float local_1272 = mix(0.60000002, 1.0, local_513);
+vec3 local_1273 = (local_1078 * local_1272);
+vec3 local_1274 = (local_997 + local_1273);
+vec3 local_1275 = (local_935 + local_1274);
+vec3 local_1276 = (local_1275 * local_854);
+vec3 local_1277 = (local_1276 + local_1260);
+vec3 local_1278 = (local_1277 + local_419);
+float local_1279 = (1.0 - local_416);
+float local_1280;
+{
+float local_1283 = (rim_power * 1.442695);
+float local_1285 = (local_1283 + 1.0892349);
+float local_1286 = (local_1285 * local_1279);
+float local_1287 = (local_1286 - local_1285);
+float local_1288 = exp2(local_1287);
+(local_1280 = local_1288);
+}
+float local_1290 = smoothstep(u_rim_start, u_rim_end, local_1280);
+vec3 local_1291 = rim_color.xyz;
+vec3 local_1293 = (local_1290 * local_1291);
+vec3 local_1294 = (local_1293 * rim_multi);
+vec3 local_1295 = adjust_inner.xyz;
+vec3 local_1297 = (local_1278 * local_1295);
+vec3 local_1298 = (local_1297 + local_1294);
+float local_1299 = (local_1279 + inner_alpha);
+vec3 local_1300 = (local_1298 + force_pixel_color);
+vec3 local_1301;
+(local_1301 = local_1300);
+vec3 local_1303 = vec3(0.18700001, 0.18700001, 0.18700001);
+vec3 local_1304 = (local_1301 + local_1303);
+vec3 local_1305 = (local_1301 / local_1304);
+vec3 local_1307 = (local_1305 * 1.035);
+float local_1308 = (local_1299 * 1.0);
+float local_1309 = (local_1308 * AlphaMtl);
+vec4 local_1310 = vec4(local_1307.x, local_1307.y, local_1307.z, local_1309);
+float local_1311;
+{
+vec3 local_1316 = vec3(0.30000001, 0.58999997, 0.11);
+float local_1317 = dot(local_1274, local_1316);
+(local_1311 = local_1317);
+}
+vec3 local_1319 = sqrt(local_1301);
+vec3 local_1321 = vec3(1.5, 1.5, 1.5);
+vec3 local_1322 = (local_1319 / local_1321);
+float local_1323 = (local_784 + bloom_range);
+float local_1324 = clamp(local_1323, 0.0, 1.0);
+float local_1325 = (local_1311 * local_1324);
+float local_1326 = (local_1325 * illum_multi);
+float local_1327 = (local_1261 * emissive_bloom);
+float local_1328 = (local_1326 + local_1327);
+vec4 local_1329 = vec4(local_1322.x, local_1322.y, local_1322.z, local_1328);
+vec4 local_1330 = vec4(u_tonemapping_factor, u_tonemapping_factor, u_tonemapping_factor, u_tonemapping_factor);
+vec4 local_1331 = mix(local_1329, local_1310, local_1330);
+vec4 local_1332;
+(local_1332 = local_1331);
+vec4 local_1335;
+(local_1335 = local_1332);
+vec4 local_1338;
+(local_1338 = local_1335);
+vec4 local_1341;
+(local_1341 = local_1338);
+(gFragColor = local_1341);
+}

@@ -1,0 +1,38 @@
+#version 330
+out vec4 webgl_FragColor;
+uniform sampler2D sam_diffuse_0;
+uniform sampler2D sam_other0_1;
+uniform sampler2D sam_other1_2;
+in vec2 v_texture0;
+void main(){
+float sam_diffuse_0_bias = 0.0;
+float sam_other0_1_bias = 0.0;
+float sam_other1_2_bias = 0.0;
+// 人物颜色
+vec4 local_0 = texture(sam_diffuse_0, v_texture0, sam_diffuse_0_bias);
+vec3 local_1 = local_0.xyz;
+// Bloom
+vec4 local_3 = texture(sam_other0_1, v_texture0, sam_other0_1_bias);
+vec3 local_4 = local_3.xyz;
+vec3 local_6 = (local_4 * local_4);
+vec3 local_7 = (local_1 * local_1);
+vec3 local_9 = (local_7 * 1.5);
+vec3 local_10 = (local_9 * 1.5);
+vec3 local_11 = (local_10 + local_6);
+vec3 local_12;
+{
+vec3 local_15 = vec3(0.18700001, 0.18700001, 0.18700001);
+vec3 local_16 = (local_11 + local_15);
+vec3 local_17 = (local_11 / local_16);
+vec3 local_19 = (local_17 * 1.035);
+(local_12 = local_19);
+}
+// 场景颜色
+vec4 local_21 = texture(sam_other1_2, v_texture0, sam_other1_2_bias);
+vec3 local_22 = local_21.xyz;
+float local_23 = local_21.w;
+vec3 local_24 = (local_12 * local_23);
+vec3 local_25 = (local_24 + local_22);
+vec4 local_27 = vec4(local_25.x, local_25.y, local_25.z, 1.0);
+(webgl_FragColor = local_27);
+}

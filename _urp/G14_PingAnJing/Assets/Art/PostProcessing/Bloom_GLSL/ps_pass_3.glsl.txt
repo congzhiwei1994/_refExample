@@ -1,0 +1,35 @@
+#version 330
+out vec4 webgl_FragColor;
+uniform sampler2D sam_diffuse_0;
+in vec4 v_texture0;
+in vec4 v_texture1;
+in vec4 v_texture2;
+in vec4 v_texture3;
+void main(){
+float sam_diffuse_0_bias = 0.0;
+vec2 local_0 = v_texture0.xy;
+vec2 local_1 = v_texture0.zw;
+vec4 local_2 = texture(sam_diffuse_0, local_0, sam_diffuse_0_bias);
+vec4 local_3 = texture(sam_diffuse_0, local_1, sam_diffuse_0_bias);
+vec2 local_4 = v_texture1.xy;
+vec2 local_5 = v_texture1.zw;
+vec4 local_6 = texture(sam_diffuse_0, local_4, sam_diffuse_0_bias);
+vec4 local_7 = texture(sam_diffuse_0, local_5, sam_diffuse_0_bias);
+vec2 local_8 = v_texture2.xy;
+vec2 local_9 = v_texture2.zw;
+vec4 local_10 = texture(sam_diffuse_0, local_8, sam_diffuse_0_bias);
+vec4 local_11 = texture(sam_diffuse_0, local_9, sam_diffuse_0_bias);
+vec2 local_12 = v_texture3.xy;
+vec2 local_13 = v_texture3.zw;
+vec4 local_14 = texture(sam_diffuse_0, local_12, sam_diffuse_0_bias);
+vec4 local_15 = texture(sam_diffuse_0, local_13, sam_diffuse_0_bias);
+vec4 local_16 = (local_2 + local_3);
+vec4 local_17 = (local_16 + local_6);
+vec4 local_18 = (local_17 + local_7);
+vec4 local_19 = (local_18 + local_10);
+vec4 local_20 = (local_19 + local_11);
+vec4 local_21 = (local_20 + local_14);
+vec4 local_22 = (local_21 + local_15);
+vec4 local_24 = (local_22 * 0.125);
+(webgl_FragColor = local_24);
+}
