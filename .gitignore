@@ -104,3 +104,6 @@
 /_urp/Lux URP Essentials_1.6/UnityEngine.TestRunner.csproj
 /_urp/Lux URP Essentials_1.6/Library
 /_urp/Lux URP Essentials_1.6/Logs
+_urp/Lux URP Essentials_1.6/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+_urp/Lux URP Essentials_1.6/obj/Debug/Unity.RenderPipelines.Core.Runtime.csproj.AssemblyReference.cache
+_urp/Lux URP Essentials_1.6/obj/Debug/UnityEngine.TestRunner.csproj.AssemblyReference.cache
