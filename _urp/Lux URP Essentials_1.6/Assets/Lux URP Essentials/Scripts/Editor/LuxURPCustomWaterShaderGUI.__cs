@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using UnityEditor;
+ 
+public class LuxURPCustomWaterShaderGUI : ShaderGUI
+{
+    public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
+    {
+        base.OnGUI(materialEditor, properties);
+
+    	Material material = materialEditor.target as Material;
+
+        MaterialProperty _EnableRefraction = ShaderGUI.FindProperty("_EnableRefraction", properties);
+        if (_EnableRefraction.floatValue == 1.0f) {
+            material.SetFloat("_DstBlend", 0.0f);
+        }
+        else {
+            material.SetFloat("_DstBlend", 10.0f);
+        }
+
+	//  Needed to make the Selection Outline work
+        if (material.HasProperty("_MainTex") && material.HasProperty("_BaseMap") ) {
+            if (material.GetTexture("_BaseMap") != null) {
+                material.SetTexture("_MainTex", material.GetTexture("_BaseMap"));
+            }
+        }
+    }
+}

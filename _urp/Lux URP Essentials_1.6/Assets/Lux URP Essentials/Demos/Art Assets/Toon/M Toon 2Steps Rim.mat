@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Toon 2Steps Rim
+  m_Shader: {fileID: -6465566751694194690, guid: b4ca407065ebd29428dcf026ebad5e6e,
+    type: 3}
+  m_ShaderKeywords: RIM_ON SPECULAR_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientMap:
+        m_Texture: {fileID: 2800000, guid: e590b840c1ddb5340b2f4c033ed092b4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LuxURPToonLighting_56B90218_Texture2D1C70DCC_2061595112:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadedBaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - BOOLEAN_92B40F44: 0
+    - Boolean_DE9402CD: 0
+    - GRADIENT: 0
+    - SMOOTHGRADIENT: 0
+    - SMOOTHGRADIENT_ON: 0
+    - _AddLightFallOff: 1
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ColorizedShadowsAdd: 0
+    - _ColorizedShadowsAddA: 1
+    - _ColorizedShadowsMain: 0
+    - _ColorizedShadowsMainA: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DiffuseFallOff: 0.01
+    - _DiffuseStep: 0.114
+    - _DstBlend: 0
+    - _EnableNormalMap: 0
+    - _EnableRim: 1
+    - _EnableSpecular: 1
+    - _EnableToonRim: 1
+    - _EnergyConservation: 0
+    - _EnvironmentReflections: 1
+    - _FoldAdvancedSurfaceInputs: 0
+    - _FoldSurfaceInputs: 0
+    - _FoldSurfaceOptions: 0
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _LightColorContribution: 1
+    - _Metallic: 0
+    - _Occlusion: 1
+    - _OcclusionStrength: 1
+    - _QueueOffset: 0
+    - _RECEIVE_SHADOWS: 0
+    - _ReceiveShadows: 1
+    - _RimAttenuation: 1
+    - _RimFallOff: 0.431
+    - _RimPower: 0.528
+    - _ShadowBiasAdditional: 0
+    - _ShadowBiasDirectional: 0
+    - _ShadowFallOff: 1
+    - _ShadowiasAdditional: 0
+    - _ShadowiasDirectional: 0
+    - _Smoothness: 0.476
+    - _SmoothnessTextureChannel: 0
+    - _SpecularFallOff: 0.01
+    - _SpecularHighlights: 1
+    - _SpecularStep: 0.4597
+    - _SrcBlend: 1
+    - _Steps: 2
+    - _Surface: 0
+    - _ToonRimAttenuation: 1
+    - _ToonRimFallOff: 0.5
+    - _ToonRimPower: 0.228
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 0.7411765, b: 0.27830186, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadedBaseColor: {r: 1, g: 0.5228405, b: 0.27843142, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _ToonRimColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
+--- !u!114 &1292651858282865764
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2

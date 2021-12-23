@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Lux LWRP Water River
+  m_Shader: {fileID: 4800000, guid: e202ee41c4a1646b89485f5daa21b886, type: 3}
+  m_ShaderKeywords: _FOAM _REFRACTION
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 70f62fb78fa384fb19b39a2af0084dc4, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: fc7df81110c0e4d2498739bf4d47a49d, type: 3}
+        m_Scale: {x: 0.25, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamMap:
+        m_Texture: {fileID: 2800000, guid: 67b60641204024dcfa5b302dc1c0c287, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a5c17b52284ad7842b5a0deaa9438cc4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 1
+    - _BumpScale: 1
+    - _Culling: 0
+    - _Density: 4.2
+    - _DstBlend: 10
+    - _EdgeBlend: 3
+    - _EnableRefraction: 1
+    - _EnvironmentReflections: 1
+    - _Foam: 1
+    - _FoamScale: 12
+    - _FoamSlopStrength: 0.554
+    - _FoamSmoothness: 0.26
+    - _FoamSoftIntersectionFactor: 1.16
+    - _FoamTiling: 6
+    - _FoanScale: 12.97
+    - _FresnelPower: 5
+    - _GlossyReflection: 1
+    - _GlossyReflections: 1
+    - _Help: 1
+    - _OrthoSpport: 0
+    - _ReceiveShadows: 1
+    - _ReflectionBumpScale: 0.3
+    - _Refraction: 0.3
+    - _Shadows: 0
+    - _Smoothness: 0.9
+    - _SpecularHighlights: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.46226418, g: 0.34839088, b: 0.28564438, a: 1}
+    - _FoamSpeed: {r: 0, g: 0.06, b: 0, a: 0}
+    - _SecondaryTilingSpeed: {r: 2, g: 2.3, b: 0, a: 0}
+    - _SecondaryTilingSpeedRefractBump: {r: 2, g: 2.3, b: 0.1, a: 1}
+    - _SpecColor: {r: 0.322, g: 0.322, b: 0.322, a: 1}
+    - _Speed: {r: 0, g: 0.15, b: 0, a: 0}

@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Unity Chan SG V2
+  m_Shader: {fileID: -6465566751694194690, guid: b4ca407065ebd29428dcf026ebad5e6e,
+    type: 3}
+  m_ShaderKeywords: NORMAL_ON RIM_ON _COLORIZEMAIN _ENERGYCONSERVATION_ON _ENVIRONMENTREFLECTIONS_OFF
+    _RAMP_OFF _TEXMODE_TWO _TOONRIM
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_4FDD4A95:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 1a2f3c8b88cfe4b278e494859bf99a74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b3e10cd2f66c14e4caacd7fd3f8ed7c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadedBaseMap:
+        m_Texture: {fileID: 2800000, guid: 9df1c8590f4e44ffb9f9300ca3ffd55a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - GRADIENT: 1
+    - SMOOTHGRADIENT: 1
+    - Vector1_4A2D6C7C: 0
+    - _AddLightFallOff: 1
+    - _AlphaClip: 0
+    - _AlphaFromMaskMap: 1
+    - _ApplyNormal: 0
+    - _Border: 6
+    - _BumpScale: 1
+    - _ColorizedShadowsAdd: 1
+    - _ColorizedShadowsAddA: 1
+    - _ColorizedShadowsMain: 1
+    - _ColorizedShadowsMainA: 1
+    - _CompensateScale: 0
+    - _Coverage: 0
+    - _Cull: 2
+    - _CullOutline: 1
+    - _Culling: 0
+    - _Cutoff: 0.5
+    - _DiffuseFallOff: 0
+    - _DiffuseStep: -0.27
+    - _EnableMaskMap: 0
+    - _EnableNormalMap: 1
+    - _EnableRamp: 0
+    - _EnableSpecular: 0
+    - _EnableToonRim: 1
+    - _EnergyConservation: 0
+    - _EnvironmentReflections: 0
+    - _Help: 0
+    - _LightColorContribution: 1
+    - _Occlusion: 1
+    - _OcclusionStrength: 1
+    - _OutlineInScreenSpace: 0
+    - _QueueOffset: 0
+    - _Ramp: 0
+    - _RampSmoothSampling: 0
+    - _ReadMask: 255
+    - _ReceiveShadows: 1
+    - _Rim: 0
+    - _RimAttenuation: 1
+    - _RimFallOff: 0.1
+    - _RimFrequency: 0
+    - _RimMinPower: 1
+    - _RimPerPositionFrequency: 1
+    - _RimPower: 0.8
+    - _ShadoBiasDirectional: 0
+    - _ShadowBiasAdditional: 0.1
+    - _ShadowBiasDirectional: 0.1
+    - _ShadowFallOff: 0.5
+    - _ShadowOffset: 1
+    - _Smoothness: 0
+    - _SpecularFallOff: 0.01
+    - _SpecularHighlights: 1
+    - _SpecularStep: 0.45
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilFail: 0
+    - _StencilOp: 0
+    - _StencilZFail: 0
+    - _Steps: 2
+    - _TexMode: 2
+    - _ToonRimAttenuation: 1
+    - _ToonRimFallOff: 0.1
+    - _ToonRimPower: 0.8
+    - _WriteMask: 255
+    - _ZTestOutline: 4
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadedBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Specular: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _ToonRimColor: {r: 1, g: 1, b: 1, a: 1}

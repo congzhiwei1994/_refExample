@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Sphere Billboard
+  m_Shader: {fileID: 4800000, guid: 33846375b5c688f4aad06f0d93c0bcce, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _APPLYFOG _APPLYFOG_ON _NORMALMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 4d716fd857b5244969693657cd7bb21e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 8d3535de072f749be90edc001c2e2e70, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClip: 0
+    - _ApplyFog: 1
+    - _ApplyNormal: 1
+    - _Blend: 0
+    - _Border: 3
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _Metallic: 0
+    - _OcclusionStrength: 1.75
+    - _Pivot: 0
+    - _Priority: 0
+    - _QueueOffset: 0
+    - _ReadMask: 255
+    - _ShadowOffset: 1.3
+    - _Shadows: 0
+    - _Shrink: 1
+    - _Smoothness: 0.5
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StencilCompare: 6
+    - _StencilRef: 0
+    - _Surface: 0
+    - _Upright: 0
+    - _ZTest: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 0.22455531, g: 0.22455531, b: 0.22455531, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

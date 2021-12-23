@@ -1,0 +1,496 @@
+## Link to the latest version of the documentation:
+https://docs.google.com/document/d/1ck3hmPzKUdewHfwsvmPYwSPCP8azwtpzN7aOLJHvMq
+
+## Version 1.6
+
+### Added:
+- Toon Lighting Version 2: Support form multiple steps, custom ramps and gradients.
+
+
+## Version 1.51
+
+### Added:
+- Skin Lighting: Lets you choose between vertex normal and specular normal for the diffuse if diffuse normal sample is disabled.
+
+
+## Version 1.5
+
+### Added:
+- Decals: HQ sampling added to avoid artifacts at depth discontinuities.
+- Skin: Ambient back scattering added.
+- URP 10.2. preview package added which supports SSAO and Shadowmasks.
+
+
+## Version 1.471
+
+### Fixed:
+- Decals fixed for PS4/PS5.
+
+
+## Version 1.47
+
+### Added:
+- Skin shading node for Shader Graph added.
+- Skin shading: Support for curvature texture added.
+
+### Changed:
+- Lux URP Skin shader: Ambient Reflection Strength exposed. Ambient diffuse lighting now uses proper diffuse normal.
+- Lux URP Skin shader: Lowered default import size of the LUT to 64px.
+
+
+## Version 1.461
+
+### Fixed:
+- Lux URP Grass TextureDisplace shader
+
+
+## Version 1.46
+
+### Fixed:
+- Lux extended/extended Uber: Fixed viewDir construction in pixelshader
+- Lux extended GUI: Fixed material settings being applied delayed
+- Lux extended Uber GUI: Fixed transparent material settings if alpha testing is enabled
+- Lux skin shader: Turning off specular lighting now works properly
+- Lux hair shader: Specular shift now works even if no shift mask is assigned
+- Versatile blend shader: Fixed "shadow shift" from going crazy in case the sampled scene depth is not close to the mesh
+
+###  Changed:
+- Lux extended Uber GUI: Removed old style render queue offsets (+50). You may have to adjust the render queues of your materials!
+
+### Addded:
+- Skin, transmission and foliage shader: "Mask by incoming shadow strength": Lets you suppress transmission from point lights (which do not cast any shadows)
+
+
+## Version 1.451
+
+### Fixed:
+- Skin shader
+
+## Version 1.45
+
+### Changed:
+- Shader Graph based shaders: Now listed under "Lux URP/Shader Graphs/..."
+- HLSL shaders: Bitangent gets calculated in the fragment shader (according to URP 7.41)
+- Uber shader: Alpha Clipping for transparent workflow exposed in the inspector
+- Skin Shader: Base Color exposed
+
+### Added:
+- Advanced parallax subgraph
+- Camera fading subgraph
+- Uber shader: LOD cross fading added (using custom dithering instead of the built in one)
+- Uber shader: Tooltips for advanced surface inputs added
+
+## Version 1.44
+
+### Fixed:
+- Lux URP version - Fixed usage of some old keywords.
+
+## Version 1.43
+
+### Added:
+- Lux URP version - Skin shader: Shadow and shadow sampling bias added.
+
+## Version 1.42
+
+### Added:
+- Lux URP version: Improved Sampling Shader Graph node added.
+
+## Version 1.41
+
+### Changed:
+- Changed shadow sampling in all HLSL shaders to match URP 7.2. A package for URP 7.1.8. is included.
+- Due to the new shadow sampling the terrain blend and versatile blend shader now have new inputs and work differently when it comes to shadows.
+- Added dirty fix to the terrain shader to receive shadows if cascades are set to: no cascades.
+
+## Version 1.40
+
+### Fixed:
+- Fixed false input struct IN in billboard and grass shader.
+- Foliage Demo: Fixed culling of solid grass material and set it to off.
+- Volumetrics Demo: Fixed glass material.
+
+### Added:
+- Lux URP version: Started to add help links for the HLSL shaders (located at the top of the material inspector).
+
+## Version 1.39
+
+### Changed:
+- Lux URP version: Started to wipe out the old "LWRP" naming of shaders, passes, ... . I updated the included demo materials but yours might miss their shaders. Sorry for the inconvenience.
+
+### Added:
+- Lux URP version: Versatile Blend Shader added (experimental - looking for feedback).
+
+### Notes:
+- Lux LWRP version will be locked to version 1.38 - unless somebody stands up.
+
+## Version 1.38
+
+### Changed:
+- URP package: Switched to URP 7.1.8
+- URP grass displacement: Added some more displacement inputs.
+
+### Fixed:
+- Foliage and grass shader: LuxLWRPDistanceFadeDrawer script fixed. You have adjust your fade distance!
+- URP package: Ported optional alpha testing to the foliage and grass shader.
+
+### Added:
+- Grass shader: Option to sample main bending from vertex color alpha added - which lets you use models e.g. from Naturemanufacturer.
+- Grass shader: Culling exposed.
+
+## Version 1.37
+
+### Changed:
+- URP package: Switched to Unity 2019.3.0f5 and URP 7.1.7
+- Hair shaders: Rim Transmission Intensity now accepts values between 0 - 8.
+
+### Fixed:
+- Hair shader: Depth pass picks up culling settings.
+- Hair shader: Specular shift fixed.
+- Hair blend shader: Shadows fixed.
+
+### Added:
+- Hair shader: Allows you to setup culling for the shadow caster pass.
+
+## Version 1.36
+
+### Changed:
+- Terrain blend shader: Now properly handles different near clipping planes so the preview in the scene view should match what you get in the game view. 
+- Box volume and decal shaders: Slightly optimized.
+- Decal shaders: Support for single pass instanced backported to LWRP.
+
+### Fixed:
+- Fixed some materials in the volumetrics demo.
+
+## Version 1.35
+
+### Added:
+- Terrain shader: Support for stochastic procedural texturing on the first terrain layer added.
+
+## Version 1.34
+
+### Added:
+- Lux Lit Uber shader: Camera Fade added to fade out objects towards the camera.
+
+### Fixed:
+- Lux Lit Uber shader GUI: Missing _MainTex assignment fixed.
+
+## Version 1.33
+
+### Added:
+- Toon Lighting: Directional and additional shadow bias added which lets you control the shadow strength and create Zelda like lighting.
+
+### Changed:
+- Toon Lighting: Stabilized rim lighting.
+
+## Version 1.32
+
+### Changed:
+- Lux LWRP Extended Lit Parallax shader: renamed to Uber
+
+### Added:
+- Lux LWRP Extended Lit Uber shader:
+- - Support for bent normals added.
+- - Horizon Occlusion added.
+- - Geometric Specular Anti Aliasing added.
+- - GI to AO added.
+
+## Version 1.31
+
+### Fixed:
+- Decal, Terrain shader: UnpackNormalScale wrapped properly (mobile).
+- Decal Lit shader: Normals fixed for mobile (caused by half precision).
+
+### Added:
+- Decal Lit shader: Fade between scene geometry's normal and projected decal normal.
+- Volumetric shaders added: Light beam, box and sphere volume.
+
+### Changed:
+- URP: Changed to version 7.1.6
+
+
+## Version 1.30
+
+### Added:
+- Alpha tested outline shader added.
+
+## Version 1.29
+
+### Changed:
+- Preview of the grass displacement system updated (URP only).
+
+### Fixed:
+- Decals Demo scene fixed (URP version).
+
+## Version 1.28
+
+### Fixed:
+- Cloth Shader: Fixed per pixel tangent and bitangent for very strong normals.
+- Decals Demo scene fixed (decals excluded using render queue did not use a proper material).
+- Grass Prefab: Missing script removed.
+
+### Changed:
+- Water shader: Lets you disable Refraction.
+
+### Added:
+- Preview of the grass displacement system added (URP only).
+
+## Version 1.27
+
+### Added:
+- Added "Lux LWRP/ Lit Extended Parallax" shader.
+- Added "ToggleRimSelection".cs as an example for how toggle rim lighting dynamically based on selection. Updated docs.
+
+### Changed:
+- Procedural texturing: Changed some halfs to floats.
+- Mesh Terrain shader: Changed some halfs to floats.
+
+### Fixed:
+- Fixed "M Challenger Eyes Reflect" material in the human demo which was accidently set to render double sided.
+- Fixed "M Broadleaf Shrub Math" material in the vegetation demo which did not use alpha testing.
+
+
+## Version 1.26
+
+### Changed:
+- URP: Changed to version 7.1.5
+
+### Added:
+- Fuzzy Lighting shader added.
+- Fuzzy Lighting added to Top Down Projection shader (rock).
+- Water, glass, decal shaders (URP): Added support for GLES 20.
+
+### Fixed:
+- Water and glass shaders (URP): Fixed depth sampling.
+
+## Version 1.25
+
+### Added:
+- Terrain shader (URP only): Added support for single pass instanced rendering.
+- Lit particles (URP only): Added support for single pass instanced rendering.
+
+## Version 1.24
+
+### Fixed:
+- Transmission HLSL shader: Specular fixed.
+- Water shader (URP): Fixed depth buffer sampling if camera opaque texture is set to be downsampled.
+
+## Version 1.23
+
+### Changed:
+- Hair shader: Alpha To Coverage exposed
+
+### Fixed:
+- Fixed materials in URP package
+
+## Version 1.22
+
+### Changed:
+- Hair shader: Cull exposed
+- URP: Experimental support for "single pass instanced" rendering added to the decal, water and glass shader.
+- PLEASE NOTE: Shader graph shaders do not support VR using URP at all... they are broken.
+
+### Added:
+- Hair shader: VFACE added which provides proper lighting on back faces.
+
+## Version 1.21
+
+### Fixed:
+- Terrain Mesh Shader vertex colors fixed (thanks to Zoltan Gubics). Alpha now gets setup automatically - just like in the splat map version.
+- Orthographic water and decal shaders fixed for OpenGL/GL ES.
+
+## Version 1.2
+
+### Added:
+- Orthographic support added to the decal shaders.
+
+## Version 1.19
+
+### Changed:
+- Mesh terrain shader: Moved to folder "Terrain Mesh"
+
+### Added:
+- Parallax terrain shader added.
+- Terrain blend shader added (experimental).
+
+## Version ## Version 1.18
+
+### Changed:
+- Grass and foliage shader: Made alpha testing optional. You may have to revisit your materials.1.18
+
+### Changed:
+- Grass and foliage shader: Made alpha testing optional. You may have to revisit your materials.
+
+## Version 1.17
+
+### Added:
+- Flat shading HLSL shader and node added.
+
+## Version 1.16
+
+### Added:
+- Procedural stochastic and procedural sampling node for shader graph added.
+
+## Version 1.15
+
+### Added:
+- Package containing tweaked shaders for URP 7.1.2.
+
+### Fixed:
+- Alebdo meta pass for Clear Coat shadergraph fixed.
+
+## Version 1.14
+
+### Added:
+- Added single pass stereo support for shaders using the camera depth and opaque texture.
+- Tree Creator shaders added.
+
+## Version 1.13
+
+### Added:
+- Glass shader: Proper shadows added for directional lights. No depth write only object needed anymore.
+- Custom node for Shader Graph added: Transparent lighting.
+
+### Changed
+
+- Documentation of how to setup complex glass materials. Please visit it again.
+
+## Version 1.121
+
+### Added
+- Toon outline shader: Added option to scale outline width by object size.
+
+## Version 1.12
+
+### Added
+- Custom nodes for Shader Graph added:
+
+- - Charlie Sheen, GGX anisotropic and clear coat lighting added.
+- - Helper nodes added: Double sided normalTS and Metallic Albedo to Specular Albedo.
+
+### Fixed
+- Custom Transmission Lighting node: Occlusion fixed.
+- Clear Coat Lighting: Wrong NdotL for clear coat layer fixed.
+
+
+## Version 1.11
+
+### Added
+- Custom nodes for Shader Graph added: Toon lighting and transmission.
+
+## Version 1.1
+
+### Added
+- Lit particles shaders added. 
+
+## Version 1.09
+
+### Added
+- Glass shader added. 
+
+### Fixed: 
+- Hair Shader: Mask Map label and description fixed.
+- Decal.cs: Fixed minor serialization issue.
+
+### Changed
+- Hair Blend Shader: ZTest parameter exposed.
+- Hair and beard materials: HD version added.
+
+## Version 1.08
+
+### Added
+- Transmission shader added.
+
+### Changed
+- Shader GUI reworked to better match the built in one.
+- "Subsurface scattering" renamed to "Transmission" to better fit the HDRP terminology.
+- Clear Coat BRDF optimized.
+- Shader inputs cleaned up.
+- Custom shader GUI scripts updated.
+
+### Fixed
+- Lit Extended Shader: Missing #pragma shader_feature _Emission added.
+- Skin Shader: Incorrect diffuse normal sampling on Android fixed.
+
+## Version 1.07
+
+### Added
+- Cloth shader
+- Clear Coat shader
+
+### Changed
+- Subsurface Scattering renamed to Transmission to better fit the terminology used in HDRP.
+- Transmission: Distortion exposed.
+- Custom lighting functions cleaned up.
+
+## Version 1.06
+
+### Added
+- Billboard shader
+
+## Version 1.051
+
+### Fixed
+- Hair Shader: Issues with unity 2019.2 and LWRP 6.x
+
+### Changed
+- LuxLWRPCustomSingleSidedShaderGUI: Sets _MainTex to make Selection Outline work
+
+## Version 1.05
+
+### Added
+- Hair shader
+
+### Changed
+- Outline Shader: Culling property added
+
+### Fixed
+- Skin Shader: Stencil Ref value
+
+## Version 1.04
+
+### Added
+- Skin shader
+
+## Version 1.03
+
+### Added
+- Foliage shader
+
+### Changed
+- Water shader: Lighting uses some floats instead of halfs to fix lighting issues on some platforms (like URP)
+- LuxLWRP_GrassMeshPostprocessor script: Support for foliage meshes
+
+## Version 1.021
+
+### Added
+- Decal Shaders: Distance based fading
+- Decal Shaders: HDR color input
+- Decal Lit Shader: Support for normal and mask map
+- Decal Lit Shader: Advanced lighting options
+
+### Changed
+- Decal script: Allows to align the decal to the underlying normal
+
+### Fixed
+- Water Shader: Refraction and OpenGL Core
+
+## Version 1.02
+
+### Added
+- Decal shaders and scripts
+
+### Changed
+- Stencil buffer options extended
+- Outline materials adjusted to stencil buffer options
+
+## Version 1.01
+
+### Added
+- Fast Outline Shader
+- Lit Extended Shader
+
+## Changed
+- ExtendedFlycam.cs: Added ability to lock/unlock camera hitting space
+
+## Version 1.0
+First release

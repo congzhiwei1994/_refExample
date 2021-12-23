@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M LWRP_Cloth GGX aniso Shader Graph
+  m_Shader: {fileID: -6465566751694194690, guid: 82ab1dfcc6d9a284588187f50a3751b5,
+    type: 3}
+  m_ShaderKeywords: _MASKMAP _NORMALMAP _SCATTERING
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: dc3a328010ae14f548997ee3e4748b2d, type: 3}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 3b740f9ee33844e86b20f31140811ef7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a00a24867f3f2452498b6dbf535fc961, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: a00a24867f3f2452498b6dbf535fc961, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PreIntegratedLUT:
+        m_Texture: {fileID: 2800000, guid: bdaa302cabfc948619c4f873f8e7c1cf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SSSAOMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SkinLUT:
+        m_Texture: {fileID: 2800000, guid: 3b145faea86314d09ab42116437731c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaFromMaskMap: 1
+    - _AlphaTesting: 1
+    - _Anisotropy: -0.6
+    - _ApplyMaskMap: 0
+    - _ApplyNormal: 1
+    - _ApplyNormalDiffuse: 0
+    - _Bias: 3
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Culling: 0
+    - _Curvature: 0.5
+    - _Cutoff: 0.5
+    - _Distortion: 0.01
+    - _EnableAlphaTesting: 1
+    - _EnableDistanceFade: 0
+    - _EnableMaskMap: 1
+    - _EnvironmentReflections: 1
+    - _Help: 0
+    - _Occlusion: 1
+    - _OcclusionStrength: 1
+    - _QueueOffset: 0
+    - _ReadMask: 255
+    - _ReceiveShadows: 1
+    - _Rim: 0
+    - _RimFrequency: 5
+    - _RimMinPower: 1
+    - _RimPerPositionFrequency: 1
+    - _RimPower: 2
+    - _ShadowOffset: 1
+    - _ShadowStrength: 0.8
+    - _Shadows: 0
+    - _Smoothness: 1
+    - _SpecularHighlights: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilFail: 0
+    - _StencilOp: 0
+    - _StencilZFail: 0
+    - _TranslucencyPower: 5
+    - _TranslucencyStrength: 1
+    - _TransmissionDistortion: 0.01
+    - _TransmissionPower: 7
+    - _TransmissionShadowstrength: 0.7
+    - _TransmissionStregth: 1
+    - _UseCottonWool: 0
+    - _UseScattering: 1
+    - _WriteMask: 255
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DistanceFade: {r: 2500, g: 0.001, b: 0, a: 0}
+    - _MaskMapTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _RimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SheenColor: {r: 0.4463438, g: 0.52900004, b: 0.52348965, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _Specular: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 0.003921569}
+    - _SubsurfaceColor: {r: 1, g: 0.39999998, b: 0.24999997, a: 1}
+    - _Tiling: {r: 4, g: 4, b: 0, a: 0}

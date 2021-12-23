@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Unity Chan Uncolored Attenuated Ramp Rim 2 v2 HLSL
+  m_Shader: {fileID: 4800000, guid: 589366c8d179a91428574ab8bc5cf021, type: 3}
+  m_ShaderKeywords: NORMAL_ON SMOOTHGRADIENT_ON SPECULAR_ON _COLORIZEMAIN _ENERGYCONSERVATION_ON
+    _ENVIRONMENTREFLECTIONS_OFF _NORMALMAP _RAMP_SMOOTHSAMPLING _TEXMODE_TWO _TOONRIM
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_4FDD4A95:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 1a2f3c8b88cfe4b278e494859bf99a74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b3e10cd2f66c14e4caacd7fd3f8ed7c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientMap:
+        m_Texture: {fileID: 2800000, guid: 6e76e75d5323a5e479bcf7c9abd0a5b8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadedBaseMap:
+        m_Texture: {fileID: 2800000, guid: 9df1c8590f4e44ffb9f9300ca3ffd55a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - GRADIENT: 0
+    - SMOOTHGRADIENT: 1
+    - Vector1_4A2D6C7C: 0
+    - _AddLightFallOff: 1
+    - _AlphaClip: 0
+    - _AlphaFromMaskMap: 1
+    - _ApplyNormal: 1
+    - _Border: 6
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _ColorizedShadowsAdd: 0.8
+    - _ColorizedShadowsMain: 0.8
+    - _CompensateScale: 0
+    - _Coverage: 0
+    - _Cull: 0
+    - _CullOutline: 1
+    - _Culling: 0
+    - _Cutoff: 0.5
+    - _DiffuseFallOff: 0
+    - _DiffuseStep: 0
+    - _DstBlend: 0
+    - _EnableMaskMap: 0
+    - _EnableNormalMap: 1
+    - _EnableSpecular: 1
+    - _EnableToonRim: 1
+    - _EnergyConservation: 1
+    - _EnvironmentReflections: 0
+    - _Help: 0
+    - _LightColorContribution: 1
+    - _Occlusion: 1
+    - _OcclusionStrength: 1
+    - _OutlineInScreenSpace: 0
+    - _QueueOffset: 0
+    - _Ramp: 1
+    - _ReadMask: 255
+    - _ReceiveShadows: 1
+    - _Rim: 0
+    - _RimAttenuation: 1
+    - _RimFallOff: 0.1
+    - _RimFrequency: 4.11
+    - _RimMinPower: 1
+    - _RimPerPositionFrequency: 1
+    - _RimPower: 0.8
+    - _ShadoBiasDirectional: 0
+    - _ShadowBiasAdditional: 0
+    - _ShadowBiasDirectional: 0.1
+    - _ShadowFallOff: 0.5
+    - _ShadowOffset: 1
+    - _Smoothness: 0.215
+    - _SpecularFallOff: 1
+    - _SpecularHighlights: 1
+    - _SpecularStep: 0.5
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilFail: 0
+    - _StencilOp: 0
+    - _StencilZFail: 0
+    - _Steps: 1
+    - _TexMode: 2
+    - _ToonRimAttenuation: 1
+    - _ToonRimFallOff: 0.1
+    - _ToonRimPower: 0.8
+    - _WriteMask: 255
+    - _ZTest: 4
+    - _ZTestOutline: 2
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0.7019608}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadedBaseColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+    - _SpecColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+    - _SpecColor2nd: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    - _Specular: {r: 0, g: 0, b: 0, a: 0}
+    - _ToonRimColor: {r: 1, g: 1, b: 1, a: 1}

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Box Volume 02
+  m_Shader: {fileID: 4800000, guid: 84fd88ec7fe2e4b99b6354e8c5c81727, type: 3}
+  m_ShaderKeywords: ORTHO_SUPPORT _APPLYFOG _SAMPLE_FULL3D
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3051
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 4fd23b8b2bd264f6fb48a13dec410fa4, type: 3}
+        m_Scale: {x: -1.46, y: 1.45}
+        m_Offset: {x: -2.8, y: 0.93}
+    - _Noise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlongLocalY: 0
+    - _ApplyFog: 1
+    - _DepthInfluence: 0.1
+    - _EnableGradient: 0
+    - _Lower: 0
+    - _OrthoSpport: 1
+    - _Power: 0.43
+    - _Sample: 0
+    - _Samples: 8
+    - _ScaleRay: 0
+    - _SimpleCompare: 0
+    - _SoftEdge: 2
+    - _Soften: 1
+    - _Strength: 0.5
+    - _Tiling: 1
+    - _Upper: 1
+    - _ZTest: 4
+    m_Colors:
+    - _Color: {r: 1, g: 0.35294116, b: 0.92030215, a: 0.54509807}
+    - _Speed: {r: 0, g: 0, b: 0, a: 1}

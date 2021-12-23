@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M Stairs terrain blended
+  m_Shader: {fileID: 4800000, guid: b15f8f6cc428b44529391a8fac1f6515, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2001
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 6, y: 6}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 541032c2a1e164f2895eb9d9922fc3f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TerrainHeightNormal:
+        m_Texture: {fileID: 2800000, guid: 08fdf5f367b584b9d973e95e5c24c2f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - : 0
+    - _AlphaClip: 0
+    - _AlphaShift: 0.04
+    - _AlphaWidth: 12.8
+    - _ApplyNormal: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _Culling: 0
+    - _Cutoff: 0.5
+    - _EnableBaseMap: 0
+    - _EnvironmentReflections: 1
+    - _Help: 0
+    - _NormalShift: 0
+    - _NormalThreshold: 0.2
+    - _NormalWidth: 0
+    - _Offset: 0
+    - _ReadMask: 255
+    - _ReceiveShadows: 1
+    - _Rim: 0
+    - _RimFrequency: 0
+    - _RimMinPower: 1
+    - _RimPerPositionFrequency: 1
+    - _RimPower: 2
+    - _ShadowShift: 0.493
+    - _ShadowShiftThreshold: 0.05
+    - _ShadowShiftView: 0
+    - _Shadows: 0
+    - _Shift: 0.008
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilFail: 0
+    - _StencilOp: 0
+    - _StencilZFail: 0
+    - _WriteMask: 255
+    - _ZWrite: 0
+    m_Colors:
+    - _BaseColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TerrainPos: {r: 0, g: 0, b: 0, a: 0}
+    - _TerrainSize: {r: 500, g: 160, b: 500, a: 0}
