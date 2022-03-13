@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1417862120221269573
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GrassD
+  m_Shader: {fileID: 4800000, guid: 9274999d1397faf458314bf04622c3f8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 18737ceafebaf604c85b587e35d9050f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FogRampmap:
+        m_Texture: {fileID: 2800000, guid: 409aebad96157034b8cee22c9bb9b3c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FogRampmap1:
+        m_Texture: {fileID: 2800000, guid: 409aebad96157034b8cee22c9bb9b3c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProjectMap:
+        m_Texture: {fileID: 2800000, guid: 1fa5866ab84d02e4097407a532b4fd2f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProjectMap1:
+        m_Texture: {fileID: 2800000, guid: 1e78ba92e89aacc4fb17134ae34fcf07, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProjectShadowMap:
+        m_Texture: {fileID: 2800000, guid: 3eac9f7276573074f86b2ccab5e831e7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: db5feef88edf36e41bc17dc3e9332658, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindMap:
+        m_Texture: {fileID: 2800000, guid: d876b964d7a76c64cbc262146888afee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 6a8bc4649f6847449ac1669de3ed7ea1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindNoiseMap1:
+        m_Texture: {fileID: 2800000, guid: 6a8bc4649f6847449ac1669de3ed7ea1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaCutoff: 0.5
+    - _BassTextureLerp: 0.418
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ColorNoiseSize: 0.223
+    - _CreatX1: -2.78
+    - _CreatZ1: -1.87
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _Float1: 0.207
+    - _Float6: -0.04
+    - _FogDistance: 0.018
+    - _FogDistance1: 0.023
+    - _FogDistanceAlphaOffset: 0.21
+    - _FogDistanceAlphaOffset1: -0.03
+    - _FogDistanceFogInstensity: 0.95
+    - _FogDistanceFogInstensity1: 2.74
+    - _FogDistanceFogRampOffset: -0.48
+    - _FogDistanceFogRampOffset1: -0.46
+    - _FogHeightHard: 0.0107
+    - _FogHeightHard1: 0.015
+    - _FogHeightOffset: 0.6
+    - _FogHeightOffset1: 0.56
+    - _FogHorizontalLine: -22
+    - _FogHorizontalLine1: -17
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _GrassOffsetIntensity: 0.94
+    - _GrassOffsetLerp: 1
+    - _GrassTextureLerp: 0.584
+    - _HeightLightColor2: -1.6
+    - _HeightLightIntensity: 8
+    - _HeightLightPower: 75
+    - _LeafDenL1: 0.305
+    - _LeafDenL2: 0.244
+    - _LeafDenL3: 0.056
+    - _LeafStep: 0.821
+    - _LeafStep1: 0.942
+    - _LeafSwingSpeed: 0
+    - _LeafSwingSpeed1: 0.138
+    - _Leafintensity: 1.76
+    - _Leafintensity1: 0.96
+    - _LightIntensity: 1.5
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _OffsetRangeL1: 0.25
+    - _OffsetRangeL2: 0.441
+    - _OffsetRangeL3: 0.04
+    - _Power: 66.1
+    - _ProjectMapCreatX: -2.78
+    - _ProjectMapCreatZ: -1.87
+    - _ProjectMapSize: 40
+    - _ProjectShadowIntensity: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RootLightIntensity: 1.326
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Tiling: 0.27866212
+    - _Tiling2: 0.1
+    - _TopLightIntensity: 1.42
+    - _WN: 0.965
+    - _WaveDirect: 1.5
+    - _WaveSinSpeed: 0.12
+    - _WaveSinSpeedX: 0.066
+    - _WaveSinSpeedZ: -0.612
+    - _WaveSize: 0.336
+    - _WindDark: -0.3
+    - _WindDark1: 0.07499639
+    - _WindMapTiling: 0.182
+    - _WindMultip: 0.452
+    - _WindMultip1: 0.212
+    - _WindNoiseScale: 0.759
+    - _WindNoiseSpeed: 0.309
+    - _WindNoiseTiling: 0.34
+    - _WindSinSpeedX: 0.11
+    - _WindSinSpeedZ: -0.02
+    - _WindSpeed: 0.5
+    - _WindSpeed1: 0.004
+    - _WindTiling: 1
+    - _WindWaveSize: 0.6
+    - _WorkflowMode: 1
+    - _WorldSize1: 40
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Color0: {r: 0.5473812, g: 0.9339623, b: 0.41852075, a: 0}
+    - _ColorA: {r: 0.78295493, g: 0.8490566, b: 0.748932, a: 0}
+    - _ColorB: {r: 0.30660364, g: 0.87478805, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FogRampColor: {r: 1.07451, g: 1.419608, b: 1.498039, a: 0}
+    - _FogRampColor1: {r: 0.6036298, g: 0.7027331, b: 0.9189587, a: 0}
+    - _GrassDirect: {r: 0.78, g: 1, b: -2, a: 0}
+    - _GrassOffsetDirect: {r: -12, g: 1, b: 46.5, a: 0}
+    - _HeightLightColor: {r: 0.75577646, g: 0.95283014, b: 0.40899706, a: 0}
+    - _LeafColor: {r: 0.064367265, g: 0.11320752, b: 0.0037379863, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _UVTiling: {r: 4, g: 0.12, b: 0, a: 0}
+    - _Vector0: {r: 4, g: 0.12, b: 0, a: 0}
+    - _WindColor: {r: 0.25388426, g: 0.30188662, b: 0.16660717, a: 0}
+    - _WindMapTiling: {r: 0.4, g: 0.4, b: 0, a: 0}
