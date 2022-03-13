@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9071120584463186675
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TreeShadow
+  m_Shader: {fileID: 4800000, guid: 0269b2758f7e0dd44ba78aa42815861b, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 4000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LeafTexture:
+        m_Texture: {fileID: 2800000, guid: 98fbf0b89a8b1bb4aa81da8328bd0dae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightTexture:
+        m_Texture: {fileID: 2800000, guid: ea713c9e3cd412349a88aa7531365459, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: ea713c9e3cd412349a88aa7531365459, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _T2:
+        m_Texture: {fileID: 2800000, guid: 98fbf0b89a8b1bb4aa81da8328bd0dae, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 12, y: 12}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaCutoff: 0.5
+    - _Blend: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _Float0: 0.01
+    - _Float1: 0.15
+    - _Float3: 0.48
+    - _Float5: 2
+    - _FloatMax: 0.25
+    - _FloatMin: 0.08
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _L1LightSpeed: 0.467
+    - _L1WindSpeed: 0.32
+    - _LeafDen: 0.103
+    - _LeafDenL1: 0.12
+    - _LeafDenL2: 0.056
+    - _LeafGroup: 0.02
+    - _LeafStep: 0.942
+    - _LeafSwingSpeed: 0.138
+    - _Leafintensity: 0.96
+    - _LightDen: 0.73
+    - _LightMax: 1
+    - _LightMin: 0.06
+    - _LightOffsetRing: 0.0127
+    - _LightSize: 50
+    - _LightSpeed: 0.074
+    - _LightTiling: 11
+    - _Lightintensity: 0.83
+    - _Max: 1
+    - _Metallic: 0
+    - _Min: 0.19
+    - _OcclusionStrength: 1
+    - _Offset: 0.0014
+    - _OffsetRangeL1: 0.127
+    - _OffsetRangeL2: 0.04
+    - _OffsetRingLight: 0.0016
+    - _OffsetSpark: 0.057
+    - _OffsetSparkGroup: 0.348
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _S2Step: 1
+    - _SinA: 0.24
+    - _SinASpark: 0.15
+    - _Size: 20
+    - _Size1: 4.71
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SparkLight: 2
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StepMax: 0.41
+    - _StepMin: 0
+    - _Surface: 0
+    - _SwingSpeedL1: 0.31
+    - _SwingSpeedLeaf: 0.12
+    - _TessEdgeLength: 16
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _DarkColor: {r: 0.26179212, g: 0.41942945, b: 0.5, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Vector0: {r: 1.48, g: -0.63, b: -0.08, a: 0}

@@ -1,0 +1,112 @@
+//******************************************************
+//
+//	文件名 (File Name) 	: 		MyToolsEditor
+//	
+//	脚本创建者(Author) 	:		Ejoy_小林
+
+//	创建时间 (CreatTime):		2019/12/11/15/6/30
+//******************************************************
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+
+enum MyImgeType
+{
+    JPG = 0,
+    PNG,
+    TGA
+}
+enum MyImageSize
+{
+    Window = 0,
+    x4320p_8K = 4320,
+    x2880p_5K = 2880,
+    x2160p_4K = 2160,
+    x1440p_QHD = 1440,
+    x1080p_FHD = 1080,
+    x720p_HD = 720,
+    x480p = 480,
+    x240p = 240,
+    Custom = int.MaxValue
+}
+
+[CustomEditor(typeof(MyTools))]
+public class MyToolsEditor : Editor
+{
+    private MyTools _target;
+    string[] m_toolBarStrs = { "创建正交相机", "截图输出" };
+    int m_toolBarIndex = 0;
+
+    private MyImgeType MyImgeType = MyImgeType.JPG;
+    private void OnEnable()
+    {
+        _target = (MyTools)target;
+        m_toolBarIndex = 1;
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        base.OnInspectorGUI();
+
+        EditorGUILayout.BeginVertical(GUI.skin.box);
+
+        EditorGUILayout.BeginHorizontal();
+        m_toolBarIndex = GUILayout.Toolbar(m_toolBarIndex, m_toolBarStrs);
+        EditorGUILayout.EndHorizontal();
+
+        ToolType(m_toolBarIndex);
+
+        EditorGUILayout.EndVertical();
+
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(_target);
+    }
+
+    private void ToolType(int indexType)
+    {
+        if (indexType > 0)
+        {
+            ScreenShotImage();
+        }
+        else
+        {
+            CreatOrthographicCamera();
+        }
+    }
+
+    /// <summary>
+    /// 依据平面创建正交相机
+    /// </summary>
+    private void CreatOrthographicCamera()
+    {
+
+    }
+
+    /// <summary>
+    /// 截取Game视图
+    /// </summary>
+    private void ScreenShotImage()
+    {
+        EditorGUILayout.BeginHorizontal();
+        MyImgeType = (MyImgeType)EditorGUILayout.EnumPopup("格式:", MyImgeType);
+        if (GUILayout.Button("保存路径",GUILayout.Width(100)))
+        {
+
+        }
+        EditorGUILayout.EndHorizontal();
+
+        if (GUILayout.Button("设置分辨率"))
+        {
+
+        }
+    }
+}
