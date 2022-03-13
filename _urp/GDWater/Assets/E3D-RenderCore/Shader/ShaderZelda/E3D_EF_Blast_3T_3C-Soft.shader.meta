@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 87ac997f8e5670045ba847e1f9b1927b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _DissloveMap: {fileID: 2800000, guid: 723d609500fd514409fabd10ed79ed0e, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

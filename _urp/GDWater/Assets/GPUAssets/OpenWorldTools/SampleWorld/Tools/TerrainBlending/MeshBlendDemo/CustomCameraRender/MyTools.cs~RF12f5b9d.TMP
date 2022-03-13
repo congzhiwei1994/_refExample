@@ -1,0 +1,18 @@
+//******************************************************
+//
+//	文件名 (File Name) 	: 		MyTools
+//	
+//	脚本创建者(Author) 	:		Ejoy_小林
+
+//	创建时间 (CreatTime):		2019/12/11/15/5/33
+//******************************************************
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MyTools : MonoBehaviour
+{
+
+}

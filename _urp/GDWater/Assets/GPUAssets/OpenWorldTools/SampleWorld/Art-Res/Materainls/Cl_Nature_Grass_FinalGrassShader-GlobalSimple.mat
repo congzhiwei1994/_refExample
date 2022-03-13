@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Cl_Nature_Grass_FinalGrassShader-GlobalSimple
+  m_Shader: {fileID: 4800000, guid: 7c46051fa1bfef7439c171120785fdaa, type: 3}
+  m_ShaderKeywords: _RENDER_ONLYDIFFUSE _WINDCOLOR1_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ScaleTex:
+        m_Texture: {fileID: 2800000, guid: 895457350a5c8344c96bf7b2e556b6f2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _ApplyLightColor: 0
+    - _GrassAnimStrength: 1
+    - _GrassRandStrength: 1
+    - _GrassSpeed: 1
+    - _GrassSwinging: 1
+    - _Render: 0
+    - _SHADOWCOLOR: 0
+    - _ScaleTexCtr: 0
+    - _ShadowColor: 0
+    - _Translucency: 0.8
+    - _VertexAO: 0.4
+    - _VertexDarkening: 0.1
+    - _Wind: 0
+    - _WindColor: 0
+    - _WindColor1: 1
+    - __dirty: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HueColor: {r: 1, g: 0.9356071, b: 0.30660334, a: 0}
+    - _MainColor: {r: 0.6015961, g: 0.7735849, b: 0.33935535, a: 1}

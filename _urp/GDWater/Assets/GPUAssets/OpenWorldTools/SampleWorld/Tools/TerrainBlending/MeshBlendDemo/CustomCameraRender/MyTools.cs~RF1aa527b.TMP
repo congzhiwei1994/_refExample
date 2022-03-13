@@ -1,0 +1,64 @@
+//******************************************************
+//
+//	文件名 (File Name) 	: 		MyTools
+//	
+//	脚本创建者(Author) 	:		Ejoy_小林
+
+//	创建时间 (CreatTime):		2019/12/11/15/5/33
+//******************************************************
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO;
+using System;
+using CustomMyTools;
+//namespace CustomMyTools
+
+    public class MyTools : MonoBehaviour
+    {
+        private void Start()
+        {
+        }
+        private void CustomGetCaptureScreenShot(string path, MyImgeType myImgeType)
+        {
+            if (string.IsNullOrEmpty(path)) return;
+            var tex = UnityEngine.ScreenCapture.CaptureScreenshotAsTexture();
+            if (tex == null) return;
+
+            Color[] colors = tex.GetPixels();
+            Texture2D newTex = new Texture2D(tex.width, tex.height, TextureFormat.ARGB32, false);
+            newTex.name = tex.name;
+            newTex.SetPixels(colors);
+            newTex.Apply();
+
+            byte[] pngData = new byte[] { };
+            switch (myImgeType)
+            {
+                case MyImgeType.JPG:
+                    pngData = newTex.EncodeToJPG();
+                    break;
+                case MyImgeType.PNG:
+                    pngData = newTex.EncodeToPNG();
+                    break;
+                case MyImgeType.TGA:
+#if UNITY_2018_1_OR_NEWER
+                    pngData = newTex.EncodeToTGA();
+#endif
+                    break;
+                default:
+                    break;
+            }
+
+            if (pngData != null)
+            {
+                path += "." + myImgeType.ToString().ToLower();
+                File.WriteAllBytes(path, pngData);
+                Debug.Log(myImgeType.ToString() + "-->Surceness! \n" + path);
+            }
+            AssetDatabase.Refresh();
+        }
+    }
+
+

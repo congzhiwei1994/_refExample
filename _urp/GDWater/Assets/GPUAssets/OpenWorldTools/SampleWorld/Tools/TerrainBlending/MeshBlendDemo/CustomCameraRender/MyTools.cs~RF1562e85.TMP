@@ -1,0 +1,124 @@
+//******************************************************
+//
+//	文件名 (File Name) 	: 		MyTools
+//	
+//	脚本创建者(Author) 	:		Ejoy_小林
+
+//	创建时间 (CreatTime):		2019/12/11/15/5/33
+//******************************************************
+
+using ClTools;
+using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class MyTools : MonoBehaviour
+{
+    [HideInInspector] public int toolIndex = 1;
+    [HideInInspector] public MyImgeType_2018 outImagType = MyImgeType_2018.JPG;
+    [HideInInspector] public MyScreenShotImageType outScreenType = MyScreenShotImageType.RGBA;
+    private MyScreenShotImageType currentType = MyScreenShotImageType.RGBA;
+    [HideInInspector] public MyImageSize outGamveSize = MyImageSize._720p;
+    [HideInInspector] public int customWidth = 1;
+
+    [HideInInspector] public Camera m_mainCamera;
+    [HideInInspector] public Shader depthShader;
+    [HideInInspector] public Shader depthNormalShader;
+    [HideInInspector] public int cameraHeight = 15;
+
+    [HideInInspector] public Material depthMat;
+    private void Start()
+    {
+
+    }
+    public void SetIdleCameraRender()
+    {
+        if (m_mainCamera)
+        {
+            m_mainCamera.ResetReplacementShader();
+        }
+    }
+    CustomCameraRenderCtr cameraDepthCtr;
+    private void Update()
+    {
+        if (currentType != outScreenType)
+        {
+            currentType = outScreenType;
+            if (cameraDepthCtr == null)
+            {
+                cameraDepthCtr = gameObject.transform.GetChild(0).GetComponent<CustomCameraRenderCtr>();
+                cameraDepthCtr.MyScreenShotType = outScreenType;
+            }
+
+            switch (currentType)
+            {
+                case MyScreenShotImageType.Depth:
+                    cameraDepthCtr.MyScreenShotType = outScreenType;
+                    break;
+                case MyScreenShotImageType.DepthNormal:
+                    cameraDepthCtr.MyScreenShotType = outScreenType;
+                    break;
+                default:
+                    cameraDepthCtr.MyScreenShotType = outScreenType;
+                    break;
+            }
+        }
+
+    }
+
+    public void ChangToDepthModel()
+    {
+        if (m_mainCamera)
+        {
+            Shader.SetGlobalFloat("_CameraHeight", cameraHeight);
+            m_mainCamera.SetReplacementShader(depthShader, "RenderType");
+            Debug.Log("切换到深度模式");
+        }
+    }
+    public void ChangToDepthNormalModel()
+    {
+        if (m_mainCamera)
+        {
+            m_mainCamera.SetReplacementShader(depthNormalShader, "RenderType");
+        }
+    }
+    public void CustomScreenShotTex(string filePath, MyImgeType_2018 imgeType)
+    {
+        outImagType = imgeType;
+        StartCoroutine(ScreenShotTex(filePath));
+    }
+
+    IEnumerator ScreenShotTex(string fileName)
+    {
+        yield return new WaitForEndOfFrame();
+        Texture2D tex = UnityEngine.ScreenCapture.CaptureScreenshotAsTexture();
+        byte[] bytes = new byte[] { };
+        switch (outImagType)
+        {
+            case MyImgeType_2018.JPG:
+                bytes = tex.EncodeToJPG();
+                break;
+            case MyImgeType_2018.PNG:
+                bytes = tex.EncodeToPNG();
+                break;
+            case MyImgeType_2018.TGA:
+#if UNITY_2018_1_OR_NEWER            
+                bytes = tex.EncodeToTGA();
+#endif
+                break;
+            default:
+                bytes = tex.EncodeToEXR();
+                break;
+        }
+        if (bytes != null)
+        {
+            System.IO.File.WriteAllBytes(fileName, bytes);
+            Debug.Log("截图纹理成功-->" + fileName);
+#if UNITY_EDITOR
+            UnityEditor.AssetDatabase.Refresh();//刷新Unity的资产目录
+#endif
+        }
+    }
+}
+
+

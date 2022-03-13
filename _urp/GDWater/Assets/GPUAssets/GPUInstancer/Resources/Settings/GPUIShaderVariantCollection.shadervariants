@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GPUIShaderVariantCollection
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 304330ae736c37047a488b8593eaec32, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHATEST_ON _APPLYLIGHTCOLOR_ON _EMISSION _SCALETEXCTR_ON _SHADOWCOLOR_ON
+          _WINDCOLOR_ON
+        passType: 0
+      - keywords: _RENDER_ONLYDIFFUSE _WINDCOLOR1_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: b018d5a5e2799dd469d0d9f2474d499c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 81c954fbcbf8c6246b4fd7acbebb98cb, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _NORMALMAP
+        passType: 0
+  - first: {fileID: 4800000, guid: 1293c1226d3e3214898748f7d9b3d43b, type: 3}
+    second:
+      variants:
+      - keywords: _MIXEDMETALLIC_ON _NORMALMAP
+        passType: 0
+  - first: {fileID: 4800000, guid: 82de82b577147a642af099f486b450b2, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _ALPHATEST_ON _LIGHTMAPPING_REALTIME _NORMALMAP _SPECGLOSSMAP _UNIFORMWIND_ON
+          _UVSEC_UV1
+        passType: 0
+      - keywords: _ALPHATEST_ON _EMISSION _LIGHTMAPPING_DYNAMIC_LIGHTMAPS _LIGHTMAPPING_REALTIME
+          _UNIFORMWIND_ON _UVSEC_UV1
+        passType: 0
+      - keywords: _ALPHATEST_ON _LIGHTMAPPING_DYNAMIC_LIGHTMAPS _LIGHTMAPPING_REALTIME
+          _NORMALMAP _SPECGLOSSMAP _UNIFORMWIND_ON _UVSEC_UV1
+        passType: 0
+  - first: {fileID: 4800000, guid: 44341bbd76716b24e9f38cb6ccded884, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d4a0b8cf4c463884db79b2d18465bb43, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHATEST_ON _EMISSION
+        passType: 0
+  - first: {fileID: 4800000, guid: 75c4d891812d2d346a0c6e92ad3db876, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d52a38c4e70daf4449eaab298ba27ce6, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 093ad729ccd8bfe4db727918dc230fe5, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHATEST_ON _EMISSION
+        passType: 0
+  - first: {fileID: 4800000, guid: 1a6ceac7f4c639b4096c21f11e4e7a56, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 2a1fda71c9e820e42b9cd64424f8452e, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: ea4018e98671dbf40b0d47588bb71400, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1d10315b13197584bb3fdedc17547e95, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: a1fe6b00539636f49bae5f911c8ccc55, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 8c09ceafd07c22648a98a34fdfcbe766, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0

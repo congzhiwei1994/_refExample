@@ -1,0 +1,34 @@
+//******************************************************
+//
+//	文件名 (File Name) 	: 		CustomGameViewSize
+//	
+//	脚本创建者(Author) 	:		Ejoy_小林
+
+//	创建时间 (CreatTime):		2019/12/10/16/21/29
+//******************************************************
+
+using System;
+
+/// <summary>
+/// Game视图分辨率控制
+/// 参考官方插件Recorder
+/// </summary>
+static class CustomGameViewSize
+{
+    static object s_InitialSizeObj;
+    public static int modifiedResolutionCount;
+    const int miscSize = 1;
+
+    const string playGameViewType = "UnityEditor.PlayModeView,UnityEditor";
+    const string playGetGameViewFuncName = "GetMainPlayModeView";
+
+    const string 
+    //版本宏定义。标识2019.3或者更新的版本
+#if UNITY_2019_3_OR_NEWER
+    static Type s_GameViewType = Type.GetType(playGameViewType);
+    static string s_GetGameViewFuncName = playGetGameViewFuncName;
+#else
+    static Type s_GameViewType = Type.GetType("UnityEditor.GameView,UnityEditor");
+    static string s_GetGameViewFuncName = "GetMainGameView";
+#endif
+}
