@@ -1,0 +1,40 @@
+1. 修复：
+    - 多选情况下，某些条件性功能设置错误的问题
+    - 编辑器求值相关逻辑改进
+    - 编辑器命名空间修改为：UME
+
+2. 改进单值编辑器精度控制相关代码：
+
+    protected float _RoundFloat( float value, float defaultValue ) {
+        // 单值浮点，无取值取值范围设定，精度表示小数部分精度如：
+        // precision = 2, 小数部分取值0.0, 0.5
+        // precision = 4, 小数部分取值0.0, 0.25, 0.5, 0.75
+        // 余下类推...
+        return m_precision > 0 ? ( float )( Math.Round( ( value - defaultValue ) * m_precision ) ) / m_precision + defaultValue : value;
+    }
+
+    protected static float _RoundRange( float value, Vector3 defaultRange, int precision ) {
+        if ( value <= defaultRange.y ) {
+            return defaultRange.y;
+        } else if ( value >= defaultRange.z ) {
+            return defaultRange.z;
+        }
+        if ( precision > 0 ) {
+            // 单位化范围，把取值范围规范到[0,1]
+            // 精度值表示取值范围均分指定次数
+            // 比如：当range = [0, 1], precision = 4, 有效取值为：0.0, 0.25, 0.5, 0.75, 1.0
+            // 比如：当range = [0, 2], precision = 2, 有效取值为：0.0, 1.0, 2.0
+            var scale = defaultRange.z - defaultRange.y;
+            var _value = value / scale;
+            var _defaultValue = defaultRange.x / scale;
+            value = ( float )( Math.Round( ( _value - _defaultValue ) * precision ) ) / precision + _defaultValue;
+            value *= scale;
+            value = Mathf.Clamp( value, defaultRange.y, defaultRange.z );
+        }
+        return value;
+    }
+
+3. 增加功能
+    
+    - 单属性自定义编辑器范围重映射
+    - 更新关键词可配置一个关联属性同时更新
