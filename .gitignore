@@ -1,223 +1,29 @@
 /_urp/BoatAttack-master/.vscode
+*.csproj
+*.sln
+*.json
+
 /_urp/BoatAttack-master/Library
+/_urp/GD/Library
+/_urp/Lux URP Essentials_1.6/Library
+/_urp/GDWater/Library
+/_urp/CelShadingWithFringeShadow/Library
+/_urp/E3D-URP-Fur/Library
+/_urp/ExtendStandard-master/Library
+/_urp/G14_PingAnJing/Library
+/_urp/island/Library
+/_urp/NDF/Library
+/_urp/ShaderGraph-MasterStack-Samples/Library
+/_urp/StylizedGrassShader/Library
+/_urp/UnityFurURP/Library
+/_urp/UnityURPFurDemo-master/Library
+/_urp/UnityUrpWaterCollision/Library
+/_urp/UniversalRenderingExamples_2020.2.0/Library
+/_urp/URP_SSR/Library
+/_urp/UWA_CustormSRPDemo/Library
+*.cache
+*.log
+/_urp/Lux URP Essentials_1.6/obj
+/_urp/Lux URP Essentials_1.6/UserSettings
 /_urp/BoatAttack-master/Logs
 /_urp/BoatAttack-master/UserSettings
-/_urp/GD/.vscode
-/_urp/GD/Library
-/_urp/GD/Temp
-/_urp/E3D-URP-Fur/Fur-Unity/.vscode
-/_urp/E3D-URP-Fur/Fur-Unity/Library
-/_urp/E3D-URP-Fur/Fur-Unity/Logs
-/_urp/E3D-URP-Fur/Fur-Unity/Temp
-/_urp/E3D-URP-Fur/Fur-Unity/Substance.EditorHelper.csproj
-/_urp/E3D-URP-Fur/Fur-Unity/Substance.Platform.csproj
-/_urp/UnityFurURP/.vscode
-/_urp/UnityFurURP/Library
-/_urp/UnityFurURP/Logs
-/_urp/UnityFurURP/obj
-/_urp/UnityFurURP/Temp
-/_urp/UnityFurURP/UserSettings
-/_urp/UnityFurURP/Assembly-CSharp.csproj
-/_urp/UnityFurURP/Assembly-CSharp-Editor.csproj
-/_urp/UnityFurURP/Unity.CollabProxy.Editor.csproj
-/_urp/UnityFurURP/Unity.Mathematics.Editor.csproj
-/_urp/UnityFurURP/Unity.Mathematics.csproj
-/_urp/UnityFurURP/Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.Core.Editor.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.Core.Runtime.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.Core.ShaderLibrary.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.Universal.Editor.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.Universal.Runtime.csproj
-/_urp/UnityFurURP/Unity.RenderPipelines.Universal.Shaders.csproj
-/_urp/UnityFurURP/Unity.Rider.Editor.csproj
-/_urp/UnityFurURP/Unity.Searcher.Editor.csproj
-/_urp/UnityFurURP/Unity.ShaderGraph.Editor.csproj
-/_urp/UnityFurURP/Unity.ShaderGraph.Utilities.csproj
-/_urp/UnityFurURP/Unity.TextMeshPro.Editor.csproj
-/_urp/UnityFurURP/Unity.TextMeshPro.csproj
-/_urp/UnityFurURP/Unity.Timeline.Editor.csproj
-/_urp/UnityFurURP/Unity.Timeline.csproj
-/_urp/UnityFurURP/Unity.VSCode.Editor.csproj
-/_urp/UnityFurURP/Unity.VisualStudio.Editor.csproj
-/_urp/UnityFurURP/UnityEditor.TestRunner.csproj
-/_urp/UnityFurURP/UnityEditor.UI.csproj
-/_urp/UnityFurURP/UnityEngine.TestRunner.csproj
-/_urp/UnityFurURP/UnityEngine.UI.csproj
-/_urp/UnityFurURP/UnityFurURP.sln
-/_urp/UnityURPFurDemo-master/Assembly-CSharp.csproj
-/_urp/UnityURPFurDemo-master/.vscode
-/_urp/UnityURPFurDemo-master/Library
-/_urp/UnityURPFurDemo-master/Logs
-/_urp/UnityURPFurDemo-master/UnityURPFurDemo-master
-/_urp/UnityURPFurDemo-master/Unity.CollabProxy.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.Core.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.Core.Runtime.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.Core.ShaderLibrary.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.Universal.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.Universal.Runtime.csproj
-/_urp/UnityURPFurDemo-master/Unity.RenderPipelines.Universal.Shaders.csproj
-/_urp/UnityURPFurDemo-master/Unity.Rider.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.ShaderGraph.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.ShaderGraph.Utilities.csproj
-/_urp/UnityURPFurDemo-master/Unity.TextMeshPro.csproj
-/_urp/UnityURPFurDemo-master/Unity.TextMeshPro.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.Timeline.csproj
-/_urp/UnityURPFurDemo-master/Unity.Timeline.Editor.csproj
-/_urp/UnityURPFurDemo-master/Unity.VSCode.Editor.csproj
-/_urp/UnityURPFurDemo-master/UnityEditor.TestRunner.csproj
-/_urp/UnityURPFurDemo-master/UnityEditor.UI.csproj
-/_urp/UnityURPFurDemo-master/UnityEngine.TestRunner.csproj
-/_urp/UnityURPFurDemo-master/UnityEngine.UI.csproj
-/_urp/UnityURPFurDemo-master/UnityURPFurDemo-master.sln
-/_urp/Lux URP Essentials_1.6/UnityEngine.UI.csproj
-/_urp/Lux URP Essentials_1.6/Temp
-/_urp/Lux URP Essentials_1.6/UserSettings
-/_urp/Lux URP Essentials_1.6/Assembly-CSharp.csproj
-/_urp/Lux URP Essentials_1.6/Assembly-CSharp-Editor.csproj
-/_urp/Lux URP Essentials_1.6/Lux URP Essentials_1.6.sln
-/_urp/Lux URP Essentials_1.6/Unity.CollabProxy.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.Mathematics.csproj
-/_urp/Lux URP Essentials_1.6/Unity.Mathematics.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.Core.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.Core.Runtime.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.Core.ShaderLibrary.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.Universal.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.Universal.Runtime.csproj
-/_urp/Lux URP Essentials_1.6/Unity.RenderPipelines.Universal.Shaders.csproj
-/_urp/Lux URP Essentials_1.6/Unity.Rider.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.Searcher.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.ShaderGraph.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.ShaderGraph.Utilities.csproj
-/_urp/Lux URP Essentials_1.6/Unity.TextMeshPro.csproj
-/_urp/Lux URP Essentials_1.6/Unity.TextMeshPro.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.Timeline.csproj
-/_urp/Lux URP Essentials_1.6/Unity.Timeline.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.VisualStudio.Editor.csproj
-/_urp/Lux URP Essentials_1.6/Unity.VSCode.Editor.csproj
-/_urp/Lux URP Essentials_1.6/UnityEditor.TestRunner.csproj
-/_urp/Lux URP Essentials_1.6/UnityEditor.UI.csproj
-/_urp/Lux URP Essentials_1.6/UnityEngine.TestRunner.csproj
-/_urp/Lux URP Essentials_1.6/Library
-/_urp/Lux URP Essentials_1.6/Logs
-_urp/Lux URP Essentials_1.6/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
-_urp/Lux URP Essentials_1.6/obj/Debug/Unity.RenderPipelines.Core.Runtime.csproj.AssemblyReference.cache
-_urp/Lux URP Essentials_1.6/obj/Debug/UnityEngine.TestRunner.csproj.AssemblyReference.cache
-/_urp/BoatAttack-master/Unity.Searcher.Editor.csproj
-/_urp/BoatAttack-master/Unity.ShaderGraph.Editor.csproj
-/_urp/BoatAttack-master/Unity.ShaderGraph.Utilities.csproj
-/_urp/BoatAttack-master/Unity.TextMeshPro.csproj
-/_urp/BoatAttack-master/Unity.TextMeshPro.Editor.csproj
-/_urp/BoatAttack-master/Unity.Timeline.csproj
-/_urp/BoatAttack-master/Unity.Timeline.Editor.csproj
-/_urp/BoatAttack-master/Unity.VisualStudio.Editor.csproj
-/_urp/BoatAttack-master/Unity.VSCode.Editor.csproj
-/_urp/BoatAttack-master/UnityEditor.CacheServer.csproj
-/_urp/BoatAttack-master/UnityEditor.TestRunner.csproj
-/_urp/BoatAttack-master/UnityEditor.UI.csproj
-/_urp/BoatAttack-master/UnityEngine.TestRunner.csproj
-/_urp/BoatAttack-master/UnityEngine.UI.csproj
-/_urp/BoatAttack-master/WaterSystem.csproj
-/_urp/BoatAttack-master/WaterSystem.Editor.csproj
-/_urp/BoatAttack-master/Assembly-CSharp.csproj
-/_urp/BoatAttack-master/Assembly-CSharp-Editor.csproj
-/_urp/BoatAttack-master/BoatAttack-master.sln
-/_urp/BoatAttack-master/Cinemachine.csproj
-/_urp/BoatAttack-master/com.unity.cinemachine.editor.csproj
-/_urp/BoatAttack-master/NavMeshComponents.csproj
-/_urp/BoatAttack-master/NavMeshComponentsEditor.csproj
-/_urp/BoatAttack-master/Unity.2D.Sprite.Editor.csproj
-/_urp/BoatAttack-master/Unity.Addressables.csproj
-/_urp/BoatAttack-master/Unity.Addressables.Editor.csproj
-/_urp/BoatAttack-master/Unity.BuildReportInspector.Editor.csproj
-/_urp/BoatAttack-master/Unity.BuildReportInspector.Editor.Mobile.csproj
-/_urp/BoatAttack-master/Unity.Burst.csproj
-/_urp/BoatAttack-master/Unity.Burst.Editor.csproj
-/_urp/BoatAttack-master/Unity.EditorCoroutines.Editor.csproj
-/_urp/BoatAttack-master/Unity.InputSystem.csproj
-/_urp/BoatAttack-master/Unity.Mathematics.csproj
-/_urp/BoatAttack-master/Unity.Mathematics.Editor.csproj
-/_urp/BoatAttack-master/Unity.MemoryProfiler.csproj
-/_urp/BoatAttack-master/Unity.MemoryProfiler.Editor.csproj
-/_urp/BoatAttack-master/Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.Core.Editor.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.Core.Runtime.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.Core.ShaderLibrary.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.Universal.Editor.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.Universal.Runtime.csproj
-/_urp/BoatAttack-master/Unity.RenderPipelines.Universal.Shaders.csproj
-/_urp/BoatAttack-master/Unity.ResourceManager.csproj
-/_urp/BoatAttack-master/Unity.Rider.Editor.csproj
-/_urp/BoatAttack-master/Unity.ScriptableBuildPipeline.csproj
-/_urp/BoatAttack-master/Unity.ScriptableBuildPipeline.Editor.csproj
-_urp/BoatAttack-master/Assets/Data/WaterSurfaceData.asset
-_urp/BoatAttack-master/Packages/packages-lock.json
-_urp/BoatAttack-master/ProjectSettings/QualitySettings.asset
-/_urp/GD/Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-/_urp/GD/Unity.RenderPipelines.Core.Editor.csproj
-/_urp/GD/Unity.RenderPipelines.Core.Runtime.csproj
-/_urp/GD/Unity.RenderPipelines.Core.ShaderLibrary.csproj
-/_urp/GD/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-/_urp/GD/Unity.RenderPipelines.Universal.Editor.csproj
-/_urp/GD/Unity.RenderPipelines.Universal.Runtime.csproj
-/_urp/GD/Unity.RenderPipelines.Universal.Shaders.csproj
-/_urp/GD/Unity.Rider.Editor.csproj
-/_urp/GD/Unity.ShaderGraph.Editor.csproj
-/_urp/GD/Unity.ShaderGraph.Utilities.csproj
-/_urp/GD/Unity.TextMeshPro.csproj
-/_urp/GD/Unity.TextMeshPro.Editor.csproj
-/_urp/GD/Unity.Timeline.csproj
-/_urp/GD/Unity.Timeline.Editor.csproj
-/_urp/GD/Unity.VSCode.Editor.csproj
-/_urp/GD/UnityEditor.TestRunner.csproj
-/_urp/GD/UnityEditor.UI.csproj
-/_urp/GD/UnityEngine.TestRunner.csproj
-/_urp/GD/UnityEngine.UI.csproj
-/_urp/GD/AmplifyShaderEditor.csproj
-/_urp/GD/Assembly-CSharp.csproj
-/_urp/GD/Assembly-CSharp-Editor.csproj
-/_urp/GD/Assembly-CSharp-Editor-firstpass.csproj
-/_urp/GD/Assembly-CSharp-firstpass.csproj
-/_urp/GD/GD.sln
-/_urp/GD/GPUInstancer.csproj
-/_urp/GD/GPUInstancer.Editor.csproj
-/_urp/GD/Unity.CollabProxy.Editor.csproj
-/_urp/GDWater/Library
-/_urp/GDWater/Logs
-/_urp/GDWater/.vscode
-/_urp/GDWater/GPUInstancer.Editor.csproj
-/_urp/GDWater/Unity.CollabProxy.Editor.csproj
-/_urp/GDWater/Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-/_urp/GDWater/Unity.RenderPipelines.Core.Editor.csproj
-/_urp/GDWater/Unity.RenderPipelines.Core.Runtime.csproj
-/_urp/GDWater/Unity.RenderPipelines.Core.ShaderLibrary.csproj
-/_urp/GDWater/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-/_urp/GDWater/Unity.RenderPipelines.Universal.Editor.csproj
-/_urp/GDWater/Unity.RenderPipelines.Universal.Runtime.csproj
-/_urp/GDWater/Unity.RenderPipelines.Universal.Shaders.csproj
-/_urp/GDWater/Unity.Rider.Editor.csproj
-/_urp/GDWater/Unity.ShaderGraph.Editor.csproj
-/_urp/GDWater/Unity.ShaderGraph.Utilities.csproj
-/_urp/GDWater/Unity.TextMeshPro.csproj
-/_urp/GDWater/Unity.TextMeshPro.Editor.csproj
-/_urp/GDWater/Unity.Timeline.csproj
-/_urp/GDWater/Unity.Timeline.Editor.csproj
-/_urp/GDWater/Unity.VSCode.Editor.csproj
-/_urp/GDWater/UnityEditor.TestRunner.csproj
-/_urp/GDWater/UnityEditor.UI.csproj
-/_urp/GDWater/UnityEngine.TestRunner.csproj
-/_urp/GDWater/UnityEngine.UI.csproj
-/_urp/GDWater/AmplifyShaderEditor.csproj
-/_urp/GDWater/Assembly-CSharp.csproj
-/_urp/GDWater/Assembly-CSharp-Editor.csproj
-/_urp/GDWater/Assembly-CSharp-Editor-firstpass.csproj
-/_urp/GDWater/Assembly-CSharp-firstpass.csproj
-/_urp/GDWater/GDWater.sln
-/_urp/GDWater/GPUInstancer.csproj
-/_urp/URPTestbed-1.0.0
-/_urp/Lux URP Essentials_1.6/obj
