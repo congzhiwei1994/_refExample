@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 023feaa7fe16c9d4387277d95c14b890
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BackFinB1.23_23
+    100002: BackFinB2.24_24
+    100004: BackFinB3.25_25
+    100006: BackFinB3.25_25_end
+    100008: BackFinT1.20_20
+    100010: BackFinT2.21_21
+    100012: BackFinT3.22_22
+    100014: BackFinT3.22_22_end
+    100016: Center_upper_Lip.10_10
+    100018: Center_upper_Lip.10_10_end
+    100020: DorsalFin1.26_26
+    100022: DorsalFin2.27_27
+    100024: DorsalFin3.28_28
+    100026: DorsalFin3.28_28_end
+    100028: GLTF_created_0
+    100030: GLTF_created_0_rootJoint
+    100032: GLTF_SceneRootNode
+    100034: Head.5_5
+    100036: Jaw.6_6
+    100038: Jaw.6_6_end
+    100040: L_Eye.7_7
+    100042: L_Eye.7_7_end
+    100044: L_Fin1.29_29
+    100046: L_Fin2.30_30
+    100048: L_Fin3.31_31
+    100050: L_Fin3.31_31_end
+    100052: L_upper_Lip.11_11
+    100054: L_upper_Lip.11_11_end
+    100056: Mesh_0
+    100058: R_Eye.8_8
+    100060: R_Eye.8_8_end
+    100062: R_Fin1.32_32
+    100064: R_Fin2.33_33
+    100066: R_Fin3.34_34
+    100068: R_Fin3.34_34_end
+    100070: R_upper_Lip.9_9
+    100072: R_upper_Lip.9_9_end
+    100074: root
+    100076: RootNode (gltf orientation matrix)
+    100078: RootNode (model correction matrix)
+    100080: RootNode.0_0
+    100082: shark.2_2
+    100084: shark.2_2_correction
+    100086: //RootNode
+    100088: shark_root.4_4
+    100090: skeletal.3_3
+    100092: Spine1.13_13
+    100094: Spine2.14_14
+    100096: Spine3.15_15
+    100098: Spine4.16_16
+    100100: Spine5.17_17
+    100102: Spine6.18_18
+    100104: Spine7.19_19
+    100106: Spine7.19_19_end
+    100108: Upper_Teeth.12_12
+    100110: Upper_Teeth.12_12_end
+    400000: BackFinB1.23_23
+    400002: BackFinB2.24_24
+    400004: BackFinB3.25_25
+    400006: BackFinB3.25_25_end
+    400008: BackFinT1.20_20
+    400010: BackFinT2.21_21
+    400012: BackFinT3.22_22
+    400014: BackFinT3.22_22_end
+    400016: Center_upper_Lip.10_10
+    400018: Center_upper_Lip.10_10_end
+    400020: DorsalFin1.26_26
+    400022: DorsalFin2.27_27
+    400024: DorsalFin3.28_28
+    400026: DorsalFin3.28_28_end
+    400028: GLTF_created_0
+    400030: GLTF_created_0_rootJoint
+    400032: GLTF_SceneRootNode
+    400034: Head.5_5
+    400036: Jaw.6_6
+    400038: Jaw.6_6_end
+    400040: L_Eye.7_7
+    400042: L_Eye.7_7_end
+    400044: L_Fin1.29_29
+    400046: L_Fin2.30_30
+    400048: L_Fin3.31_31
+    400050: L_Fin3.31_31_end
+    400052: L_upper_Lip.11_11
+    400054: L_upper_Lip.11_11_end
+    400056: Mesh_0
+    400058: R_Eye.8_8
+    400060: R_Eye.8_8_end
+    400062: R_Fin1.32_32
+    400064: R_Fin2.33_33
+    400066: R_Fin3.34_34
+    400068: R_Fin3.34_34_end
+    400070: R_upper_Lip.9_9
+    400072: R_upper_Lip.9_9_end
+    400074: root
+    400076: RootNode (gltf orientation matrix)
+    400078: RootNode (model correction matrix)
+    400080: RootNode.0_0
+    400082: shark.2_2
+    400084: shark.2_2_correction
+    400086: //RootNode
+    400088: shark_root.4_4
+    400090: skeletal.3_3
+    400092: Spine1.13_13
+    400094: Spine2.14_14
+    400096: Spine3.15_15
+    400098: Spine4.16_16
+    400100: Spine5.17_17
+    400102: Spine6.18_18
+    400104: Spine7.19_19
+    400106: Spine7.19_19_end
+    400108: Upper_Teeth.12_12
+    400110: Upper_Teeth.12_12_end
+    2100000: material_0
+    4300000: Mesh_0
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Mesh_0
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_0
+    second: {fileID: 2100000, guid: 83a42215e7e5b7a4498b4e40bfd41501, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: RootNode (gltf orientation matrix)
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.25
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0076200003
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
