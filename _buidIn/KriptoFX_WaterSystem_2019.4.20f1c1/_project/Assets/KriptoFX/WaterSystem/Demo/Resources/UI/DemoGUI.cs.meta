@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: b0d6f85b055ce2f42aba9610e24be28c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - button: {fileID: 2084793545579251597, guid: 6065b9eb511f48f44a187545dfb259f0,
+      type: 3}
+  - slider: {fileID: 6325593189601401916, guid: 801fefcbf3d84a24abc73c4623c82109,
+      type: 3}
+  - cam: {instanceID: 0}
+  - sun: {instanceID: 0}
+  - environment: {instanceID: 0}
+  - water: {instanceID: 0}
+  - posteffects: {instanceID: 0}
+  - terrain: {instanceID: 0}
+  - terrainTrees: {instanceID: 0}
+  - volumeLightRend: {instanceID: 0}
+  - volumeLight: {instanceID: 0}
+  - timeline: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

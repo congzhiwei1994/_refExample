@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1eed1d9cbe64423499f1fefc0ce50417
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
+  - BlitAddShader: {fileID: 4800000, guid: c2282c5842bb6d74d999852919953d40, type: 3}
+  - BilateralBlurShader: {fileID: 4800000, guid: d297a5d5cdd4e7f469b33e9f468e00d1,
+      type: 3}
+  - VolumetricLightShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

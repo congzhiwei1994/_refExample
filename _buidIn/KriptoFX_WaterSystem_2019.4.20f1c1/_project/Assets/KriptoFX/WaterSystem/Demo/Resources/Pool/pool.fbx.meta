@@ -1,0 +1,621 @@
+fileFormatVersion: 2
+guid: 1171a4a47d83e9f4ca147cbafbd92753
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: base-terrasse
+    100002: Circle
+    100004: Circle.003
+    100006: Object001
+    100008: Plane
+    100010: Plane.001
+    100012: Plane.002
+    100014: Plane.007
+    100016: //RootNode
+    100018: Sphere
+    100020: transat-5
+    100022: Couch
+    100024: Flower
+    100026: Forest
+    100028: Lamp
+    100030: Pool_bottom
+    100032: Pool_top
+    100034: Sunbed
+    100036: Terrasse
+    100038: Wall
+    100040: base-terrasse.001
+    100042: Camera
+    100044: Circle.004
+    100046: Circle.005
+    100048: Circle.006
+    100050: Circle.009
+    100052: Circle.010
+    100054: Circle.011
+    100056: Circle.014
+    100058: Circle.015
+    100060: Circle.016
+    100062: Circle.019
+    100064: Circle.020
+    100066: Circle.021
+    100068: Circle.029
+    100070: Circle.030
+    100072: Circle.031
+    100074: Cube.001
+    100076: Cube.004
+    100078: Cube.005
+    100080: Cube.006
+    100082: Cube.007
+    100084: Cube.008
+    100086: Cube.009
+    100088: Plane.004
+    100090: Sphere.001
+    100092: Sphere.002
+    100094: Sphere.004
+    100096: Sphere.005
+    100098: Sphere.006
+    100100: Sphere.007
+    100102: Sphere.008
+    100104: transat-1
+    100106: transat-2
+    100108: transat-3
+    100110: transat-4
+    100112: Stair
+    400000: base-terrasse
+    400002: Circle
+    400004: Circle.003
+    400006: Object001
+    400008: Plane
+    400010: Plane.001
+    400012: Plane.002
+    400014: Plane.007
+    400016: //RootNode
+    400018: Sphere
+    400020: transat-5
+    400022: Couch
+    400024: Flower
+    400026: Forest
+    400028: Lamp
+    400030: Pool_bottom
+    400032: Pool_top
+    400034: Sunbed
+    400036: Terrasse
+    400038: Wall
+    400040: base-terrasse.001
+    400042: Camera
+    400044: Circle.004
+    400046: Circle.005
+    400048: Circle.006
+    400050: Circle.009
+    400052: Circle.010
+    400054: Circle.011
+    400056: Circle.014
+    400058: Circle.015
+    400060: Circle.016
+    400062: Circle.019
+    400064: Circle.020
+    400066: Circle.021
+    400068: Circle.029
+    400070: Circle.030
+    400072: Circle.031
+    400074: Cube.001
+    400076: Cube.004
+    400078: Cube.005
+    400080: Cube.006
+    400082: Cube.007
+    400084: Cube.008
+    400086: Cube.009
+    400088: Plane.004
+    400090: Sphere.001
+    400092: Sphere.002
+    400094: Sphere.004
+    400096: Sphere.005
+    400098: Sphere.006
+    400100: Sphere.007
+    400102: Sphere.008
+    400104: transat-1
+    400106: transat-2
+    400108: transat-3
+    400110: transat-4
+    400112: Stair
+    2000000: Camera
+    2100000: 09 - Default
+    2100002: 'Material #42'
+    2100004: 'Material #44'
+    2300000: base-terrasse
+    2300002: Circle
+    2300004: Circle.003
+    2300006: Object001
+    2300008: Plane
+    2300010: Plane.001
+    2300012: Plane.002
+    2300014: Plane.007
+    2300016: Sphere
+    2300018: transat-5
+    2300020: Couch
+    2300022: Flower
+    2300024: Forest
+    2300026: Lamp
+    2300028: Pool_bottom
+    2300030: Pool_top
+    2300032: Sunbed
+    2300034: Terrasse
+    2300036: Wall
+    2300038: base-terrasse.001
+    2300040: Circle.004
+    2300042: Circle.005
+    2300044: Circle.006
+    2300046: Circle.009
+    2300048: Circle.010
+    2300050: Circle.011
+    2300052: Circle.014
+    2300054: Circle.015
+    2300056: Circle.016
+    2300058: Circle.019
+    2300060: Circle.020
+    2300062: Circle.021
+    2300064: Circle.029
+    2300066: Circle.030
+    2300068: Circle.031
+    2300070: Cube.001
+    2300072: Cube.004
+    2300074: Cube.005
+    2300076: Cube.006
+    2300078: Cube.007
+    2300080: Cube.008
+    2300082: Cube.009
+    2300084: Plane.004
+    2300086: Sphere.001
+    2300088: Sphere.002
+    2300090: Sphere.004
+    2300092: Sphere.005
+    2300094: Sphere.006
+    2300096: Sphere.007
+    2300098: Sphere.008
+    2300100: transat-1
+    2300102: transat-2
+    2300104: transat-3
+    2300106: transat-4
+    2300108: Stair
+    3300000: base-terrasse
+    3300002: Circle
+    3300004: Circle.003
+    3300006: Object001
+    3300008: Plane
+    3300010: Plane.001
+    3300012: Plane.002
+    3300014: Plane.007
+    3300016: Sphere
+    3300018: transat-5
+    3300020: Couch
+    3300022: Flower
+    3300024: Forest
+    3300026: Lamp
+    3300028: Pool_bottom
+    3300030: Pool_top
+    3300032: Sunbed
+    3300034: Terrasse
+    3300036: Wall
+    3300038: base-terrasse.001
+    3300040: Circle.004
+    3300042: Circle.005
+    3300044: Circle.006
+    3300046: Circle.009
+    3300048: Circle.010
+    3300050: Circle.011
+    3300052: Circle.014
+    3300054: Circle.015
+    3300056: Circle.016
+    3300058: Circle.019
+    3300060: Circle.020
+    3300062: Circle.021
+    3300064: Circle.029
+    3300066: Circle.030
+    3300068: Circle.031
+    3300070: Cube.001
+    3300072: Cube.004
+    3300074: Cube.005
+    3300076: Cube.006
+    3300078: Cube.007
+    3300080: Cube.008
+    3300082: Cube.009
+    3300084: Plane.004
+    3300086: Sphere.001
+    3300088: Sphere.002
+    3300090: Sphere.004
+    3300092: Sphere.005
+    3300094: Sphere.006
+    3300096: Sphere.007
+    3300098: Sphere.008
+    3300100: transat-1
+    3300102: transat-2
+    3300104: transat-3
+    3300106: transat-4
+    3300108: Stair
+    4300000: Plane.002
+    4300002: Plane.001
+    4300004: Plane
+    4300006: Circle
+    4300008: Sphere
+    4300010: transat-5
+    4300012: Circle.003
+    4300014: Plane.007
+    4300016: base-terrasse
+    4300018: Object001
+    4300020: Pool_top
+    4300022: Pool_bottom
+    4300024: Forest
+    4300026: Flower
+    4300028: Sunbed
+    4300030: Couch
+    4300032: Wall
+    4300034: Terrasse
+    4300036: Lamp
+    4300038: Sphere.004
+    4300040: Plane.004
+    4300042: base-terrasse.001
+    4300044: Cube.006
+    4300046: Cube.009
+    4300048: Cube.008
+    4300050: Sphere.008
+    4300052: Sphere.007
+    4300054: Cube.007
+    4300056: Sphere.006
+    4300058: Cube.005
+    4300060: Cube.004
+    4300062: Sphere.005
+    4300064: Sphere.002
+    4300066: Sphere.001
+    4300068: Cube.001
+    4300070: Circle.031
+    4300072: Circle.030
+    4300074: Circle.029
+    4300076: transat-4
+    4300078: transat-1
+    4300080: Circle.021
+    4300082: Circle.020
+    4300084: Circle.019
+    4300086: transat-3
+    4300088: Circle.016
+    4300090: Circle.015
+    4300092: Circle.014
+    4300094: transat-2
+    4300096: Circle.011
+    4300098: Circle.010
+    4300100: Circle.009
+    4300102: Circle.006
+    4300104: Circle.005
+    4300106: Circle.004
+    4300108: Stair
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: eeb58eac2538dee4ebae083dc351fed4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bonde
+    second: {fileID: 2100000, guid: 2e1cd1c33535d4146926009b08f5e45c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boule-arbuste.001
+    second: {fileID: 2100000, guid: 2a358b23205df844f86f152d6e30a9cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boule-arbuste.003
+    second: {fileID: 2100000, guid: c8ba5ef9a8fbc5e41a89c88d1360f854, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boule-arbuste.004
+    second: {fileID: 2100000, guid: eda785485da71b84c94f255c39e54914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boule-arbuste.005
+    second: {fileID: 2100000, guid: dbe2e98642f1e5c46966e77929b17c87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boule-arbuste.006
+    second: {fileID: 2100000, guid: 645229c0a70c93746b428688c0a637e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boule-arbuste.007
+    second: {fileID: 2100000, guid: 8a4abc3182a290949aa9abdb8fb7baf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carrelage-terrasse
+    second: {fileID: 2100000, guid: faac501b19cf0094c9c5e85849019c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: couch
+    second: {fileID: 2100000, guid: e3d2101c9354d2348aeff85585c8bf7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flower1
+    second: {fileID: 2100000, guid: d0245c8f2330d2d4f830586c57ca3244, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flower2
+    second: {fileID: 2100000, guid: a3e5e0c7b714b52488456fcdb3421531, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: joint
+    second: {fileID: 2100000, guid: 9e31ccaf0025f464eae1aff3a60a23b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: marches-piscine
+    second: {fileID: 2100000, guid: 5754d2c5e859c7244bfbcaa376311e0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pneu-transat.001
+    second: {fileID: 2100000, guid: 2b6651c7ad3067840b90917113359147, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pneu-transat.002
+    second: {fileID: 2100000, guid: 3c98865311f89154ca7a4ff1865ab1ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pneu-transat.003
+    second: {fileID: 2100000, guid: 97d5cda942833c64fa81800cf9463764, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pneu-transat.004
+    second: {fileID: 2100000, guid: d22abb042c0dd894a9870c77ee440632, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot-fleur.007
+    second: {fileID: 2100000, guid: cb42387d3c0a4c54582a86b9f8441178, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot-fleur.010
+    second: {fileID: 2100000, guid: 51e064b1dcc57344c939c6722d373b51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot-fleur.011
+    second: {fileID: 2100000, guid: 8aa161fdcb1aa1c44a8485e171ccc5c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot-fleur.012
+    second: {fileID: 2100000, guid: ce1652d31e592d5439ebc7c3c21a6676, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot-fleur.013
+    second: {fileID: 2100000, guid: b3d993a810ada6346894ee176f74f479, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pot-fleur.014
+    second: {fileID: 2100000, guid: d96a1636966f26247b0a7d1f045caf7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roue-transat.001
+    second: {fileID: 2100000, guid: 3721a0c577d17624bb55d71c1b9b6daf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roue-transat.002
+    second: {fileID: 2100000, guid: 23b8b78e93746b84e9a289715b82b9ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roue-transat.003
+    second: {fileID: 2100000, guid: 20e85682987204e4aa45092fd602a6b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roue-transat.004
+    second: {fileID: 2100000, guid: bd8d0026ef61b214b9319be9c87a48a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.001
+    second: {fileID: 2100000, guid: e7c9772c8ec50104895022d057cf48df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.002
+    second: {fileID: 2100000, guid: 869b003d4946dde4aa782540039135da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.003
+    second: {fileID: 2100000, guid: 6a209f2435d3eed4d810a5a30697c740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.004
+    second: {fileID: 2100000, guid: 1bd4de6554bacec419782804f3c668c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.005
+    second: {fileID: 2100000, guid: 9afc926bd830dff4ab9cec33b7edaaeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.006
+    second: {fileID: 2100000, guid: d4a7d92d9a817cf4fb62eae52ecbd7e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.007
+    second: {fileID: 2100000, guid: bed36d004f75d33479bd3730340b7cb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: structure-transat.008
+    second: {fileID: 2100000, guid: b9cbe7b7fd00e9e438250f3c4c08a05b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sunbed1
+    second: {fileID: 2100000, guid: a32be938c4e7bd843b8756eaefe27643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sunbed2
+    second: {fileID: 2100000, guid: 59fe5478e1625084e900d40dd7daca01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.001
+    second: {fileID: 2100000, guid: 01f321b19aed898428083ec0e07a7cf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.002
+    second: {fileID: 2100000, guid: 96853d2c1e73211488522eed0dd56311, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.003
+    second: {fileID: 2100000, guid: 14c6bcae4399ca042a5d8486268e5c94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.004
+    second: {fileID: 2100000, guid: 3c10d085938ef8f459c7dd97d384b1f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.005
+    second: {fileID: 2100000, guid: 438d1cb6c92258849a3b275a8c0900cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.006
+    second: {fileID: 2100000, guid: 7241d583eb611d344a1e7fe3a1fc342d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.007
+    second: {fileID: 2100000, guid: 2022a0b5434c57f42bcec2670b9ae954, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-normal-tissu.008
+    second: {fileID: 2100000, guid: cf5ec2cf8eae0e0488b8f892863f6087, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-plein
+    second: {fileID: 2100000, guid: c5e08405354990e45ad2f320e1a1cac5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-plein.002
+    second: {fileID: 2100000, guid: 7eb79fcb1a0554140b552140ca0a5b01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transat-plein.003
+    second: {fileID: 2100000, guid: 08e3f8986a7d1f84995afd1a8d762ca6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
