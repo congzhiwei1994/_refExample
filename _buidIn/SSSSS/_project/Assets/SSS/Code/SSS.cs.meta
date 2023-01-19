@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b6d46804b613d28429d8fa2288bb7afb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sss_buffers_viewer: {instanceID: 0}
+  - ProfileShader: {fileID: 4800000, guid: 4f885b4b795cabd45815cd422ba09b31, type: 3}
+  - LightingPassShader: {fileID: 4800000, guid: f3448f1ede5f1c046bc8b8423403975d,
+      type: 3}
+  - SSS_ProfileTex: {instanceID: 0}
+  - LightingTex: {instanceID: 0}
+  - LightingTexBlurred: {instanceID: 0}
+  - NoiseTexture: {fileID: 2800000, guid: d469c63fdf99cd243a05047268aeaa5d, type: 3}
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 73fdea4ff9eb3814baf101a097a4873d, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

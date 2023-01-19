@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: amyr-01-skin
+  m_Shader: {fileID: 4800000, guid: 99110ceb4c4cc664a9a28311e9c843c2, type: 3}
+  m_ShaderKeywords: ENABLE_DETAIL_NORMALMAP _DETAIL_MULX2 _NORMALMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 49ac7480ae54fc84e94f7943ed06d164, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CavityMap:
+        m_Texture: {fileID: 2800000, guid: 3230e8b92aa12ef458467db77e1b34c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: 884f4ce41a5f49e468bdeb7ae95ed94f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a812bfd35d6126c4e88f4cf1b55f5fab, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: d8bf08d456c756042a2d4e35007003ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProfileTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ScaleMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: 25a680da95bb4bb45a78ace7b3d7800c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubsurfaceAlbedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransmissionMap:
+        m_Texture: {fileID: 2800000, guid: 9b2afe1152bd52c44a83b7cb2590c2dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - BasePassTransmission: 1
+    - DynamicPassTransmission: 1
+    - ENABLE_ALPHA_TEST: 0
+    - ENABLE_PARALLAX: 0
+    - PUPIL_DILATION: 0
+    - SSS_shader: 1
+    - SUBSURFACE_ALBEDO: 0
+    - SUBSURFACE_PARALLAX: 0
+    - TransmissionOcc: 1
+    - TransmissionRange: 5
+    - TransmissionShadows: 1
+    - WRAPPED_LIGHTING: 0
+    - _AlbedoOpacity: 1
+    - _AlbedoTile: 1
+    - _BumpScale: 1
+    - _BumpTile: 1
+    - _CavityStrength: 0.822
+    - _Cutoff: 0.5
+    - _Depth: 0.231
+    - _DepthCenter: 0
+    - _DepthTile: 20
+    - _DetailNormal: 1
+    - _DetailNormalMapScale: 0.515
+    - _DetailNormalMapTile: 51.22
+    - _Dilation: -0.01
+    - _DstBlend: 0
+    - _FresnelIntensity: 0.459
+    - _GlossMapScale: 1
+    - _Glossiness: 0.667
+    - _GlossyReflections: 1
+    - _IrisCaustics: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SubSurfaceParallax: -0.000363
+    - _SubsurfaceAlbedoOpacity: 1
+    - _SubsurfaceAlbedoSaturation: 1
+    - _Transmission: 0
+    - _UVSec: 0
+    - _Wrap: 0
+    - _ZWrite: 1
+    - refractiveIndex: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionColor: {r: 0.74, g: 0.58335763, b: 0.52934307, a: 1}
+    - _ProfileColor: {r: 1, g: 0.765, b: 0.665, a: 0.6901961}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TransmissionColor: {r: 0.497, g: 0.22689131, b: 0.043217383, a: 1}

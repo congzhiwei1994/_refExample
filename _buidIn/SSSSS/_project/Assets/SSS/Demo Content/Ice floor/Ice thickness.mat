@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ice thickness
+  m_Shader: {fileID: 4800000, guid: a65a8da6158ca7a4e9349f301ca9752a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 6
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Ice_diffuse:
+        m_Texture: {fileID: 2800000, guid: 62341cb5dcb18894585d5aa2a3c2c7f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ice_diffuse1:
+        m_Texture: {fileID: 2800000, guid: 62341cb5dcb18894585d5aa2a3c2c7f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex:
+        m_Texture: {fileID: 2800000, guid: 62341cb5dcb18894585d5aa2a3c2c7f4, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Cutoff: 0.5
+    - _Displacement: 0.000112
+    - _PushAlpha: 1.053
+    - _Tiling: 0.5
+    - _TransAmbient: 0.018
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0
+    - _TransScattering: 1.6
+    - _TransShadow: 1
+    - _Translucency: 11.2
+    - _Transmission: 0.89
+    - __dirty: 0
+    - _alpha: 5.6
+    - _end: 0.0144
+    - _end2: 0.00359
+    m_Colors:
+    - _Color: {r: 0.5766287, g: 0.5838376, b: 0.5849056, a: 0.4117647}
+    - _Colortransmission: {r: 0.19824666, g: 0.42452827, b: 0.42452827, a: 1}

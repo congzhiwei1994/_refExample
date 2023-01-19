@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SSSoap
+  m_Shader: {fileID: 4800000, guid: 99110ceb4c4cc664a9a28311e9c843c2, type: 3}
+  m_ShaderKeywords: ENABLE_PARALLAX TRANSMISSION
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 543f69c6899f7f74daf2a203c588f821, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CavityMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: b32be54cac38e2743aabe9cdcd9f0008, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 60528ccbc0a998443afd724a6c861c3c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProfileTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ScaleMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubsurfaceAlbedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransmissionMap:
+        m_Texture: {fileID: 2800000, guid: e5be2145b71b0804b939b02d1a6f6eea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - BasePassTransmission: 1
+    - DynamicPassTransmission: 1
+    - ENABLE_ALPHA_TEST: 0
+    - ENABLE_PARALLAX: 1
+    - PUPIL_DILATION: 0
+    - SSS_shader: 1
+    - SUBSURFACE_ALBEDO: 0
+    - SUBSURFACE_PARALLAX: 0
+    - TransmissionOcc: 0
+    - TransmissionRange: 5
+    - TransmissionShadows: 0
+    - WRAPPED_LIGHTING: 0
+    - _AlbedoOpacity: 1
+    - _AlbedoTile: 1
+    - _BumpScale: 1
+    - _BumpTile: 1
+    - _CavityStrength: 1
+    - _Cutoff: 0.5
+    - _Depth: 0.0049
+    - _DepthCenter: -0.01
+    - _DepthTile: 1
+    - _DetailNormal: 0
+    - _DetailNormalMapScale: 1
+    - _DetailNormalMapTile: 1
+    - _Dilation: 0
+    - _DstBlend: 0
+    - _FresnelIntensity: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.489
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SubSurfaceParallax: -0.000363
+    - _SubsurfaceAlbedoOpacity: 1
+    - _SubsurfaceAlbedoSaturation: 1
+    - _Transmission: 1
+    - _UVSec: 0
+    - _Wrap: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.75294125, g: 0.47450984, b: 0.14117648, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ProfileColor: {r: 1, g: 0.5821822, b: 0, a: 1}
+    - _SpecColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+    - _TransmissionColor: {r: 0.322, g: 0.22046848, b: 0.046414405, a: 1}
